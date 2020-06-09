@@ -1,0 +1,5 @@
+{
+  "dashboard_dir": "/Users/erikbuunk/Documents/Computer/iqss/iqss-metrics/iqss-metrics-dashboard/",
+  "git_command" : "gitpush.sh",
+  "output_dir" : "../iqss-metrics-dashboard/assets/data/"
+}
