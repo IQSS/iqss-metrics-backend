@@ -2,8 +2,7 @@
 from __future__ import print_function
 from datetime import *
 from google_sheets import *
-import logging
-import pandas as pd
+from metrics import *
 
 sheets = [
     ["cgaContact", "1bd7VPF2fLKfcnjjlZU4PxfaS75x3d_C7P0a_rb4FP1M", "Form Responses 1!A:H", [0, 5, 6, 7]],  # OK
@@ -37,78 +36,164 @@ def harvest_cga(path):
 
     return
 
-def convertTimestamp(timestamp_string):
-     return str(datetime.datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date())
 
-def convertTimestamp_dt(timestamp_string):
+# get data from field and return string
+def convert_timestamp_str(timestamp_string):
+    return str(datetime.datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date())
+
+
+# get date from field and return date-type
+def convert_timestamp_dt(timestamp_string):
     return datetime.datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date()
 
 
 # return the last 12 rows, not including last one
 def df_previous_12_months(df):
-    if len(df)<12:
+    if len(df) < 12:
         return df
     else:
-        return df.head(len(df)-1).tail(12)
+        return df.head(len(df) - 1).tail(12)
+
 
 def get_last_month():
     t = datetime.datetime.now()
     return pd.Timestamp(datetime.datetime(t.year, t.month, 1, 0, 0, 0, 0))
 
+
+# get the last year based on field "Timestamp"
 def get_last_year():
     t = datetime.datetime.now()
     return pd.Timestamp(datetime.datetime(t.year - 1, t.month, 1, 0, 0, 0, 0))
 
-def filter_last_12_months(df, field):
-    df["datetime"] = df[field].transform(lambda x: pd.Timestamp(x))
-    return df[(df['datetime'] >= get_last_year()) & (df['datetime'] < get_last_month())]
+
+# get the last year based on 'field'  field
+# def filter_last_12_months(df, field):
+#     df["datetime"] = df[field].transform(lambda x: pd.Timestamp(x)) # **pd**.Timestamp = Pandas function
+#     return df[(df['datetime'] >= get_last_year()) & (df['datetime'] < get_last_month())]
+
+def filter_last_12_months(df, field, drop_datetime=False):
+    df2 = df.copy()
+    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))  # klopt niet??
+    df3 = df2[(df2['datetime'] >= get_last_year()) & (df2['datetime'] < get_last_month())]
+
+    if drop_datetime:
+        del df3['datetime']
+
+    return df3
+
+
+def getBeginningOfThisYear():
+    t = datetime.datetime.now()
+    return pd.Timestamp(datetime.datetime(t.year, 1, 1, 0, 0, 0, 0))
+
+
+def get_records_YTD(df, field="Timestamp", drop_datetime=False):
+    df2 = df.copy()
+    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))
+    df3 = df2[df2['datetime'] >= getBeginningOfThisYear()]
+
+    if drop_datetime:
+        del df3['datetime']
+
+    return df3
+
+
+def get_current_year_str():
+    return str(datetime.datetime.now().year)
+
 
 def aggregate_cga(path):
-
-    # contact
+    # contact (A)
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
-    df["date"] = df.Timestamp.transform(lambda x: convertTimestamp(x)[:7])
+    df["date"] = df.Timestamp.transform(lambda x: convert_timestamp_str(x)[:7])
     df_aggr = pd.DataFrame({'count': df["date"].value_counts()}).sort_index()
     df_previous_12_months(df_aggr).to_csv(path + 'cga_contact.tsv', sep="\t", index=True, index_label="date")
 
-
-    # contact: status
+    # contact: status/appointment (B)
     df_aggr = filter_last_12_months(df, 'Timestamp')
     df_aggr2 = pd.DataFrame({'count': df_aggr["Your Harvard status/appointment"].value_counts()})
     df_aggr2.to_csv(path + 'cga_contact_status.tsv', sep="\t", index=True, index_label="Harvard status/Appointment")
 
-    # Training
+    # Training (C) --------------------------------
     df = pd.read_csv(path + 'cgaTrainingRegistration.tsv', delimiter="\t")
     df = filter_last_12_months(df, 'Date of the training workshop')
 
-    df["month"] = df.datetime.transform(lambda x: x.month_name() + " " + str(x.year))
-    df["count"] = df["Name of the training workshop"] + "\n(" + df["month"] + ")" # we name the column 'count'
-    df.sort_values('datetime')
+    df["month"] = df.datetime.transform(lambda x: x.strftime("%b") + " " + str(x.year))
+    df["name"] = df["Name of the training workshop"] + "#(" + df["month"] + ")"  # we name the column 'count'
+    df = df.sort_values("datetime")
 
-    df_aggr = df["count"].value_counts(sort= False)
-    # TODO: needs sorting
-    df_aggr.to_csv(path + 'cga_training.tsv', sep="\t", index=True, index_label="course")
+    # create a list with unique courses in time order
+    df2 = df[["Name of the training workshop", "month", "name"]].drop_duplicates()
+    df2.reset_index(drop=True)  # save the order
 
-    # Training evaluations
+    # count the number or registrations and save ones  wiht more than 5
+    df3 = df[["name", "datetime"]].groupby(['name']).count()
+    df3 = df3[df3["datetime"] > 5]
+
+    # join with the table with the correct order and rename columns
+    df3 = df2.merge(df3, how="inner", on="name").drop_duplicates()[["name", "datetime"]]
+    df_aggr = df3.rename(columns={'name': 'course', 'datetime': 'registration_count'})
+
+    # save
+    df_aggr.to_csv(path + 'cga_training.tsv', sep="\t", index=True, index_label="id")
+
+    # Training evaluations (C) ----------------------------------
     df = pd.read_csv(path + 'cgaWorkshopEvaluation.tsv', delimiter="\t")
     df_aggr = df.describe()[1:2].transpose()
     df_aggr = df_aggr.transform(lambda x: round(x, 2))
     df_aggr.to_csv(path + 'cga_workshop_evaluations.tsv', sep="\t", index=True, index_label="metric")
 
     # Registration for CGA conference
-    # School affiliation: Harvard/ Non Havard
-    # Number of registrations
-    #
+    df = pd.read_csv(path + 'cgaEventRegistration.tsv', delimiter="\t")
+    df["count"] = df["Your primary affiliated school at Harvard"].apply(
+        lambda x: 'Non-Harvard' if x == "Non-Harvard" else 'Harvard')
+    unique_conferences = df["The event name"].value_counts()
+    last = unique_conferences[len(unique_conferences) - 1:]
+    value = last[0]
+    unit = last.index[0]
+
+    # School affiliation: Harvard/ Non Harvard (E)
+    df_schools = df[df["The event name"] == unit]["count"].value_counts()
+    df_schools.to_csv(path + "cga_conference_schools.tsv", sep='\t', index=True, index_label="School Affiliation")
+
+    # Number of registrations (G2)
+    write_metric(path=path, group="CGA", metric="Number of Registrations for CGA Conference",
+                 title="CGA Events",
+                 value=value, unit="Registrations for " + unit, icon="fa fa-calendar-alt", color="blue",
+                 url="")
+
+    # Applications GIS Institute (G1)
+    df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
+    applications_YTD = len(get_records_YTD(df, drop_datetime=True))
+    write_metric(path=path, group="CGA", metric="GIS Institute Applications",
+                 title="CGA Applications",
+                 value=applications_YTD, unit="Applications for GIS institute " + get_current_year_str() + " YTD",
+                 icon="fa fa-university", color="blue",
+                 url="")
+
+    # Access Requests (G3)
+    df = pd.read_csv(path + 'cgaAccessReq.tsv', delimiter="\t")
+    requests_this_year = len(get_records_YTD(df, drop_datetime=True))
+    write_metric(path=path, group="CGA", metric="Number of Access requests",
+                 title="CGA Requests",
+                 value=requests_this_year, unit="Access Requests in " + get_current_year_str() + " YTD",
+                 icon="fa fa-key", color="blue",
+                 url="")
 
 
-    # metrics:
-    # 1: Access 28 Access request in 2020
-    # 2: CGA Events/114/Registrations for conference 2019
+    # license requests ()
+    df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
 
-    # 3:Applications:    47: Applicatons for GIS     institute 2020
+    # smaller df of last 12 months
+    df2 = df[["Software product which you need a license for", "Timestamp"]]
+    df3 = filter_last_12_months(df2, "Timestamp", drop_datetime=True)
 
-    # license requests
-    # top 10 license requests (Software product vs.Number of license requests.
-    # write_metric(path=path, group="Dataverse", metric="Dataverse TV", title="Dataverse TV",
-    #              value=nrow, unit="Number of Videos", icon="fa fa-tv", color="red",
-    #              url="https://iqss.github.io/dataverse-tv/")
+    # count number and select top 10
+    df3 = df3.groupby("Software product which you need a license for").count()
+    df3 = df3.sort_values(by="Timestamp", ascending=False).head(10)
+
+    # clean up of output
+    df3 = df3.reset_index()
+    df3 = df3.rename(
+        columns={'Software product which you need a license for': 'Software product', 'Timestamp': 'count'})
+    df3.to_csv(path + "cga_license_req_last_12_months.tsv", sep='\t', index=True, index_label="id")

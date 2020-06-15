@@ -1,4 +1,3 @@
-import logging
 from google_sheets import *
 
 sheets = [
@@ -21,5 +20,4 @@ def harvest_css(path):
         range_name = s[2]
         columns = s[3]
         harvest_sheet_tsv(path, collection, sheet_id, range_name, columns)
-
     return

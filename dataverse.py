@@ -3,9 +3,7 @@ from google_sheets import harvest_sheet_tsv
 import requests
 from datetime import date
 import csv
-import logging
-import pandas as pd
-import os.path
+from metrics import *
 
 
 # dataverse tv -----------------
@@ -48,37 +46,6 @@ def harvest_dataverse(path):
                          unit=posts[row][5], icon="fab fa-github", color="orange", url="")
     # TODO: aggregate into main_metrics?
 
-
-def write_metric(path, group, metric, title, value, unit, icon="fa fa-chart", color="orange", url=""):
-    logging.info("Writing main metric %s" % metric)
-
-    d = {'group': [group],
-         'metric': [metric],
-         'title': [title],
-         'value': [value],
-         'unit': [unit],
-         'icon': [icon],
-         'color': [color],
-         'url': [url]
-         }
-    df = pd.DataFrame(data=d)
-
-    file_name = path + "main_metrics.tsv"
-    if os.path.isfile(file_name):
-
-        df_file = pd.read_csv(file_name, delimiter="\t")
-
-        row = df_file.loc[(df_file['metric'] == metric) & (df_file['group'] == group)]
-        if len(row) == 0:
-            logging.info('Adding main metric %s' % metric)
-        else:
-            logging.info('Updating main metric %s' % metric)
-            df_file = df_file.drop(df_file[(df_file['metric'] == metric) & (df_file['group'] == group)].index)
-        df_file = df_file.append(df)
-        df_file.to_csv(file_name, sep="\t", index=False)
-    else:
-        logging.info("%s not found. Creating new file." % file_name)
-        df.to_csv(file_name, sep="\t", index=False)
 
 
 def harvest_dataverse_installations(path):
