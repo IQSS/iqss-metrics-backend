@@ -1,8 +1,7 @@
 # CGA
 from __future__ import print_function
-from datetime import *
-from google_sheets import *
 from metrics import *
+from myfunctions import *
 
 sheets = [
     ["cgaContact", "1bd7VPF2fLKfcnjjlZU4PxfaS75x3d_C7P0a_rb4FP1M", "Form Responses 1!A:H", [0, 5, 6, 7]],  # OK
@@ -35,72 +34,6 @@ def harvest_cga(path):
         harvest_sheet_tsv(path, collection, sheet_id, range_name, columns)
 
     return
-
-
-# get data from field and return string
-def convert_timestamp_str(timestamp_string):
-    return str(datetime.datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date())
-
-
-# get date from field and return date-type
-def convert_timestamp_dt(timestamp_string):
-    return datetime.datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date()
-
-
-# return the last 12 rows, not including last one
-def df_previous_12_months(df):
-    if len(df) < 12:
-        return df
-    else:
-        return df.head(len(df) - 1).tail(12)
-
-
-def get_last_month():
-    t = datetime.datetime.now()
-    return pd.Timestamp(datetime.datetime(t.year, t.month, 1, 0, 0, 0, 0))
-
-
-# get the last year based on field "Timestamp"
-def get_last_year():
-    t = datetime.datetime.now()
-    return pd.Timestamp(datetime.datetime(t.year - 1, t.month, 1, 0, 0, 0, 0))
-
-
-# get the last year based on 'field'  field
-# def filter_last_12_months(df, field):
-#     df["datetime"] = df[field].transform(lambda x: pd.Timestamp(x)) # **pd**.Timestamp = Pandas function
-#     return df[(df['datetime'] >= get_last_year()) & (df['datetime'] < get_last_month())]
-
-def filter_last_12_months(df, field, drop_datetime=False):
-    df2 = df.copy()
-    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))  # klopt niet??
-    df3 = df2[(df2['datetime'] >= get_last_year()) & (df2['datetime'] < get_last_month())]
-
-    if drop_datetime:
-        del df3['datetime']
-
-    return df3
-
-
-def getBeginningOfThisYear():
-    t = datetime.datetime.now()
-    return pd.Timestamp(datetime.datetime(t.year, 1, 1, 0, 0, 0, 0))
-
-
-def get_records_YTD(df, field="Timestamp", drop_datetime=False):
-    df2 = df.copy()
-    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))
-    df3 = df2[df2['datetime'] >= getBeginningOfThisYear()]
-
-    if drop_datetime:
-        del df3['datetime']
-
-    return df3
-
-
-def get_current_year_str():
-    return str(datetime.datetime.now().year)
-
 
 def aggregate_cga(path):
     # contact (A)

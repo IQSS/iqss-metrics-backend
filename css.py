@@ -9,6 +9,7 @@ sheets = [
     ["cssTypeOfRequestPCMac", "13SiPRDxzf4xEj7_6VrJ8CtvWvnL42gVSO4VAsNHNgqY", "Type of Request  PC & MAC!A:U", []],
 ]
 
+
 def harvest_css(path):
     """Harvest a range of google spreadsheet of CSS
     """
