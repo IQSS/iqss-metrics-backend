@@ -93,7 +93,7 @@ def aggregate_cga(path):
     write_metric(path=path, group="CGA", metric="Number of Registrations for CGA Conference",
                  title="CGA Events",
                  value=value, unit="Registrations for " + unit, icon="fa fa-calendar-alt", color="blue",
-                 url="")
+                 url="cga.html")
 
     # Applications GIS Institute (G1)
     df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
@@ -102,7 +102,7 @@ def aggregate_cga(path):
                  title="CGA Applications",
                  value=applications_YTD, unit="Applications for GIS institute " + get_current_year_str() + " YTD",
                  icon="fa fa-university", color="blue",
-                 url="")
+                 url="cga.html")
 
     # Access Requests (G3)
     df = pd.read_csv(path + 'cgaAccessReq.tsv', delimiter="\t")
@@ -111,7 +111,7 @@ def aggregate_cga(path):
                  title="CGA Requests",
                  value=requests_this_year, unit="Access Requests in " + get_current_year_str() + " YTD",
                  icon="fa fa-key", color="blue",
-                 url="")
+                 url="cga.html")
 
 
     # license requests ()

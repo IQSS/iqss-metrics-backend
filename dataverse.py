@@ -43,7 +43,7 @@ def harvest_dataverse(path):
         for row in range(0, len(posts)):
             writer.writerow(posts[row])
             write_metric(path, group=posts[row][1], metric=posts[row][2], title=posts[row][3], value = posts[row][4],
-                         unit=posts[row][5], icon="fab fa-github", color="orange", url="")
+                         unit=posts[row][5], icon="fab fa-github", color="orange", url="dataverse.html")
     # TODO: aggregate into main_metrics?
 
 
@@ -69,7 +69,7 @@ def harvest_dataverse_installations(path):
     nrow = "%d" % len(df)
     write_metric(path=path, group="Dataverse", metric="Dataverse Installations", title="Dataverse Worldwide",
                  value=nrow, unit="Number of Installations", icon="fa fa-globe", color="blue",
-                 url="")
+                 url="dataverse.html")
 
 
 def aggregate_dataverse(path):
