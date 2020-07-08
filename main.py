@@ -5,10 +5,13 @@ from cga import *
 from css import *
 from rc import *
 from dataverse import *
-from google_sheets import *
 import json
 import os
 from metrics import *
+import time
+
+# Google sheets has limits on the number of calls per 100 seconds
+SLEEP_TIME = 100
 
 def push_to_github(config):
     logging.info("Pushing TSV to Github Dashboard")
@@ -35,9 +38,17 @@ def main():
     output_dir = config['output_dir']
 
     # Harvest Data -----------------------------------
+
+    # make sure we start with a clean slate
+    time.sleep(SLEEP_TIME)
+
     harvest_main_metrics(output_dir)
     harvest_business_operations(output_dir)
     harvest_cga(output_dir)
+
+    # wait for the next batch
+    time.sleep(SLEEP_TIME)
+
     harvest_dataverse(output_dir)
     harvest_css(output_dir)
     harvest_rc(output_dir)
