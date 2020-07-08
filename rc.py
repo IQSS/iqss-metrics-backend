@@ -11,7 +11,8 @@ sheets = [
 
 
 def harvest_rc(path):
-    """Harvest a range of google spreadsheet of CSS
+    """
+    Harvest a range of google spreadsheet of CSS
     """
 
     logging.info("Harvesting RC Spreadsheets")

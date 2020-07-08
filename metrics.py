@@ -36,11 +36,24 @@ def write_metric(path, group, metric, title, value, unit, icon="fa fa-chart", co
 
 
 def harvest_main_metrics(path):
+    """
+    Read the main metrics from the google doc and writ it into TSV 'main_metrics.tsv'
+    :param path: directory where the TSV is written
+    :return: nothing
+    """
     logging.info("Harvesting main metrics")
     harvest_sheet_tsv(path, 'main_metrics', sheet_id="1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s",
                       range_name="Main!A:H", columns=[])
 
+
+
 def aggregate_main_metrics(path):
+    """
+    Read the TSV and write it into the metrics TSV. Here all the metrics are written to,
+    not only those from the google spreadsheet
+    :param path:
+    :return: nothing
+    """
     # aggregate into main metrics
     logging.info("Aggregating main metrics")
     df = pd.read_csv(path + 'main_metrics.tsv', delimiter="\t")

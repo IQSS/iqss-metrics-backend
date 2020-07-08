@@ -31,7 +31,15 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 
 def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
-    """Generic function to read google spreadsheet"""
+    """
+    Generic function to read google spreadsheet
+    :param path: path to write to
+    :param name: filename
+    :param sheet_id: Google Sheet ID
+    :param range_name: range to import
+    :param columns: column number in array to import or use []
+    :return: <nothing>
+    """
 
     logging.info('Harvesting google sheet %s' % name)
     path_and_metric_file = path + name + ".tsv"
