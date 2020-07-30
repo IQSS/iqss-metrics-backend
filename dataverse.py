@@ -8,7 +8,7 @@ from metrics import *
 
 # dataverse tv -----------------
 def harvest_dataverse(path):
-    harvest_sheet_tsv(path, "dataverse_tv", "1uVk_57Ek_A49sLZ5OKdI6QASKloWNzykni3kcYNzpxA", "A:E", [1,2,3,4,5])
+    harvest_sheet_tsv(path, "dataverse_tv", "1uVk_57Ek_A49sLZ5OKdI6QASKloWNzykni3kcYNzpxA", "A:E", [1, 2, 3, 4, 5])
     harvest_dataverse_installations(path)
     aggregate_dataverse(path)
 
@@ -35,8 +35,8 @@ def harvest_dataverse(path):
 
         posts = [
             [now, 'Dataverse', 'GitHub Watchers', 'Dataverse on GitHub', data["watchers_count"], 'Watchers', '', '', ''],
-            [now, 'Dataverse', 'GitHub Open Issues', 'Dataverse on GitHub', data["open_issues_count"], 'Open Issues', '', '',
-             ''],
+            # [now, 'Dataverse', 'GitHub Open Issues', 'Dataverse on GitHub', data["open_issues_count"], 'Open Issues', '', '',
+            #  ''],
             [now, 'Dataverse', 'GitHub Subscribers', 'Dataverse on GitHub', data["subscribers_count"], 'Subscribers', '', '',
              '']]
 

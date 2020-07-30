@@ -5,6 +5,7 @@ from cga import *
 from css import *
 from rc import *
 from dataverse import *
+from psr import *
 import json
 import os
 from metrics import *
@@ -52,6 +53,10 @@ def main():
     harvest_dataverse(output_dir)
     harvest_css(output_dir)
     harvest_rc(output_dir)
+
+    # wait for the next batch
+    time.sleep(SLEEP_TIME)
+    harvest_psr(output_dir)
 
     # aggregate and transform the data -------------------
     aggregate_main_metrics(output_dir)

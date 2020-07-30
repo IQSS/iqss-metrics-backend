@@ -14,10 +14,7 @@ sheets = [
     # OK
     ["cgaTrainingRegistration", "15b3O2wkUoq4TqJ-_T4qB-Jypqe2_zemupHo_s-QCZm4", "Form Responses 1!A:M",
      [0, 1, 2, 6, 7, 8, 11, 12]],
-    ["cgaLicenseRequest", "1e40rmc55hErUSIlOHLHGm40bzAya00FzRrI3oAx-kcs", "Form Responses 1!A:L", [0, 5, 6, 7, 10, 11]],
-    # OK
-    ["cgaSULicenses", "1kJCQkbPCDQeLTNR1Jjnpox8i9QgTULc1Nywxi9KWJsI", "Tracking!A:H", [0, 1, 2, 4, 5, 7]],  # OK
-    ["cgaAccessReq", "1_hD3ME9877rmHkyBK-PNlsiLRarqlio0A4cAy84luhw", "Form Responses 1!A:L", [0, 5, 6, 7, 10]]  # OK
+    ["cgaLicenseRequest", "1e40rmc55hErUSIlOHLHGm40bzAya00FzRrI3oAx-kcs", "Form Responses 1!A:L", [0, 5, 6, 7, 10, 11]]
 ]
 
 
@@ -36,21 +33,79 @@ def harvest_cga(path):
     return
 
 def aggregate_cga(path):
-    # contact (A)
+    cga_contact_time(path)
+    cga_contact_status(path)
+    cga_contact_school(path)
+    cga_training_aggr(path)
+    cga_training_evaluations(path)
+    gis_institute(path)
+    cga_lic_req_top10(path)
+    cga_lic_req_status(path)
+
+
+def cga_contact_school(path):
+    # CGA contact by school last 12 months ----------------------------------------------
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
-    df["date"] = df.Timestamp.transform(lambda x: convert_timestamp_str(x)[:7])
-    df_aggr = pd.DataFrame({'count': df["date"].value_counts()}).sort_index()
-    df_previous_12_months(df_aggr).to_csv(path + 'cga_contact.tsv', sep="\t", index=True, index_label="date")
+    df_contact_12mo = filter_last_12_months(df, 'Timestamp')
+    c = "Your primary affiliated school at Harvard"
+    df_contact_12mo_aggr = get_counts(df_contact_12mo, column=c)
+    df_contact_12mo_aggr = df_contact_12mo_aggr[df_contact_12mo_aggr[c] != "Non-Harvard"]
+    df_contact_12mo_aggr = create_percentage(df_contact_12mo_aggr, 'count')
+    df_contact_12mo_aggr.to_csv(path + "cga_contact_last_12_months_by_school.tsv", sep='\t', index=True,
+                                index_label="id")
 
-    # contact: status/appointment (B)
-    df_aggr = filter_last_12_months(df, 'Timestamp')
-    df_aggr2 = pd.DataFrame({'count': df_aggr["Your Harvard status/appointment"].value_counts()})
-    df_aggr2.to_csv(path + 'cga_contact_status.tsv', sep="\t", index=True, index_label="Harvard status/Appointment")
 
+def cga_lic_req_status(path):
+    # CGA License Request last 12 months by status----------------------------------------------
+    df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
+    df_lic_12mo = filter_last_12_months(df, 'Timestamp')
+    c = "Your primary affiliated school at Harvard"
+    df_aggr_status = get_counts(df_lic_12mo, c)
+    df_aggr_status = df_aggr_status[df_aggr_status[c] != "Non-Harvard"]
+    df_aggr_status = create_percentage(df_aggr_status, 'count')
+    df_aggr_status.to_csv(path + "cga_license_request_last_12_months_by_status.tsv", sep='\t', index=True,
+                          index_label="id")
+
+
+def cga_lic_req_top10(path):
+    # CGA License Request last 12 months Top 10 products --------------------------------------------
+    df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
+    # smaller df of last 12 months
+    df2 = df[["Software product which you need a license for", "Timestamp"]]
+    df3 = filter_last_12_months(df2, "Timestamp", drop_datetime=True)
+    # count number and select top 10
+    df3 = df3.groupby("Software product which you need a license for").count()
+    df3 = df3.sort_values(by="Timestamp", ascending=False).head(10)
+    # clean up of output
+    df3 = df3.reset_index()
+    df3 = df3.rename(
+        columns={'Software product which you need a license for': 'Software product', 'Timestamp': 'count'})
+    df3.to_csv(path + "cga_license_req_last_12_months.tsv", sep='\t', index=True, index_label="id")
+
+
+def gis_institute(path):
+    # Applications GIS Institute (G1) ---------------------------
+    df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
+    applications_YTD = len(get_records_YTD(df, drop_datetime=True))
+    write_metric(path=path, group="CGA", metric="GIS Institute Applications",
+                 title="GIS Institute",
+                 value=applications_YTD, unit="Number of applications " + get_current_year_str() + " YTD",
+                 icon="fa fa-university", color="blue",
+                 url="")
+
+
+def cga_training_evaluations(path):
+    # Training evaluations (C) ----------------------------------
+    df = pd.read_csv(path + 'cgaWorkshopEvaluation.tsv', delimiter="\t")
+    df_aggr = df.describe()[1:2].transpose()
+    df_aggr = df_aggr.transform(lambda x: round(x, 2))
+    df_aggr.to_csv(path + 'cga_workshop_evaluations.tsv', sep="\t", index=True, index_label="metric")
+
+
+def cga_training_aggr(path):
     # Training (C) --------------------------------
     df = pd.read_csv(path + 'cgaTrainingRegistration.tsv', delimiter="\t")
     df = filter_last_12_months(df, 'Date of the training workshop')
-
     df["month"] = df.datetime.transform(lambda x: x.strftime("%b") + " " + str(x.year))
     df["name"] = df["Name of the training workshop"] + "#(" + df["month"] + ")"  # we name the column 'count'
     df = df.sort_values("datetime")
@@ -59,74 +114,34 @@ def aggregate_cga(path):
     df2 = df[["Name of the training workshop", "month", "name"]].drop_duplicates()
     df2.reset_index(drop=True)  # save the order
 
-    # count the number or registrations and save ones  wiht more than 5
+    # count the number or registrations and save ones  with more than 5
     df3 = df[["name", "datetime"]].groupby(['name']).count()
     df3 = df3[df3["datetime"] > 5]
 
     # join with the table with the correct order and rename columns
     df3 = df2.merge(df3, how="inner", on="name").drop_duplicates()[["name", "datetime"]]
     df_aggr = df3.rename(columns={'name': 'course', 'datetime': 'registration_count'})
-
     # save
     df_aggr.to_csv(path + 'cga_training.tsv', sep="\t", index=True, index_label="id")
 
-    # Training evaluations (C) ----------------------------------
-    df = pd.read_csv(path + 'cgaWorkshopEvaluation.tsv', delimiter="\t")
-    df_aggr = df.describe()[1:2].transpose()
-    df_aggr = df_aggr.transform(lambda x: round(x, 2))
-    df_aggr.to_csv(path + 'cga_workshop_evaluations.tsv', sep="\t", index=True, index_label="metric")
 
-    # Registration for CGA conference
-    df = pd.read_csv(path + 'cgaEventRegistration.tsv', delimiter="\t")
-    df["count"] = df["Your primary affiliated school at Harvard"].apply(
-        lambda x: 'Non-Harvard' if x == "Non-Harvard" else 'Harvard')
-    unique_conferences = df["The event name"].value_counts()
-    last = unique_conferences[len(unique_conferences) - 1:]
-    value = last[0]
-    unit = last.index[0]
-
-    # School affiliation: Harvard/ Non Harvard (E)
-    df_schools = df[df["The event name"] == unit]["count"].value_counts()
-    df_schools.to_csv(path + "cga_conference_schools.tsv", sep='\t', index=True, index_label="School Affiliation")
-
-    # Number of registrations (G2)
-    write_metric(path=path, group="CGA", metric="Number of Registrations for CGA Conference",
-                 title="CGA Events",
-                 value=value, unit="Registrations for " + unit, icon="fa fa-calendar-alt", color="blue",
-                 url="cga.html")
-
-    # Applications GIS Institute (G1)
-    df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
-    applications_YTD = len(get_records_YTD(df, drop_datetime=True))
-    write_metric(path=path, group="CGA", metric="GIS Institute Applications",
-                 title="CGA Applications",
-                 value=applications_YTD, unit="Applications for GIS institute " + get_current_year_str() + " YTD",
-                 icon="fa fa-university", color="blue",
-                 url="cga.html")
-
-    # Access Requests (G3)
-    df = pd.read_csv(path + 'cgaAccessReq.tsv', delimiter="\t")
-    requests_this_year = len(get_records_YTD(df, drop_datetime=True))
-    write_metric(path=path, group="CGA", metric="Number of Access requests",
-                 title="CGA Requests",
-                 value=requests_this_year, unit="Access Requests in " + get_current_year_str() + " YTD",
-                 icon="fa fa-key", color="blue",
-                 url="cga.html")
+def cga_contact_time(path):
+    # CGA Contact  (A)
+    df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
+    df["date"] = df.Timestamp.transform(lambda x: convert_timestamp_str(x)[:7])
+    df_aggr = pd.DataFrame({'count': df["date"].value_counts()}).sort_index()
+    df_previous_12_months(df_aggr).to_csv(path + 'cga_contact.tsv', sep="\t", index=True, index_label="date")
 
 
-    # license requests ()
-    df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
 
-    # smaller df of last 12 months
-    df2 = df[["Software product which you need a license for", "Timestamp"]]
-    df3 = filter_last_12_months(df2, "Timestamp", drop_datetime=True)
 
-    # count number and select top 10
-    df3 = df3.groupby("Software product which you need a license for").count()
-    df3 = df3.sort_values(by="Timestamp", ascending=False).head(10)
+def cga_contact_status(path):
+    # CGA Contact: virtual helpdesk req. by status/appointment (B)
+    df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
+    c = 'Your Harvard status/appointment'
+    df_aggr = filter_last_12_months(df, 'Timestamp')
+    df_aggr2 = get_counts(df_aggr, c)
+    df_aggr2 = df_aggr2[df_aggr2["Your Harvard status/appointment"] != "Non-Harvard"]
+    df_aggr2 = create_percentage(df_aggr2, 'count')
+    df_aggr2.to_csv(path + 'cga_contact_status.tsv', sep="\t", index=True, index_label="id")
 
-    # clean up of output
-    df3 = df3.reset_index()
-    df3 = df3.rename(
-        columns={'Software product which you need a license for': 'Software product', 'Timestamp': 'count'})
-    df3.to_csv(path + "cga_license_req_last_12_months.tsv", sep='\t', index=True, index_label="id")

@@ -13,6 +13,7 @@ def convert_timestamp_dt(timestamp_string):
 def convert_timestamp_str(timestamp_string):
     return str(datetime.strptime(timestamp_string, "%m/%d/%Y %H:%M:%S").date())
 
+
 # return the last 12 rows, not including last one
 # used after aggregation and exclude current month, which is not complete
 def df_previous_12_months(df):
@@ -37,6 +38,7 @@ def get_last_year():
     t = datetime.now()
     return pd.Timestamp(datetime(t.year - 1, t.month, 1, 0, 0, 0, 0))
 
+
 # return the current year in string format:
 # '2020'
 def get_current_year_str():
@@ -55,10 +57,13 @@ def filter_last_12_months(df, field, drop_datetime=False):
     return df3
 
 
-# return the start datetime of this year
-# if it is Jun 19 2020 now, it returns Jan 1 2020 midnight
-# Timestamp('2020-01-01 00:00:00')
 def get_beginning_of_this_year():
+    """
+    return the start datetime of this year
+    if it is Jun 19 2020 now, it returns Jan 1 2020 midnight
+    Timestamp('2020-01-01 00:00:00')
+    :return: pandas Timestamp
+    """
     t = datetime.now()
     return pd.Timestamp(datetime(t.year, 1, 1, 0, 0, 0, 0))
 
@@ -73,3 +78,57 @@ def get_records_YTD(df, field="Timestamp", drop_datetime=False):
         del df3['datetime']
 
     return df3
+
+
+def get_counts(df, column):
+    """
+    get the total for a column and return a cleaned up datafram
+    :param df: input datafram
+    :param column: columnt to calculate the counts of
+    :return: new dataframe
+    """
+    df2 = pd.DataFrame({'count': df[column].value_counts()}).reset_index()
+    df2.rename(columns={'index': column}, inplace='True')
+    return df2
+
+
+def create_other_category(df, cut_off=0.05):
+    """
+    Creates an 'Other" category with the drop off value
+    Functions is used in combinations with create percentage and counts.
+    So we have first column, count and fraction column. (else sum will not work)
+
+    :param df: input dataframe
+    :param cut_off: cut-off value
+    :return:
+    """
+    x = {}
+    for idx, c in enumerate(df.columns):
+        if idx == 0:
+            x[c] = "Other"
+        else:
+            x[c] = df[df.fraction < cut_off][c].sum()
+    new_df = pd.DataFrame(x, index=[0])
+    df = df[df.fraction >= cut_off]
+    df = df.append(new_df)
+
+    return df
+
+
+def create_percentage(df, column, cut_off=0.05):
+    """
+    Creates a percentage column.
+    :param df: input dataframe
+    :param column: column to calculate the percentage of the total of
+    :param cutoff: sum percentage lower than cutoff to one group
+    :return: dataframe with fraction and percentage
+    """
+    total = df[column].sum()
+    df["fraction"] = round(df[column] / total, ndigits=2)
+    if cut_off > 0.:
+        df = create_other_category(df, cut_off)
+    df["percentage"] = df["fraction"].transform(lambda x: f"{round(x * 100)}%")
+    return df
+
+
+
