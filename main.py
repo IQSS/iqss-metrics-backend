@@ -62,6 +62,7 @@ def main():
     aggregate_main_metrics(output_dir)
     aggregate_cga(output_dir)
     aggregate_bo(output_dir, "business_operations")
+    aggregate_css(output_dir)
 
     # Add and commit changes to the dashboard on Github -------------------------
     push_to_github(config)
