@@ -4,6 +4,7 @@ from business_operations import *
 from cga import *
 from css import *
 from rc import *
+from dss import aggregate_dss
 from dataverse import *
 from psr import *
 import json
@@ -63,6 +64,7 @@ def main():
     aggregate_cga(output_dir)
     aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
+    aggregate_dss(output_dir)
 
     # Add and commit changes to the dashboard on Github -------------------------
     push_to_github(config)

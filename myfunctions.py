@@ -131,4 +131,68 @@ def create_percentage(df, column, cut_off=0.05):
     return df
 
 
+# --------------- for CSS
 
+def last_FY(df, column):
+    """
+
+    :param df: dataframe input
+    :param column: column name with the FYxy values
+    :return: highest FY value in the column
+    """
+    df_year = df.apply(lambda row: row[column][2:4], axis=1)
+    last_FY = f"FY{df_year.unique().max()}"
+    return last_FY
+
+
+# NOTE This function does the same thing as create_percentage()...
+def combine_lower_n_percent(df, column, threshold=5, decimals=0):
+    df = df.sort_values(column, ascending=False)
+    total = df[column].sum()
+    df["percentage"] = 100.0 * df[column] / total
+
+    other = df[df["percentage"] < threshold][column].sum()
+
+    # keep
+    df = df[df["percentage"] >= threshold]
+    other = pd.DataFrame({column: other, "percentage": 100 * other / total}, index=["Other"])
+    df = df.append(other)
+    if decimals > 0:
+        df["percentage"] = df.apply(lambda row: round(row["percentage"], decimals), axis=1)
+    elif decimals == 0:
+        df["percentage"] = df.apply(lambda row: round(row["percentage"]), axis=1)
+
+    return df
+
+
+# ----------------
+def combine_lower_n_percent_complete(df, column, other_cols=[], sum_columns=[], threshold=5, decimals=0):
+    df = df.sort_values(column, ascending=False)
+    total = df[column].sum()
+    df["percentage"] = 100.0 * df[column] / total
+
+    other = df[df["percentage"] < threshold][column].sum()
+
+    x = {"percentage": 100 * other / total, column: df[df["percentage"] < threshold][column].sum()}
+
+    for c in sum_columns:  # calc the sums
+        x[c] = df[df["percentage"] < threshold][c].sum()
+
+    # keep
+    df = df[df["percentage"] >= threshold]
+    if not other_cols:  # use index
+        other = pd.DataFrame({column: other, "percentage": 100 * other / total}, index=["Other"])
+    else:  # use columns
+        for c in other_cols:
+            x[c] = ["Other"]
+        other = pd.DataFrame(x)
+
+    df = df.append(other)
+    if decimals > 0:
+        df["percentage"] = df.apply(lambda row: round(row["percentage"], decimals), axis=1)
+    elif decimals == 0:
+        df["percentage"] = df.apply(lambda row: round(row["percentage"]), axis=1)
+
+    df = df.reset_index()
+    df = df.drop(["index"], axis=1)
+    return df
