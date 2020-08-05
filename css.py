@@ -74,7 +74,6 @@ def css_quarterly_tickets(path):
     last_FY = df["year_number"].unique().max()
     last_5yr = last_FY - 4
     df_aggr = df.query(f"year_number >= {last_5yr}")
-    print(df_aggr)
     df_aggr.to_csv(path + "css_quarterly_tickets_last_5yr.tsv", sep='\t', index=True, index_label="id")
 
     # # tickets last quarter
@@ -104,12 +103,25 @@ def css_device_type(path):
     df = pd.read_csv(path + 'cssDeviceType.tsv', delimiter="\t")
 
     # tickets last available year
+    # get last year
     df["year_number"] = df.apply(lambda row: int(row["FY"][2:4]), axis=1)
     last_FY = df["year_number"].unique().max()
+
+    # filter last year
     df_aggr = df[df["year_number"] == last_FY]
 
-    df_aggr = df_aggr.reset_index(drop=True)
-    df_aggr.to_csv(path + "css_device_type_last_year.tsv", sep='\t', index=True, index_label="id")
+    # Transpose data frame
+    df_aggr = df_aggr.reset_index(drop=True)  # make sure column will be named '0'
+    df_aggr = df_aggr.drop(["FY", "year_number"], axis=1)
+    df_aggr = df_aggr.T
+
+    # rename column, sort and add Year to column
+    df_aggr = df_aggr.rename(columns={0: "count"})
+    df_aggr = df_aggr.sort_values("count", ascending=False)
+    df_aggr["year"] = f"FY{last_FY}"
+
+    # save dataframe
+    df_aggr.to_csv(path + "css_device_type_last_year.tsv", sep='\t', index=True, index_label="device")
 
     return df_aggr
 
