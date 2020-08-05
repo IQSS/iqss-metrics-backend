@@ -1,6 +1,7 @@
 from google_sheets import *
 import pandas as pd
 import numpy as np
+from myfunctions import *
 
 sheets = [
     ["cssQuarterlyTickets", "13SiPRDxzf4xEj7_6VrJ8CtvWvnL42gVSO4VAsNHNgqY", "Q1234 Tickets Resolved!A:F", []],
@@ -32,36 +33,6 @@ def aggregate_css(path):
     css_device_type(path)
     css_patron_community(path)
     css_mac_pc(path)
-
-
-# ---------------
-
-def last_FY(df, column):
-    df_year = df.apply(lambda row: row[column][2:4], axis=1)
-    last_FY = f"FY{df_year.unique().max()}"
-    return last_FY
-
-
-def combine_lower_n_percent(df, column, treshold=5, decimals=0):
-    df = df.sort_values(column, ascending=False)
-    total = df[column].sum()
-    df["percentage"] = 100.0 * df["count"] / total
-
-    other = df[df["percentage"] < treshold][column].sum()
-
-    # keep
-    df = df[df["percentage"] >= treshold]
-    other = pd.DataFrame({"count": other, "percentage": 100 * other / total}, index=["Other"])
-    df = df.append(other)
-    if decimals > 0:
-        df["percentage"] = df.apply(lambda row: np.round(row["percentage"], decimals), axis=1)
-    elif decimals == 0:
-        df["percentage"] = df.apply(lambda row: round(row["percentage"]), axis=1)
-
-    return df
-
-
-# ----------------
 
 
 def css_quarterly_tickets(path):
@@ -145,7 +116,7 @@ def css_patron_community(path):
     df_aggr2 = df_aggr2[df_aggr2.index != "Year"]
 
     # other category: < 3 %
-    df_aggr2 = combine_lower_n_percent(df_aggr2, "count", treshold=3, decimals=0)
+    df_aggr2 = combine_lower_n_percent(df_aggr2, "count", threshold=3, decimals=0)
 
     # clean up the index so we can keep the order in the index
     df_aggr2 = df_aggr2.reset_index()
