@@ -5,8 +5,10 @@ import pandas as pd
 
 
 def aggregate_dss(path):
-    aggr_dss_community(path)
-    aggr_dss_request_type(path)
+    # aggr_dss_community(path)
+    # aggr_dss_request_type(path)
+    return
+
 
 def aggr_dss_request_type(path):
     df = pd.read_csv(f"{path}dss/request_types.csv")
