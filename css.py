@@ -27,12 +27,16 @@ def harvest_css(path):
     return
 
 
+
+
+
 def aggregate_css(path):
     css_quarterly_tickets(path)
     css_monthly_tickets(path)
     css_device_type(path)
     css_patron_community(path)
     css_mac_pc(path)
+    aggregate_lab(path)
 
 
 def css_quarterly_tickets(path):
@@ -167,3 +171,92 @@ def css_mac_pc(path):
   df_mac.set_index("Year", inplace=True)
   df_total["Mac"] = df_mac["Mac"]
   df_total.to_csv(path + "css_pc_mac.tsv", sep='\t', index=True, index_label="year")
+
+
+def aggregate_lab(path):
+    path = path + 'lab/'
+    print(path)
+
+    # read data
+    df = pd.read_csv(f"{path}lab_report_master_data.csv", encoding="latin_1", parse_dates=True)
+
+    # convert timestamp
+    df["timestamp"] = df["Transaction Created"].apply(lambda d: pd.Timestamp(d))
+
+    # drop columns
+    df = df.drop(["Transaction Created", "Transaction Time Worked", "Ticket ID", "Queue Name", "Ticket Requestor",
+                  "Ticket Owner", "Ticket Subject", "Ticket Parents IDs", "Ticket Children IDs", "Audio & Video",
+                  "Power Adapters", "Input Devices", "Cables & Adapters", "Laptops", "Misc"], axis=1)
+
+    # create columns
+    df["year"] = df["timestamp"].apply(lambda d: d.year)
+    df["month"] = df["timestamp"].apply(lambda d: d.month)
+    df["month_name"] = df["timestamp"].apply(lambda d: d.month_name())
+    df["quarter"] = df["timestamp"].apply(lambda d: f"Q{d.quarter}")
+    df["year_quarter"] = df["timestamp"].apply(lambda d: f"{d.year}-Q{d.quarter}")
+    df["year_month"] = df["timestamp"].apply(lambda d: f"{d.year}-{d.month:02}")
+    df["year_month_name"] = df["timestamp"].apply(lambda d: f"{d.month_name()} {d.year}")
+
+    # create period value
+    end = list(df["year_month_name"].value_counts()[-1:].index)[0]
+    begin = list(df["year_month_name"].value_counts()[0:1].index)[0]
+    period = f"{begin} - {end}"
+
+    requests_per_month_year = df_value_counts(df, "year_month")
+    requests_per_month_year = requests_per_month_year.sort_values("year_month", ascending=True)
+    requests_per_month_year.to_csv(f"{path}lab_request_per_month.tsv", sep='\t', index=True, index_label="id")
+
+    requests_per_quarter = df_value_counts(df, "year_quarter")
+    requests_per_quarter.to_csv(f"{path}lab_request_per_quarter.tsv", sep='\t', index=True, index_label="id")
+
+    # total request by school"
+    df_schools = df_value_counts(df, "School", limit=1)
+    df_schools["period"] = period
+    df_schools.to_csv(f"{path}lab_request_school.tsv", sep='\t', index=True, index_label="id")
+
+    # requests by departement
+    df_dc = df_value_counts(df, "Department/Concentration", limit=1)
+
+    # there is already on 'other' category, so we need to combine thess.
+    sum_other = df_dc[df_dc["Department/Concentration"] == "Other"].sum(axis=0)
+    count = sum_other["count"]
+    percentage = sum_other["percentage"]
+
+    df_dc = df_dc[df_dc["Department/Concentration"] != "Other"]
+    df_dc = df_dc.append(pd.DataFrame({"Department/Concentration": "Other",  "count": count,  "percentage": percentage},index=[100]))
+    print(df_dc)
+
+
+    df_dc["period"] = period
+    df_dc.to_csv(f"{path}lab_request_department.tsv", sep='\t', index=True, index_label="id")
+
+    # Request by Status
+    df_status = df_value_counts(df, "Status", limit=2)
+    df_status["period"] = period
+    df_status.to_csv(f"{path}lab_request_status.tsv", sep='\t', index=True, index_label="id")
+
+    # Request Sponsored?
+    df_sponsored = df_value_counts(df, "Sponsored?")
+    df_sponsored["period"] = period
+    df_sponsored.to_csv(f"{path}lab_request_sponsored.tsv", sep='\t', index=True, index_label="id")
+
+    # what is the reason for access
+
+    # the columns can contain multiple values separated by ;
+    df_reasons = df["Reason for Lab Access:"].dropna()
+    reasons = []
+    for i in df_reasons:
+        record = i.split(';')
+        for j in record:
+            reasons.append(j)
+
+    df_reasons = pd.DataFrame(reasons)
+    df_reasons.columns = ["Reason for Lab Access"]
+    df_reasons = df_value_counts(df_reasons, "Reason for Lab Access")
+    df_reasons["period"] = period
+    df_reasons.to_csv(f"{path}lab_request_reason.tsv", sep='\t', index=True, index_label="id")
+
+    # How did you hear about us?
+    df_discovery = df_value_counts(df, "Lab Discovery")
+    df_discovery["period"] = period
+    df_discovery.to_csv(f"{path}lab_request_discovery.tsv", sep='\t', index=True, index_label="id")

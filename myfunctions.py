@@ -196,3 +196,15 @@ def combine_lower_n_percent_complete(df, column, other_cols=[], sum_columns=[], 
     df = df.reset_index()
     df = df.drop(["index"], axis=1)
     return df
+
+
+# ---- Lab
+
+def df_value_counts(df, column, limit=0):
+    df = df[column].value_counts().to_frame().reset_index()
+    df.columns = [column, 'count']
+
+    if limit > 0:
+        df = combine_lower_n_percent_complete(df, "count", other_cols=[column], sum_columns=[], threshold=limit,
+                                              decimals=1)
+    return df
