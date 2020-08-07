@@ -175,7 +175,6 @@ def css_mac_pc(path):
 
 def aggregate_lab(path):
     path = path + 'lab/'
-    print(path)
 
     # read data
     df = pd.read_csv(f"{path}lab_report_master_data.csv", encoding="latin_1", parse_dates=True)
@@ -224,8 +223,6 @@ def aggregate_lab(path):
 
     df_dc = df_dc[df_dc["Department/Concentration"] != "Other"]
     df_dc = df_dc.append(pd.DataFrame({"Department/Concentration": "Other",  "count": count,  "percentage": percentage},index=[100]))
-    print(df_dc)
-
 
     df_dc["period"] = period
     df_dc.to_csv(f"{path}lab_request_department.tsv", sep='\t', index=True, index_label="id")
