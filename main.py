@@ -41,7 +41,7 @@ def main():
     # Harvest Data -----------------------------------
 
     # make sure we start with a clean slate
-    time.sleep(SLEEP_TIME)
+    # time.sleep(SLEEP_TIME)
 
     harvest_main_metrics(output_dir)
     harvest_business_operations(output_dir)
@@ -56,13 +56,16 @@ def main():
 
     # wait for the next batch
     time.sleep(SLEEP_TIME)
+
     harvest_psr(output_dir)
+    harvest_harvard_dataverse(output_dir)
 
     # aggregate and transform the data -------------------
     aggregate_main_metrics(output_dir)
     aggregate_cga(output_dir)
     aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
+    aggregate_harvard_dataverse(output_dir)
 
     # Add and commit changes to the dashboard on Github -------------------------
     push_to_github(config)

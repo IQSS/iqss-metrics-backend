@@ -4,6 +4,7 @@ import requests
 from datetime import date
 import csv
 from metrics import *
+from myfunctions import combine_lower_n_percent_complete
 
 
 # dataverse tv -----------------
@@ -72,6 +73,14 @@ def harvest_dataverse_installations(path):
                  url="dataverse.html")
 
 
+def harvest_harvard_dataverse(path):
+
+    sheet_id = "1p5itvbuZZ-sSzNSNSNk__Z_Q-PdYMesS-ocefVgk8-E"
+    harvest_sheet_tsv(path, 'hdv-ticket-type', sheet_id, "Ticket Type!A:C", [])
+    harvest_sheet_tsv(path, 'hdv-feature', sheet_id, "Feature!A:C", [])
+    harvest_sheet_tsv(path, 'hdv-total-tickets', sheet_id, "Total Tickets!A:B", [])
+
+
 def aggregate_dataverse(path):
     logging.info('Aggregate Dataverse info')
 
@@ -80,3 +89,37 @@ def aggregate_dataverse(path):
     write_metric(path=path, group="Dataverse", metric="Dataverse TV", title="Dataverse TV",
                  value=nrow, unit="Number of Videos", icon="fa fa-tv", color="red",
                  url="https://iqss.github.io/dataverse-tv/")
+
+def aggregate_harvard_dataverse(path):
+    logging.info('Aggregate Harvest Dataverse')
+
+    # Total tickets
+    df = pd.read_csv(path + 'hdv-total-tickets.tsv', delimiter="\t")
+    df = df.sort_values(axis=0,  by="Period", ascending=False)
+    period = df["Period"][0]
+    count = df["Count"][0]
+    title = f"Total number of Tickets {period}"
+    write_metric(path=path, group="Harvard Dataverse", metric="Harvard Dataverse Tickets", title="Harvard Dataverse ",
+                 value=count, unit=title, icon="fa fa-ticket-alt", color="red",
+                 url="")
+
+     # Features
+    df_features = pd.read_csv(path + 'hdv-feature.tsv', delimiter="\t")
+
+    period = df_features["Period"][0]
+
+    other = df_features[df_features["Feature"] == "Other"]
+    not_other  = df_features[ df_features["Feature"] != "Other"].sort_values(by="Count", ascending=False)
+    df_features = not_other.append(other).reset_index(drop=True)
+    df_features["Period"] = period
+
+    df_features.to_csv(f"{path}hdv-feature_aggr.tsv", sep='\t', index=True, index_label="id")
+
+    # ticket types
+    df_ticket_type = pd.read_csv(path + 'hdv-ticket-type.tsv', delimiter='\t')
+
+    period = df_ticket_type["Period"][0]
+    df_ticket_type = df_ticket_type.sort_values(by="Count", ascending=False).reset_index(drop=True)
+    df_ticket_type["Period"] = period
+
+    df_ticket_type.to_csv(f"{path}hdv-ticket-type_aggr.tsv", sep='\t', index=True, index_label="id")
