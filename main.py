@@ -10,6 +10,7 @@ import json
 import os
 from metrics import *
 import time
+from rt_scripts import rt_harvard_dataverse
 
 # Google sheets has limits on the number of calls per 100 seconds
 SLEEP_TIME = 100
@@ -27,7 +28,7 @@ def main():
     # configure logger
     logging.basicConfig(
         filename="app.log",
-        level=logging.DEBUG,
+        level=logging.INFO,
         filemode='w',
         format='%(asctime)s - %(levelname)s - %(message)s',
         datefmt='%Y-%m-%d %H:%M:%S')
@@ -42,21 +43,18 @@ def main():
 
     # make sure we start with a clean slate
     # time.sleep(SLEEP_TIME)
-
     harvest_main_metrics(output_dir)
     harvest_business_operations(output_dir)
     harvest_cga(output_dir)
-
-    # wait for the next batch
+    #
+    # # wait for the next batch
     time.sleep(SLEEP_TIME)
-
     harvest_dataverse(output_dir)
     harvest_css(output_dir)
     harvest_rc(output_dir)
 
-    # wait for the next batch
-    time.sleep(SLEEP_TIME)
 
+    rt_harvard_dataverse(output_dir)  #
     harvest_psr(output_dir)
     harvest_harvard_dataverse(output_dir)
 
@@ -66,12 +64,11 @@ def main():
     aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
     aggregate_harvard_dataverse(output_dir)
-
-    # Add and commit changes to the dashboard on Github -------------------------
+    #
+    # # Add and commit changes to the dashboard on Github -------------------------
     push_to_github(config)
-
+    #
     logging.info("Finished ETL cycle")
-
 
 if __name__ == '__main__':
     main()

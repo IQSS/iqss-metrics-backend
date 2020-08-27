@@ -3,14 +3,23 @@ from google_sheets import harvest_sheet_tsv
 import requests
 from datetime import date
 import csv
+from myfunctions import get_counts
 from metrics import *
-from myfunctions import combine_lower_n_percent_complete
 
 
 # dataverse tv -----------------
 def harvest_dataverse(path):
+    # pre-aggregated data on servers of Odum institute
+    # TODO: This is a Temporary solution
+    download_files_from_odum(path)
+
+    # dataverse tv
     harvest_sheet_tsv(path, "dataverse_tv", "1uVk_57Ek_A49sLZ5OKdI6QASKloWNzykni3kcYNzpxA", "A:E", [1, 2, 3, 4, 5])
+
+    # dataverse installations
     harvest_dataverse_installations(path)
+
+    # dataverse aggregations
     aggregate_dataverse(path)
 
     # data verse github -----------------
@@ -35,18 +44,34 @@ def harvest_dataverse(path):
         writer = csv.writer(tsv_file, delimiter='\t')
 
         posts = [
-            [now, 'Dataverse', 'GitHub Watchers', 'Dataverse on GitHub', data["watchers_count"], 'Watchers', '', '', ''],
-            # [now, 'Dataverse', 'GitHub Open Issues', 'Dataverse on GitHub', data["open_issues_count"], 'Open Issues', '', '',
-            #  ''],
-            [now, 'Dataverse', 'GitHub Subscribers', 'Dataverse on GitHub', data["subscribers_count"], 'Subscribers', '', '',
+            [now, 'Dataverse', 'GitHub Watchers', 'Dataverse on GitHub', data["watchers_count"], 'Watchers', '', '',
+             ''],
+            [now, 'Dataverse', 'GitHub Subscribers', 'Dataverse on GitHub', data["subscribers_count"], 'Subscribers',
+             '', '',
              '']]
 
         for row in range(0, len(posts)):
             writer.writerow(posts[row])
-            write_metric(path, group=posts[row][1], metric=posts[row][2], title=posts[row][3], value = posts[row][4],
+            write_metric(path, group=posts[row][1], metric=posts[row][2], title=posts[row][3], value=posts[row][4],
                          unit=posts[row][5], icon="fab fa-github", color="orange", url="dataverse.html")
-    # TODO: aggregate into main_metrics?
 
+
+def download_files_from_odum(path):
+    logging.info('Downloading files from ODUM servers')
+    tables = ["dataverses-toMonth.tsv",
+              "dataverses-byCategory.tsv",
+              "datasets-toMonth.tsv",
+              "datasets-bySubject.tsv",
+              "files-toMonth.tsv",
+              "downloads-toMonth.tsv"]
+
+    odum_url = "https://dataversemetrics.odum.unc.edu/dataverse-metrics/"
+
+    for t in tables:
+        tsv = requests.get(odum_url + t)
+        f = open(path + t, "w")
+        f.write(tsv.text)
+        f.close()
 
 
 def harvest_dataverse_installations(path):
@@ -56,7 +81,7 @@ def harvest_dataverse_installations(path):
         "https://iqss.github.io/dataverse-installations/data/data.json")
 
     df2 = df['installations']
-    # df_countries = pd.DataFrame()
+
     countries = []
     for i in range(0, len(df2)):
         if df2[i]["country"] != "NA":
@@ -73,14 +98,6 @@ def harvest_dataverse_installations(path):
                  url="dataverse.html")
 
 
-def harvest_harvard_dataverse(path):
-
-    sheet_id = "1p5itvbuZZ-sSzNSNSNk__Z_Q-PdYMesS-ocefVgk8-E"
-    harvest_sheet_tsv(path, 'hdv-ticket-type', sheet_id, "Ticket Type!A:C", [])
-    harvest_sheet_tsv(path, 'hdv-feature', sheet_id, "Feature!A:C", [])
-    harvest_sheet_tsv(path, 'hdv-total-tickets', sheet_id, "Total Tickets!A:B", [])
-
-
 def aggregate_dataverse(path):
     logging.info('Aggregate Dataverse info')
 
@@ -90,12 +107,21 @@ def aggregate_dataverse(path):
                  value=nrow, unit="Number of Videos", icon="fa fa-tv", color="red",
                  url="https://iqss.github.io/dataverse-tv/")
 
+
+# Harvard Dataverse ---------------------
+def harvest_harvard_dataverse(path):
+    # using the pre-processed Google Sheet
+
+    sheet_id = "1p5itvbuZZ-sSzNSNSNk__Z_Q-PdYMesS-ocefVgk8-E"
+    harvest_sheet_tsv(path, 'hdv-total-tickets', sheet_id, "Total Tickets!A:B", [])
+
+
 def aggregate_harvard_dataverse(path):
     logging.info('Aggregate Harvest Dataverse')
 
-    # Total tickets
+    # Total tickets (still from google sheets) ---------------
     df = pd.read_csv(path + 'hdv-total-tickets.tsv', delimiter="\t")
-    df = df.sort_values(axis=0,  by="Period", ascending=False)
+    df = df.sort_values(axis=0, by="Period", ascending=False)
     period = df["Period"][0]
     count = df["Count"][0]
     title = f"Total number of Tickets {period}"
@@ -103,23 +129,21 @@ def aggregate_harvard_dataverse(path):
                  value=count, unit=title, icon="fa fa-ticket-alt", color="red",
                  url="")
 
-     # Features
-    df_features = pd.read_csv(path + 'hdv-feature.tsv', delimiter="\t")
 
-    period = df_features["Period"][0]
+    df_dv_support_tickets = pd.read_csv(path + 'rt_dataverse_support.tsv', delimiter="\t")
+    period = df_dv_support_tickets["period"][0]
 
-    other = df_features[df_features["Feature"] == "Other"]
-    not_other  = df_features[ df_features["Feature"] != "Other"].sort_values(by="Count", ascending=False)
+    # Features -----------------
+    df_features = get_counts(df_dv_support_tickets[df_dv_support_tickets["custom_field"] == "Features"], 'value')
+
+    other = df_features[df_features["value"] == "Other"]
+    not_other = df_features[df_features["value"] != "Other"].sort_values(by="count", ascending=False)
     df_features = not_other.append(other).reset_index(drop=True)
-    df_features["Period"] = period
+    df_features["period"] = period
 
     df_features.to_csv(f"{path}hdv-feature_aggr.tsv", sep='\t', index=True, index_label="id")
 
-    # ticket types
-    df_ticket_type = pd.read_csv(path + 'hdv-ticket-type.tsv', delimiter='\t')
-
-    period = df_ticket_type["Period"][0]
-    df_ticket_type = df_ticket_type.sort_values(by="Count", ascending=False).reset_index(drop=True)
-    df_ticket_type["Period"] = period
-
+    # ticket types -----------------
+    df_ticket_type = get_counts(df_dv_support_tickets[df_dv_support_tickets["custom_field"] == "Ticket Type"], 'value') # ["value"].value_counts()
+    df_ticket_type["period"] = period
     df_ticket_type.to_csv(f"{path}hdv-ticket-type_aggr.tsv", sep='\t', index=True, index_label="id")
