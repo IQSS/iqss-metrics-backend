@@ -19,7 +19,8 @@ sheets = [
 
 
 def harvest_cga(path):
-    """Harvest a range of google spreadsheet of CGA
+    """
+    Harvest a range of google spreadsheet of CGA
     """
 
     logging.info("Harvesting CGA Spreadsheets")
@@ -31,6 +32,7 @@ def harvest_cga(path):
         harvest_sheet_tsv(path, collection, sheet_id, range_name, columns)
 
     return
+
 
 def aggregate_cga(path):
     cga_contact_time(path)
@@ -86,10 +88,10 @@ def cga_lic_req_top10(path):
 def gis_institute(path):
     # Applications GIS Institute (G1) ---------------------------
     df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
-    applications_YTD = len(get_records_YTD(df, drop_datetime=True))
+    applications_ytd = len(get_records_YTD(df, drop_datetime=True))
     write_metric(path=path, group="CGA", metric="GIS Institute Applications",
                  title="GIS Institute",
-                 value=applications_YTD, unit="Number of applications " + get_current_year_str() + " YTD",
+                 value=applications_ytd, unit="Number of applications " + get_current_year_str() + " YTD",
                  icon="fa fa-university", color="blue",
                  url="")
 
@@ -133,8 +135,6 @@ def cga_contact_time(path):
     df_previous_12_months(df_aggr).to_csv(path + 'cga_contact.tsv', sep="\t", index=True, index_label="date")
 
 
-
-
 def cga_contact_status(path):
     # CGA Contact: virtual helpdesk req. by status/appointment (B)
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
@@ -144,4 +144,3 @@ def cga_contact_status(path):
     df_aggr2 = df_aggr2[df_aggr2["Your Harvard status/appointment"] != "Non-Harvard"]
     df_aggr2 = create_percentage(df_aggr2, 'count')
     df_aggr2.to_csv(path + 'cga_contact_status.tsv', sep="\t", index=True, index_label="id")
-

@@ -45,7 +45,7 @@ def get_current_year_str():
     return str(datetime.now().year)
 
 
-# fiters the records of the data frame of the last 12 months.
+# filters the records of the data frame of the last 12 months.
 def filter_last_12_months(df, field, drop_datetime=False):
     df2 = df.copy()
     df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))
@@ -82,13 +82,13 @@ def get_records_YTD(df, field="Timestamp", drop_datetime=False):
 
 def get_counts(df, column):
     """
-    get the total for a column and return a cleaned up datafram
-    :param df: input datafram
-    :param column: columnt to calculate the counts of
+    get the total for a column and return a cleaned up dataframe
+    :param df: input dataframe
+    :param column: column to calculate the counts of
     :return: new dataframe
     """
     df2 = pd.DataFrame({'count': df[column].value_counts()}).reset_index()
-    df2.rename(columns={'index': column}, inplace='True')
+    df2.rename(columns={'index': column}, inplace=True)
     return df2
 
 
@@ -120,7 +120,7 @@ def create_percentage(df, column, cut_off=0.05):
     Creates a percentage column.
     :param df: input dataframe
     :param column: column to calculate the percentage of the total of
-    :param cutoff: sum percentage lower than cutoff to one group
+    :param cut_off: sum percentage lower than cutoff to one group
     :return: dataframe with fraction and percentage
     """
     total = df[column].sum()
@@ -141,8 +141,8 @@ def last_FY(df, column):
     :return: highest FY value in the column
     """
     df_year = df.apply(lambda row: row[column][2:4], axis=1)
-    last_FY = f"FY{df_year.unique().max()}"
-    return last_FY
+    last_fy = f"FY{df_year.unique().max()}"
+    return last_fy
 
 
 # NOTE This function does the same thing as create_percentage()...
