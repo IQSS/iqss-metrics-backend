@@ -5,7 +5,7 @@ from datetime import date
 import csv
 from myfunctions import get_counts
 from metrics import *
-
+from rt_scripts import rt_harvard_dataverse
 
 # dataverse tv -----------------
 def harvest_dataverse(path):
@@ -109,29 +109,22 @@ def aggregate_dataverse(path):
 
 
 # Harvard Dataverse ---------------------
-def harvest_harvard_dataverse(path):
-    # using the pre-processed Google Sheet
-
-    sheet_id = "1p5itvbuZZ-sSzNSNSNk__Z_Q-PdYMesS-ocefVgk8-E"
-    harvest_sheet_tsv(path, 'hdv-total-tickets', sheet_id, "Total Tickets!A:B", [])
+def harvest_harvard_dataverse(path, config):
+    rt_harvard_dataverse(path, config)
 
 
 def aggregate_harvard_dataverse(path):
     logging.info('Aggregate Harvest Dataverse')
 
-    # Total tickets (still from google sheets) ---------------
-    df = pd.read_csv(path + 'hdv-total-tickets.tsv', delimiter="\t")
-    df = df.sort_values(axis=0, by="Period", ascending=False)
-    period = df["Period"][0]
-    count = df["Count"][0]
-    title = f"Total number of Tickets {period}"
-    write_metric(path=path, group="Harvard Dataverse", metric="Harvard Dataverse Tickets", title="Harvard Dataverse ",
-                 value=count, unit=title, icon="fa fa-ticket-alt", color="red",
-                 url="")
-
-
     df_dv_support_tickets = pd.read_csv(path + 'rt_dataverse_support.tsv', delimiter="\t")
     period = df_dv_support_tickets["period"][0]
+
+    # total number of tickets
+    count = len(df_dv_support_tickets["ticket_url"].unique())
+    title = f"Total number of Tickets {period}"
+    write_metric(path=path, group="Dataverse Support", metric="Dataverse  Support Tickets", title="Dataverse Support",
+                 value=count, unit=title, icon="fa fa-ticket-alt", color="red",
+                 url="")
 
     # Features -----------------
     df_features = get_counts(df_dv_support_tickets[df_dv_support_tickets["custom_field"] == "Features"], 'value')
@@ -141,9 +134,10 @@ def aggregate_harvard_dataverse(path):
     df_features = not_other.append(other).reset_index(drop=True)
     df_features["period"] = period
 
-    df_features.to_csv(f"{path}hdv-feature_aggr.tsv", sep='\t', index=True, index_label="id")
+    df_features.to_csv(f"{path}dvs-feature_aggr.tsv", sep='\t', index=True, index_label="id")
 
     # ticket types -----------------
-    df_ticket_type = get_counts(df_dv_support_tickets[df_dv_support_tickets["custom_field"] == "Ticket Type"], 'value') # ["value"].value_counts()
+    df_ticket_type = get_counts(df_dv_support_tickets[df_dv_support_tickets["custom_field"] == "Ticket Type"],
+                                'value')  # ["value"].value_counts()
     df_ticket_type["period"] = period
-    df_ticket_type.to_csv(f"{path}hdv-ticket-type_aggr.tsv", sep='\t', index=True, index_label="id")
+    df_ticket_type.to_csv(f"{path}dvs-ticket-type_aggr.tsv", sep='\t', index=True, index_label="id")

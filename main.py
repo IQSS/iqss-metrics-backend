@@ -9,8 +9,7 @@ from psr import *
 import json
 import os
 from metrics import *
-import time
-from rt_scripts import rt_harvard_dataverse
+
 
 # Google sheets has limits on the number of calls per 100 seconds
 SLEEP_TIME = 100
@@ -48,15 +47,13 @@ def main():
     harvest_cga(output_dir)
     #
     # # wait for the next batch
-    time.sleep(SLEEP_TIME)
+    # time.sleep(SLEEP_TIME)
+    harvest_harvard_dataverse(output_dir, config)
     harvest_dataverse(output_dir)
     harvest_css(output_dir)
     harvest_rc(output_dir)
-
-
-    rt_harvard_dataverse(output_dir)  #
     harvest_psr(output_dir)
-    harvest_harvard_dataverse(output_dir)
+
 
     # aggregate and transform the data -------------------
     aggregate_main_metrics(output_dir)

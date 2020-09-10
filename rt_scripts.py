@@ -8,10 +8,10 @@ import datetime
 import logging
 
 
-def rt_harvard_dataverse(path):
-    # TODO: Remove credentials
-    user_login = 'erb124'
-    user_pass = '47*n28g#*ftazykb'
+def rt_harvard_dataverse(path, config):
+
+    user_login = config['rt_user']
+    user_pass = config['rt_password']
 
     # Enter the timeframe for the ticket search, e.g. to get tickets created in
     current_month = datetime.datetime.now().month
