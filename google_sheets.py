@@ -10,6 +10,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 import datetime
 
+
 def get_current_UTC_date():
     t = datetime.datetime.utcnow()
     return datetime.datetime(t.year, t.month, t.day, 0, 0, 0, 0)
@@ -22,12 +23,27 @@ def get_current_date():
 def get_current_month():
     return date.today().strftime('%Y-%m')
 
+
 def get_last_12_months_UTC():
     t = datetime.datetime.utcnow()
     datetime.datetime(t.year - 1, t.month, 1, 0, 0, 0, 0)
 
+
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+
+
+def harvest_sheet_tsv_http(path, name, url, range_name, columns):
+    """
+    Generic function to read google spreadsheet
+    :param path: path to write to
+    :param name: filename
+    :param url: Google Sheet URL, treated as secret.
+    :param range_name: range to import
+    :param columns: column number in array to import or use []
+    :return: <nothing>
+    """
+    return
 
 
 def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
@@ -79,8 +95,8 @@ def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
             for row in values:
                 row_to_write = []
 
-                if not columns: # import all:
-                    for c in range(0,len(row)):
+                if not columns:  # import all:
+                    for c in range(0, len(row)):
                         row_to_write.append(row[c])
                 else:
                     for c in columns:
