@@ -8,7 +8,21 @@ from datetime import date
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+import requests
 import datetime
+
+retry_strategy = Retry(
+    total=5,
+    backoff_factor=2,
+    status_forcelist=[429, 500, 502, 503, 504],
+    method_whitelist=["HEAD", "GET", "OPTIONS"]
+)
+adapter = HTTPAdapter(max_retries=retry_strategy)
+http = requests.Session()
+http.mount("https://", adapter)
+http.mount("http://", adapter)
 
 
 def get_current_UTC_date():
@@ -43,7 +57,14 @@ def harvest_sheet_tsv_http(path, name, url, range_name, columns):
     :param columns: column number in array to import or use []
     :return: <nothing>
     """
-    return
+    logging.info('Harvesting google sheet %s' % name)
+    path_and_metric_file = path + name + ".tsv"
+    u = f"{url.rstrip('/')}/export"
+
+    return http.get(u, params={
+        "format": "tsv",
+        "range": range_name,
+    })
 
 
 def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
@@ -86,20 +107,26 @@ def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
     result = sheet.values().get(spreadsheetId=sheet_id,
                                 range=range_name).execute()
     values = result.get('values', [])
+
     if not values:
         logging.warning('No data found.')
-    else:
+        return
 
-        with open(path_and_metric_file, 'w') as tsv_file:
-            writer = csv.writer(tsv_file, delimiter='\t')
-            for row in values:
-                row_to_write = []
+    return write_tsv(path_and_metric_file, values, columns)
 
-                if not columns:  # import all:
-                    for c in range(0, len(row)):
+
+def write_tsv(path, values, columns):
+    with open(path, 'w') as tsv_file:
+        writer = csv.writer(tsv_file, delimiter='\t')
+        for row in values:
+            row_to_write = []
+
+            if not columns:  # import all:
+                for c in range(0, len(row)):
+                    row_to_write.append(row[c])
+            else:
+                for c in columns:
+                    if c < len(row):
                         row_to_write.append(row[c])
-                else:
-                    for c in columns:
-                        if c < len(row):
-                            row_to_write.append(row[c])
-                writer.writerow(row_to_write)
+            writer.writerow(row_to_write)
+    return None
