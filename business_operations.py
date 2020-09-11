@@ -19,6 +19,7 @@ def harvest_business_operations(path):
                       range_name='Sponsored Research!A:I',
                       columns=[])
 
+
 def aggregate_bo(path, tsv):
     df = pd.read_csv(path + tsv + ".tsv", delimiter="\t")
     df1 = df[df["Group"] == "Sponsored Research Administration"].iloc[:, 0:7]

@@ -61,10 +61,15 @@ def harvest_sheet_tsv_http(path, name, url, range_name, columns):
     path_and_metric_file = path + name + ".tsv"
     u = f"{url.rstrip('/')}/export"
 
-    return http.get(u, params={
+    raw_sheet = http.get(u, params={
         "format": "tsv",
         "range": range_name,
-    })
+    }).text.splitlines()
+
+    tsv = csv.reader(raw_sheet, delimiter='\t')
+    values = list(tsv)
+
+    return write_tsv(path_and_metric_file, values, columns)
 
 
 def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
