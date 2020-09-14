@@ -29,6 +29,15 @@ def harvest_dataverse(path):
     resp = requests.get(url=url)
     data = resp.json()
 
+    # Write social_media_all once a day to prevent double records
+    if os.path.exists(path + collection_name + "_all.tsv"):
+        with open(path + collection_name + "_all.tsv", 'r') as tsv_file:
+            reader = csv.reader(tsv_file, delimiter='\t')
+            for r in reader:
+                if r[0] == now:
+                    logging.info('Harvesting Dataverse GitHub already harvested')
+                    return
+
     with open(path + collection_name + "_all.tsv", 'w') as tsv_file:
         writer = csv.writer(tsv_file, delimiter='\t')
 
