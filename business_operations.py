@@ -17,7 +17,8 @@ def harvest_business_operations(path):
     harvest_sheet_tsv_http(path=path,
                            name="business_operations",
                            url=os.getenv("SHEET_URL_BUSINESS_OPERATIONS"),
-                           range_name='Sponsored Research!A:I',
+                           gid=0,
+                           range_name='A:I',
                            columns=[])
 
 

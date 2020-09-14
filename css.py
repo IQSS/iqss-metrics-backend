@@ -6,11 +6,11 @@ from myfunctions import *
 
 css_tickets_url = os.getenv("SHEET_URL_CSS")
 sheets = [
-    ["cssQuarterlyTickets", css_tickets_url, "Q1234 Tickets Resolved!A:F", []],
-    ["cssMonthlyTickets", css_tickets_url, "Monthly Resolved Tickets!A:F", []],
-    ["cssDeviceType", css_tickets_url, "Device Type!A:K", []],
-    ["cssPatronCommunity", css_tickets_url, "Patron Community!A:W", []],
-    ["cssTypeOfRequestPCMac", css_tickets_url, "Type of Request  PC & MAC!A:U", []],
+    ["cssQuarterlyTickets", 0, css_tickets_url, "A:F", []],
+    ["cssMonthlyTickets", 876621858, css_tickets_url, "A:F", []],
+    ["cssDeviceType", 2019277922, css_tickets_url, "A:K", []],
+    ["cssPatronCommunity", 1186877879, css_tickets_url, "A:W", []],
+    ["cssTypeOfRequestPCMac", 2070549986, css_tickets_url, "A:U", []],
 ]
 
 
@@ -21,14 +21,12 @@ def harvest_css(path):
     logging.info("Harvesting CSS Spreadsheets")
     for s in sheets:
         collection = s[0]
-        sheet_url = s[1]
-        range_name = s[2]
-        columns = s[3]
-        harvest_sheet_tsv_http(path, collection, sheet_url, range_name, columns)
+        gid = s[1]
+        sheet_url = s[2]
+        range_name = s[3]
+        columns = s[4]
+        harvest_sheet_tsv_http(path, collection, sheet_url, range_name, columns, gid=gid)
     return
-
-
-
 
 
 def aggregate_css(path):
@@ -44,7 +42,7 @@ def css_quarterly_tickets(path):
     # cssQuarterlyTickets:
     df = pd.read_csv(path + 'cssQuarterlyTickets.tsv', delimiter="\t",
                      dtype={'RCE': 'Int64', 'Dataverse': 'Int64', 'Desktop': 'Int64'})
-    df = df.reindex(columns =["Year", "Quarter", "Year_Quarter", "Desktop", "RCE", "Dataverse"])
+    df = df.reindex(columns=["Year", "Quarter", "Year_Quarter", "Desktop", "RCE", "Dataverse"])
     # tickets last 5 years
     df["year_number"] = df.apply(lambda row: int(row["Year"][2:4]), axis=1)
     last_FY = df["year_number"].unique().max()
@@ -132,46 +130,42 @@ def css_patron_community(path):
 
 
 def css_mac_pc(path):
-  df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
+    df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
 
+    # last FY, Mac and PC
+    last_year = last_FY(df, "Year")
+    df = df[df["Year"] == last_year]
+    df = df.drop("Year", axis=1)
 
-  #last FY, Mac and PC
-  last_year = last_FY(df, "Year")
-  df = df[df["Year"] == last_year]
-  df = df.drop("Year", axis = 1)
+    df = df.set_index("Type")
+    df = df.T
+    df["Sum"] = df.apply(lambda row: row.PC + row.Mac, axis=1)
+    df = df.sort_values("Sum", ascending=False)
+    df["Year"] = last_year
+    df.to_csv(path + "css_pc_mac_last_year.tsv", sep='\t', index=True, index_label="id")
 
-  df = df.set_index("Type")
-  df = df.T
-  df["Sum"] = df.apply(lambda row: row.PC + row.Mac, axis= 1)
-  df = df.sort_values("Sum", ascending = False)
-  df["Year"] = last_year
-  df.to_csv(path + "css_pc_mac_last_year.tsv", sep='\t', index=True, index_label="id")
+    # last FY, Mac and PC, total
+    df_aggr = pd.DataFrame(df[["PC", "Mac"]].sum(axis=0), columns=["count"])
+    df_aggr["year"] = last_year
+    df_aggr.reset_index()
+    df_aggr.to_csv(path + "css_pc_mac_last_year_total.tsv", sep='\t', index=True, index_label="id")
 
+    # totals PC and MAC over the years
+    df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
+    df["sum"] = df.sum(axis=1)
+    df2 = df[["Year", "Type", "sum"]]
 
-  # last FY, Mac and PC, total
-  df_aggr = pd.DataFrame(df[["PC","Mac"]].sum(axis=0), columns=["count"])
-  df_aggr["year"] = last_year
-  df_aggr.reset_index()
-  df_aggr.to_csv(path + "css_pc_mac_last_year_total.tsv", sep='\t', index=True, index_label="id")
+    df_total = df2[df2["Type"] == "PC"][["Year", "sum"]]
+    df_mac = df2[df2["Type"] == "Mac"][["Year", "sum"]]
 
-
-  # totals PC and MAC over the years
-  df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
-  df["sum"] = df.sum(axis=1)
-  df2=df[["Year", "Type", "sum"]]
-
-
-  df_total = df2[df2["Type"] == "PC"][["Year","sum"]]
-  df_mac = df2[df2["Type"] == "Mac"][["Year","sum"]]
-
-  df_total["PC"] = df_total["sum"]
-  df_total = df_total.drop("sum", axis =1 )
-  df_total.set_index("Year", inplace=True)
-  df_mac["Mac"] = df_mac["sum"]
-  df_mac = df_mac.drop("sum", axis =1 )
-  df_mac.set_index("Year", inplace=True)
-  df_total["Mac"] = df_mac["Mac"]
-  df_total.to_csv(path + "css_pc_mac.tsv", sep='\t', index=True, index_label="year")
+    df_total["PC"] = df_total["sum"]
+    df_total = df_total.drop("sum", axis=1)
+    df_total.set_index("Year", inplace=True)
+    df_mac["Mac"] = df_mac["sum"]
+    df_mac = df_mac.drop("sum", axis=1)
+    df_mac.set_index("Year", inplace=True)
+    df_total["Mac"] = df_mac["Mac"]
+    df_total.to_csv(path + "css_pc_mac.tsv", sep='\t', index=True, index_label="year")
 
 
 def aggregate_lab(path):
@@ -223,7 +217,8 @@ def aggregate_lab(path):
     percentage = sum_other["percentage"]
 
     df_dc = df_dc[df_dc["Department/Concentration"] != "Other"]
-    df_dc = df_dc.append(pd.DataFrame({"Department/Concentration": "Other",  "count": count,  "percentage": percentage},index=[100]))
+    df_dc = df_dc.append(
+        pd.DataFrame({"Department/Concentration": "Other", "count": count, "percentage": percentage}, index=[100]))
 
     df_dc["period"] = period
     df_dc.to_csv(f"{path}lab_request_department.tsv", sep='\t', index=True, index_label="id")

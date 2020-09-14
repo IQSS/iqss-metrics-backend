@@ -6,10 +6,10 @@ import rt
 # import time
 import datetime
 import logging
+from pathlib import Path
 
 
 def rt_harvard_dataverse(path, config):
-
     user_login = os.getenv("RT_USER")
     user_pass = os.getenv("RT_PASSWORD")
 
@@ -20,7 +20,7 @@ def rt_harvard_dataverse(path, config):
     if current_month <= 7:  # FY not ended
         start_date = f'{current_year - 2}-07-01'
         end_date = f'{current_year - 1}-06-30'
-        fy = f"FY{current_year -1}"
+        fy = f"FY{current_year - 1}"
     else:
         start_date = f'{current_year - 1}-07-01'
         end_date = f'{current_year}-06-30'
@@ -34,7 +34,7 @@ def rt_harvard_dataverse(path, config):
     tracker.login()
 
     # Save filename
-    csv_file = f'{path}rt_dataverse_support.tsv'
+    csv_file = Path(path, "rt_dataverse_support").with_suffix(".tsv")
 
     # Create CSV with column headers
     with open(csv_file, mode='w') as f1:

@@ -1,10 +1,10 @@
 # PSR
 from __future__ import print_function
+import os
 from metrics import *
-
 sheets = [
-    ["psrAdvisesBySchool", "1VFxX-PxfA4ykw0coyLzbV7oB2Ikt1VsHkN3x6diKwTo", "Number of Advisees by School!A:D", []],
-    ["psrAdvisesByRole", "1VFxX-PxfA4ykw0coyLzbV7oB2Ikt1VsHkN3x6diKwTo", "Cumulative PSR Advisees by Primary Role!A:E", []]
+    ["psrAdvisesBySchool", 0, os.getenv("SHEET_URL_PSR"), "A:D", []],
+    ["psrAdvisesByRole", 1079810459, os.getenv("SHEET_URL_PSR"), "A:E", []]
 ]
 
 
@@ -15,9 +15,10 @@ def harvest_psr(path):
     logging.info("Harvesting PSR Spreadsheets")
     for s in sheets:
         collection = s[0]
-        sheet_id = s[1]
-        range_name = s[2]
-        columns = s[3]
-        harvest_sheet_tsv(path, collection, sheet_id, range_name, columns)
+        gid = s[1]
+        url = s[2]
+        range_name = s[3]
+        columns = s[4]
+        harvest_sheet_tsv_http(path, collection, url, range_name, columns, gid=gid)
 
     return

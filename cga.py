@@ -5,17 +5,17 @@ from myfunctions import *
 import os
 
 sheets = [
-    ["cgaContact", os.getenv("SHEET_URL_CGA_CONTACT"), "Form Responses 1!A:H", [0, 5, 6, 7]],  # OK
-    ["cgaWorkshopEvaluation", os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "Form Responses 1!A:P",
+    ["cgaContact", 0, os.getenv("SHEET_URL_CGA_CONTACT"), "A:H", [0, 5, 6, 7]],  # OK
+    ["cgaWorkshopEvaluation", 0, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:P",
      [0, 1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]],
     # OK
-    ["cgaGISApplication", os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "Form Responses 1!A:N", [0, 1, 5, 6, 7]],
+    ["cgaGISApplication", 0, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:N", [0, 1, 5, 6, 7]],
     # OK
-    ["cgaEventRegistration", os.getenv("SHEET_URL_CGA_EVENT_REGISTRATION"), "Form Responses 1!A:L", [0, 1, 5, 6, 7]],
+    ["cgaEventRegistration", 0, os.getenv("SHEET_URL_CGA_EVENT_REGISTRATION"), "A:L", [0, 1, 5, 6, 7]],
     # OK
-    ["cgaTrainingRegistration", os.getenv("SHEET_URL_CGA_TRAINING_REGISTRATION"), "Form Responses 1!A:M",
+    ["cgaTrainingRegistration", 0, os.getenv("SHEET_URL_CGA_TRAINING_REGISTRATION"), "A:M",
      [0, 1, 2, 6, 7, 8, 11, 12]],
-    ["cgaLicenseRequest", os.getenv("SHEET_URL_CGA_LICENSE_REQUEST"), "Form Responses 1!A:L", [0, 5, 6, 7, 10, 11]]
+    ["cgaLicenseRequest", 0, os.getenv("SHEET_URL_CGA_LICENSE_REQUEST"), "A:L", [0, 5, 6, 7, 10, 11]]
 ]
 
 
@@ -27,10 +27,11 @@ def harvest_cga(path):
     logging.info("Harvesting CGA Spreadsheets")
     for s in sheets:
         collection = s[0]
-        sheet_url = s[1]
-        range_name = s[2]
-        columns = s[3]
-        harvest_sheet_tsv_http(path, collection, sheet_url, range_name, columns)
+        gid = s[1]
+        sheet_url = s[2]
+        range_name = s[3]
+        columns = s[4]
+        harvest_sheet_tsv_http(path, collection, sheet_url, range_name, columns, gid=gid)
 
     return
 

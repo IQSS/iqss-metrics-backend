@@ -46,7 +46,7 @@ def get_last_12_months_UTC():
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 
-def harvest_sheet_tsv_http(path, name, url, range_name, columns):
+def harvest_sheet_tsv_http(path, name, url, range_name, columns, gid=0):
     """
     Generic function to read google spreadsheet
     :param path: path to write to
@@ -61,6 +61,7 @@ def harvest_sheet_tsv_http(path, name, url, range_name, columns):
     u = f"{url.rstrip('/')}/export"
 
     raw_sheet = http.get(u, params={
+        "gid": gid,
         "format": "tsv",
         "range": range_name,
     }).text.splitlines()

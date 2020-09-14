@@ -25,14 +25,6 @@ def harvest_dataverse(path):
     collection_name = "dataverse_github"
     now = date.today().strftime('%Y-%m-%d')
 
-    # Write social_media_all once a day to prevent double records
-    with open(path + collection_name + "_all.tsv", 'r') as tsv_file:
-        reader = csv.reader(tsv_file, delimiter='\t')
-        for r in reader:
-            if r[0] == now:
-                logging.info('Harvesting Dataverse GitHub already harvested')
-                return
-
     url = "https://api.github.com/repos/IQSS/dataverse"
     resp = requests.get(url=url)
     data = resp.json()

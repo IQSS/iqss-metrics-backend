@@ -1,12 +1,12 @@
 # research computing
 from google_sheets import *
-
+import os
+sheet = os.getenv("SHEET_URL_MAIN_AND_RESEARCH_COMPUTING")
 sheets = [
-    ["rc-interactive-by-department", "1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s", "RCE Interactive Tier FAS Users by Department!A:D", []],
-    ["rc-interactive-by-school", "1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s", "RCE Interactive Tier Users by School!A:D", []],
-    ["rc-batch-by-school", "1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s", "RC Batch!A2:D50", []],
-    ["rc-batch-by-department", "1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s", "RC Batch!F2:I50", []]
-
+    ["rc-interactive-by-department", 1520439358, sheet, "A:D", []],
+    ["rc-interactive-by-school", 1746116154, sheet, "A:D", []],
+    ["rc-batch-by-school", 1414161867, sheet, "A2:D50", []],
+    ["rc-batch-by-department", 1414161867, sheet, "F2:I50", []]
 ]
 
 
@@ -18,8 +18,10 @@ def harvest_rc(path):
     logging.info("Harvesting RC Spreadsheets")
     for s in sheets:
         collection = s[0]
-        sheet_id = s[1]
-        range_name = s[2]
-        columns = s[3]
-        harvest_sheet_tsv(path, collection, sheet_id, range_name, columns)
+        gid = s[1]
+        url = s[2]
+        range_name = s[3]
+        columns = s[4]
+        harvest_sheet_tsv_http(path, collection, url, range_name, columns, gid=gid)
+
     return
