@@ -1,5 +1,5 @@
+import settings
 from time import ctime
-
 from business_operations import *
 from cga import *
 from css import *
@@ -14,6 +14,7 @@ from metrics import *
 # Google sheets has limits on the number of calls per 100 seconds
 SLEEP_TIME = 100
 
+
 def push_to_github(config):
     logging.info("Pushing TSV to Github Dashboard")
     dashboard_dir = config['dashboard_dir']
@@ -25,17 +26,7 @@ def push_to_github(config):
 # Main -----------------------------
 def main():
     # configure logger
-    logging.basicConfig(
-        filename="app.log",
-        level=logging.INFO,
-        filemode='w',
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S')
-    logging.info("Running daily jobs for IQSS Dashboard %s" % str(ctime()))
-
-    with open('config.json') as config_file:
-        config = json.load(config_file)
-
+    config = settings.config
     output_dir = config['output_dir']
 
     # Harvest Data -----------------------------------
@@ -54,7 +45,6 @@ def main():
     harvest_rc(output_dir)
     harvest_psr(output_dir)
 
-
     # aggregate and transform the data -------------------
     aggregate_main_metrics(output_dir)
     aggregate_cga(output_dir)
@@ -66,6 +56,7 @@ def main():
     push_to_github(config)
     #
     logging.info("Finished ETL cycle")
+
 
 if __name__ == '__main__':
     main()

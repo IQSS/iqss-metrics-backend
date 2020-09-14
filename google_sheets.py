@@ -4,7 +4,6 @@ import logging
 import os.path
 import pickle
 from datetime import date
-
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build

@@ -1,11 +1,8 @@
-import json
-from google_sheets import harvest_sheet_tsv
-import requests
-from datetime import date
-import csv
+import os
 from myfunctions import get_counts
 from metrics import *
 from rt_scripts import rt_harvard_dataverse
+
 
 # dataverse tv -----------------
 def harvest_dataverse(path):
@@ -14,7 +11,7 @@ def harvest_dataverse(path):
     download_files_from_odum(path)
 
     # dataverse tv
-    harvest_sheet_tsv(path, "dataverse_tv", "1uVk_57Ek_A49sLZ5OKdI6QASKloWNzykni3kcYNzpxA", "A:E", [1, 2, 3, 4, 5])
+    harvest_sheet_tsv_http(path, "dataverse_tv", os.getenv("SHEET_URL_DATAVERSE"), "A:E", [1, 2, 3, 4, 5])
 
     # dataverse installations
     harvest_dataverse_installations(path)
