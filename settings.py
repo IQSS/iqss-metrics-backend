@@ -16,4 +16,5 @@ logging.basicConfig(
 with open('config.json') as config_file:
     config = json.load(config_file)
 
-Path(config["output_dir"]).mkdir(parents=True, exist_ok=True)
+Path(f"{config['output_dir']}/lab").mkdir(parents=True, exist_ok=True)
+
