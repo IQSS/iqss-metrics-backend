@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
 import json
+from pathlib import Path
 import logging
 load_dotenv()
-
 # noinspection PyArgumentList
 logging.basicConfig(
     level=logging.INFO,
@@ -15,3 +15,5 @@ logging.basicConfig(
 
 with open('config.json') as config_file:
     config = json.load(config_file)
+
+Path(config["output_dir"]).mkdir(parents=True, exist_ok=True)

@@ -1,6 +1,6 @@
 import csv
 import logging
-
+from pathlib import Path
 import os.path
 import pickle
 from datetime import date
@@ -57,7 +57,7 @@ def harvest_sheet_tsv_http(path, name, url, range_name, columns):
     :return: <nothing>
     """
     logging.info('Harvesting google sheet %s' % name)
-    path_and_metric_file = path + name + ".tsv"
+    path_and_metric_file = Path(path, name).with_suffix(".tsv")
     u = f"{url.rstrip('/')}/export"
 
     raw_sheet = http.get(u, params={

@@ -10,8 +10,8 @@ import logging
 
 def rt_harvard_dataverse(path, config):
 
-    user_login = config['rt_user']
-    user_pass = config['rt_password']
+    user_login = os.getenv("RT_USER")
+    user_pass = os.getenv("RT_PASSWORD")
 
     # Enter the timeframe for the ticket search, e.g. to get tickets created in
     current_month = datetime.datetime.now().month
