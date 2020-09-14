@@ -6,7 +6,7 @@ from myfunctions import *
 
 css_tickets_url = os.getenv("SHEET_URL_CSS")
 sheets = [
-    ["cssQuarterlyTickets", 0, css_tickets_url, "A:F", []],
+    ["cssQuarterlyTickets", 1265380120, css_tickets_url, "A:F", []],
     ["cssMonthlyTickets", 876621858, css_tickets_url, "A:F", []],
     ["cssDeviceType", 2019277922, css_tickets_url, "A:K", []],
     ["cssPatronCommunity", 1186877879, css_tickets_url, "A:W", []],

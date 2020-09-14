@@ -5,17 +5,17 @@ from myfunctions import *
 import os
 
 sheets = [
-    ["cgaContact", 0, os.getenv("SHEET_URL_CGA_CONTACT"), "A:H", [0, 5, 6, 7]],  # OK
-    ["cgaWorkshopEvaluation", 0, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:P",
+    ["cgaContact", 1021617292, os.getenv("SHEET_URL_CGA_CONTACT"), "A:H", [0, 5, 6, 7]],  # OK
+    ["cgaWorkshopEvaluation", 1803423154, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:P",
      [0, 1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]],
     # OK
-    ["cgaGISApplication", 0, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:N", [0, 1, 5, 6, 7]],
+    ["cgaGISApplication", 1021617292, os.getenv("SHEET_URL_CGA_GIS_APPLICATION"), "A:N", [0, 1, 5, 6, 7]],
     # OK
     ["cgaEventRegistration", 0, os.getenv("SHEET_URL_CGA_EVENT_REGISTRATION"), "A:L", [0, 1, 5, 6, 7]],
     # OK
-    ["cgaTrainingRegistration", 0, os.getenv("SHEET_URL_CGA_TRAINING_REGISTRATION"), "A:M",
+    ["cgaTrainingRegistration", 2068274999, os.getenv("SHEET_URL_CGA_TRAINING_REGISTRATION"), "A:M",
      [0, 1, 2, 6, 7, 8, 11, 12]],
-    ["cgaLicenseRequest", 0, os.getenv("SHEET_URL_CGA_LICENSE_REQUEST"), "A:L", [0, 5, 6, 7, 10, 11]]
+    ["cgaLicenseRequest", 842362239, os.getenv("SHEET_URL_CGA_LICENSE_REQUEST"), "A:L", [0, 5, 6, 7, 10, 11]]
 ]
 
 
