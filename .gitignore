@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 app.log
 *.tsv
+iqss-metrics-dashboard
 out
 __pycache__/
 *.py[cod]
