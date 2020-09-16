@@ -1,0 +1,14 @@
+venv
+.DS_Store
+credentials.json
+.idea
+*.csv
+*.tsv
+token.pickle
+*.pyc
+cache
+app.log
+daily_loop.py
+hashcode.py
+*.ipynb
+notebooks
