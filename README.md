@@ -1,8 +1,11 @@
 # iqss-metrics-backend
 
 ## Requirements 
+
 pyenv ```brew install pyenv```
+
 pipenv ```brew install pipenv```
+
   
 ## .env file
 an .env file in this directory with credentials and secret/links (or
@@ -30,8 +33,11 @@ RT_PASSWORD="XXSECRET"
 ## Running
 make build run 
 
-build: Installs pre-requisite libraries and git pull iqss-metrics-dashboard and 
-run: Runs the processing. Files updated in ./out which is symlink into iqss-metrics-dashboard repo
-... at this point look around at out or do a git diff in ./iqss-metrics-dashboard to see if its good... This part will be automatic after Erik confirms.
-clean: Removes all above.
+`build`: Installs pre-requisite libraries and git pull iqss-metrics-dashboard and 
+
+`run`: Runs the processing. Files updated in ./out which is symlink into iqss-metrics-dashboard repo
+
+At this point look around at out or do a git diff in ./iqss-metrics-dashboard to see if its good... This part will be automatic after Erik confirms.
+
+`clean`: Removes all above.
 
