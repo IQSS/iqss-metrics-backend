@@ -44,7 +44,7 @@ def harvest_main_metrics(path):
     """
     logging.info("Harvesting main metrics")
     harvest_sheet_tsv_http(path, 'main_metrics', os.getenv("SHEET_URL_MAIN_AND_RESEARCH_COMPUTING"),
-                           "Main!A:H", columns=[])
+                           "A:H", columns=[], gid=0)
 
 
 

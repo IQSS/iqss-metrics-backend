@@ -5,7 +5,7 @@ from myfunctions import *
 import os
 
 sheets = [
-    ["cgaContact", 1021617292, os.getenv("SHEET_URL_CGA_CONTACT"), "A:H", [0, 5, 6, 7]],  # OK
+    ["cgaContact", 279615175, os.getenv("SHEET_URL_CGA_CONTACT"), "A:H", [0, 5, 6, 7]],  # OK
     ["cgaWorkshopEvaluation", 1803423154, os.getenv("SHEET_URL_CGA_WORKSHOP_EVALUATIONS"), "A:P",
      [0, 1, 2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]],
     # OK
