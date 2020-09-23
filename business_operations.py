@@ -1,10 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
-from google_sheets import harvest_sheet_tsv
+from google_sheets import harvest_sheet_tsv_http
 import logging
 import csv
 from datetime import date
 import pandas as pd
+import os
 from metrics import write_metric
 
 
@@ -13,11 +14,13 @@ def harvest_business_operations(path):
 
     logging.info("harvest_business_operations")
     # harvest_social_media(path)
-    harvest_sheet_tsv(path=path,
-                      name="business_operations",
-                      sheet_id='1TXGcNBAPYmAgITwJ7dBAP2cB3Kkfigss_Kcr2A6jwUE',
-                      range_name='Sponsored Research!A:I',
-                      columns=[])
+    harvest_sheet_tsv_http(path=path,
+                           name="business_operations",
+                           url=os.getenv("SHEET_URL_BUSINESS_OPERATIONS"),
+                           gid=0,
+                           range_name='A:I',
+                           columns=[])
+
 
 def aggregate_bo(path, tsv):
     df = pd.read_csv(path + tsv + ".tsv", delimiter="\t")

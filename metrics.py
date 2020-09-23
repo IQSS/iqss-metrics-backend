@@ -1,4 +1,5 @@
 import os.path
+import os
 from google_sheets import *
 import pandas as pd
 
@@ -42,8 +43,8 @@ def harvest_main_metrics(path):
     :return: nothing
     """
     logging.info("Harvesting main metrics")
-    harvest_sheet_tsv(path, 'main_metrics', sheet_id="1ai07kTO89huzTGCxMPHUExrT5M0_izqPtrYcK5uuO1s",
-                      range_name="Main!A:H", columns=[])
+    harvest_sheet_tsv_http(path, 'main_metrics', os.getenv("SHEET_URL_MAIN_AND_RESEARCH_COMPUTING"),
+                           "A:H", columns=[], gid=0)
 
 
 
