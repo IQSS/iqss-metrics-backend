@@ -30,6 +30,13 @@ jobs:
         run: |
           pipenv install --deploy --dev
 
+      - name: Add ssh deploy key
+        run: |
+          mkdir ~/.ssh
+          echo "${{ secrets.IQSS_DASHBOARD_SSH_DEPLOY_KEY}}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com
+
       - run: make
         env:
           SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
