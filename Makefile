@@ -19,10 +19,12 @@ z_clean: ## ∟ clean artifacts metrics backend and link pre-requisites [private
 	rm -rfv iqss-metrics-dashboard
 	rm -rfv out
 
-z_deploy:
-  cd out && \
-    git diff --exit-code && echo "No changes to data." || git add -A && \
-      git commit -a -m "Automated push of new data by iqss-metrics-backend on $(RUN_DATE)" && \
-      git push origin master
+z_deploy: ## ∟ Run deploy
+	cd out && \
+		git diff --exit-code && echo "No changes to data." || git add -A && \
+		git commit -a -m "Automated push of new data by iqss-metrics-backend on $(RUN_DATE)" && \
+		echo E
+ 		#git push origin master
+
 z_run: ## ∟ Run backend
 	pipenv run python main.py
