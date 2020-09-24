@@ -33,6 +33,8 @@ jobs:
       - name: Add ssh deploy key
         run: |
           mkdir ~/.ssh
+          git config --global user.email "noreply@hmdc.harvard.edu"
+          git config --global user.name "IQSS metrics agent"
           echo "${{ secrets.IQSS_DASHBOARD_SSH_DEPLOY_KEY}}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -t rsa github.com
