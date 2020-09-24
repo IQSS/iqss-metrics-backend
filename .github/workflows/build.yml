@@ -2,7 +2,10 @@
 
 name: generate iqss stat data
 
-on: [workflow_dispatch]
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   test:
