@@ -37,7 +37,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -t rsa github.com
 
-      - run: make
+      - run: make build run
         env:
           SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
           SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
