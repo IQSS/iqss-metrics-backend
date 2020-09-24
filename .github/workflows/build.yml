@@ -31,3 +31,18 @@ jobs:
           pipenv install --deploy --dev
 
       - run: make
+        env:
+          SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
+          SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
+          SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
+          SHEET_URL_MAIN_AND_RESEARCH_COMPUTING: ${{ secrets.SHEET_URL_MAIN_AND_RESEARCH_COMPUTING }}
+          SHEET_URL_DATAVERSE: ${{ secrets.SHEET_URL_DATAVERSE }}
+          SHEET_URL_CGA_LICENSE_REQUEST: ${{ secrets.SHEET_URL_CGA_LICENSE_REQUEST }}
+          SHEET_URL_CGA_TRAINING_REGISTRATION: ${{ secrets.SHEET_URL_CGA_TRAINING_REGISTRATION }}
+          SHEET_URL_CGA_EVENT_REGISTRATION: ${{ secrets.SHEET_URL_CGA_EVENT_REGISTRATION }}
+          SHEET_URL_CGA_GIS_APPLICATION: ${{ secrets.SHEET_URL_CGA_GIS_APPLICATION }}
+          SHEET_URL_CGA_CONTACT: ${{ secrets.SHEET_URL_CGA_CONTACT }}
+          SHEET_URL_CGA_WORKSHOP_EVALUATIONS: ${{ secrets.SHEET_URL_CGA_WORKSHOP_EVALUATIONS }}
+          RT_USER: ${{ secrets.RT_USER }}
+          RT_PASSWORD: ${{ secrets.RT_PASSWORD }}
+
