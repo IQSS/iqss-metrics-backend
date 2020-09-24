@@ -10,17 +10,8 @@ import json
 import os
 from metrics import *
 
-
 # Google sheets has limits on the number of calls per 100 seconds
 SLEEP_TIME = 100
-
-
-def push_to_github(config):
-    logging.info("Pushing TSV to Github Dashboard")
-    dashboard_dir = config['dashboard_dir']
-    git_command = config['git_command']
-    os.chdir(dashboard_dir)
-    os.system('./' + git_command)
 
 
 # Main -----------------------------
@@ -51,9 +42,6 @@ def main():
     aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
     aggregate_harvard_dataverse(output_dir)
-    #
-    # # Add and commit changes to the dashboard on Github -------------------------
-    push_to_github(config)
     #
     logging.info("Finished ETL cycle")
 
