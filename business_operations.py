@@ -9,12 +9,12 @@ import os
 from metrics import write_metric
 
 
-def harvest_business_operations(path):
+def harvest_business_operations(jekyll_data):
     """Harvest Business Operations Spreadsheet"""
 
     logging.info("harvest_business_operations")
     # harvest_social_media(path)
-    harvest_sheet_tsv_http(path=path,
+    harvest_sheet_tsv_http(path=jekyll_data,
                            name="business_operations",
                            url=os.getenv("SHEET_URL_BUSINESS_OPERATIONS"),
                            gid=0,
@@ -24,23 +24,12 @@ def harvest_business_operations(path):
 
 def aggregate_bo(path, tsv):
     df = pd.read_csv(path + tsv + ".tsv", delimiter="\t")
-    df1 = df[df["Group"] == "Sponsored Research Administration"].iloc[:, 0:7]
-    df2 = df[df["Group"] != "Sponsored Research Administration"].iloc[:, 0:7]
 
+    # Write update date 
     update_date = df[df["Updated"].isnull() == False]["Updated"][0]
     pd.DataFrame({"Department": ["Business Operations"], "Last Update": update_date}).to_csv(path + "update_dates.tsv",
                                                                                              sep='\t', index=False)
 
-    metric_df = df[df["Homepage"].isnull() == False].values.tolist()[0]
-
-    df1.to_csv(path + "sponsored_research_administration.tsv", sep='\t', index=False)
-    df2.to_csv(path + "finance_and_administration.tsv", sep='\t', index=False)
-
-    write_metric(path=path, group=metric_df[0], metric=metric_df[1],
-                 title=metric_df[1],
-                 value=metric_df[6], unit=metric_df[5],
-                 icon=metric_df[2], color=metric_df[4],
-                 url=metric_df[3])
 
 
 def harvest_social_media(path):
