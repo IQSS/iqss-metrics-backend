@@ -1,12 +1,103 @@
 # iqss-metrics-backend
 
+# Description of the Backend setup
+
+The Metrics dashboard contains 3 different parts:
+
+1. The backend. This part aggregates the data.
+2. The frontend. This part uses the aggregated data and displays the chart.
+3. The IQSS website. The front end is embedded in an iframe on iq.harvard.edu/metrics
+
+# Backend architecture
+
+In most cases the scripts has two steps:
+
+1. Harvesting the data. Which means accessing the data source and saving the result. 
+2. Aggregating the data. Which means preparing the data in the desired format for the front end. Data is filtered, summarized, grouped, counted etc. 
+
+Scripts are written in Python and uses Pandas as the library for data manipulation. There are some custom functions in myfunctions.py. All data is written as a TSV in the front end repository. 
+
+## Sources
+
+The following sources are used:
+
+- Google sheets. 
+- Aggregated Dataverse data
+- Dataverse API
+- Github
+- RT ticketing system
+
+
+
+## Business Operations
+
+Uses a Google spreadsheet. 
+
+Updates: The department edits the number on a monthly basis. 
+
+Contact: Pat. 
+
+## Center for Geographical Analysis (CGA)
+
+Uses a serie of google Forms. The data from the spreadsheets is aggregated. 
+
+Contact: Wendy
+
+Update: continuous
+
+## Client Support Services (CSS)
+
+For now, it uses google spreadsheet. In the future the RT-connection will be used. 
+
+Updates: Every FY
+
+Contacts: Soner and Randy
+
+## Dataverse
+
+Uses a couple of sources. The most important source is the aggregated data from all dataverses installation. This aggregation is done on https://dataversemetrics.odum.unc.edu/dataverse-metrics/ and copied.
+
+Dataverse TV. Spreadsheet with videos about dataverse. 
+
+Github: Number of installation and also some infor about contributors
+
+RT-API to harvest the number of requests for dataverse. 
+
+Contact: Sonia for the Support part and Danny for the rest.
+
+## Data Science Services (DSS)
+
+Data is mainly stored in RT, but since DSS want to preparation before it is published, with receive the prepared CSVs. Contact: Steve Worthington
+
+Updates: Yearly
+
+## Program on Survey Research (PSR)
+
+Uses a google sheet with the aggregated data. 
+
+Updates: Yearly
+
+Contact: Chase
+
+
+
+## Research computing (RC)
+
+Uses a Google sheet for now, with aggregated data. After the migration of RCE we will look at the at this again.
+
+Contact: Len
+
+
+
+# Installing and Running
+
 ## Requirements 
 
 pyenv ```brew install pyenv```
 
 pipenv ```brew install pipenv```
 
-  
+
 ## .env file
 an .env file in this directory with credentials and secret/links (or
 ENV variables set on command line)
@@ -98,3 +189,4 @@ Follow your original workflow.
 
 ## Ref
 [GitHub actions tutorial](https://lab.github.com/githubtraining/github-actions:-hello-world)
+
