@@ -37,7 +37,8 @@ make build run
 
 `run`: Runs the processing. Files updated in ./out which is symlink into iqss-metrics-dashboard repo
 
-At this point look around at out or do a git diff in ./iqss-metrics-dashboard to see if its good... This part will be automatic after Erik confirms.
+At this point look around at out or do a git diff in ./iqss-metrics-dashboard to see if it's good... 
+This part will be automatic after Erik confirms.
 
 `clean`: Removes all above.
 
@@ -48,12 +49,13 @@ Use the following method
 harvest_sheet_tsv_http(output_path, sheet_name, os.getenv("SHEET_URL_ENV"), "A:E", [0..n], gid=0)
 ```
 
-All URLs are presumed secrets and should live in the `.env` file above. The sheet url also defines which sheet tab to pull from
+All URLs are presumed secrets and should live in the `.env` file above. The sheet url also defines which sheet tab 
+to pull from
 
 ### Example
 
-I needed to add the spreadsheet, selecting A through B, but only returning the values at index 0, 1, and 2, 
-on the second ta sheet entitled "Z"
+I needed to add the spreadsheet, selecting A through D, but only returning the columns with index 0, 2, and 3, 
+on the second tab sheet entitled "Z"
 
 https://docs.google.com/spreadsheets/d/1F7fcSJoPzUloWMkigLlzJW6r9zGuurtKiAcQirFS8kU
 
@@ -66,20 +68,24 @@ The `gid` is the id of the tab.
 Therefore, to harvest this sheet, you would first add the URL to .env, and in your harvester, run  the following:
 
 ```
-harvest_sheet_tsv_http(output_path, "test_sheet", os.getenv("SHEET_URL_ENV"), "A:B", [0,1,2], gid=831621854)
+harvest_sheet_tsv_http(output_path, "test_sheet", os.getenv("SHEET_URL_ENV"), "A:D", [0,2,3], gid=831621854)
 ```
 
 Note that by default gid=0 meaning first tab on the sheet. gid is optional when a sheet has 1 tab.
 
 ## Secrets
-To schedule the above job, you will also need to set the same environment variale in GitHHu actions.
+To schedule the above job, you will also need to set the same environment variable in GitHub actions.
 Following the above example
 
 `SHEET_URL_ENV="https://docs.google.com/spreadsheets/d/1F7fcSJoPzUloWMkigLlzJW6r9zGuurtKiAcQirFS8kU"`
 
-Set this variable from the GitHub actions secret page. See [setting encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)
+Set this variable from the GitHub actions secret page. 
+See [setting encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets)
 
-The `IQSS_DASHBOARD_SSH_DEPLOY_KEY` secret is an SSH key used to commit/push to the dashboard. It is a [deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys) configured in the dashboard repo. You don't need this for local developmet as it is assumed you have your own GH key capale of committing/pushing to both repos  
+The `IQSS_DASHBOARD_SSH_DEPLOY_KEY` secret is an SSH key used to commit/push to the dashboard. 
+It is a [deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys) 
+configured in the dashboard repo. You don't need this for local development as it is assumed you have 
+your own GH key capale of committing/pushing to both repos  
 
 ##  Scheduling
 The cron specification lives in `.github/workflows/build.yml`
