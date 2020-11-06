@@ -5,6 +5,12 @@ import pandas as pd
 
 
 def aggregate_dss(path):
+    """
+    Aggregates DSS data. Right now this function is empty. data is delivered preaggregated/formatted sot
+    these files can be uploaded directly to github repository
+    @param path:
+    @return: nothing
+    """
     # aggr_dss_community(path)
     # aggr_dss_request_type(path)
     return

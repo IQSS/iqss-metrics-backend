@@ -5,6 +5,7 @@ import pandas as pd
 
 
 def write_metric(path, group, metric, title, value, unit, icon="fa fa-chart", color="orange", url=""):
+
     # logging.info("Writing main metric %s" % metric)
 
     d = {'group': [group],

@@ -6,6 +6,16 @@ from rt_scripts import rt_harvard_dataverse
 
 # dataverse tv -----------------
 def harvest_dataverse(path):
+    """
+    Gets all the dataverse data.
+    - Downloads aggregates from Odum institute
+    - Dataverse Tv
+    - dataverse installations
+    - Github
+    @param path: Directory to write to
+    @return: nothing
+    """
+
     # pre-aggregated data on servers of Odum institute
     # TODO: This is a Temporary solution
     download_files_from_odum(path)
@@ -55,6 +65,12 @@ def harvest_dataverse(path):
 
 
 def download_files_from_odum(path):
+    """
+    Download and saves pre-aggregate data from the
+    Odum institute ("https://dataversemetrics.odum.unc.edu/dataverse-metrics/")
+    @param path: Directory to write to
+    @return: nothing
+    """
     logging.info('Downloading files from ODUM servers')
     tables = ["dataverses-toMonth.tsv",
               "dataverses-byCategory.tsv",
@@ -73,6 +89,11 @@ def download_files_from_odum(path):
 
 
 def harvest_dataverse_installations(path):
+    """
+    Aggregate the number of Dataverse installations by country and total installations
+    @param path: Directory to write to
+    @return: nothing
+    """
     logging.info('Dataverse installations')
 
     df = pd.read_json(
@@ -97,6 +118,11 @@ def harvest_dataverse_installations(path):
 
 
 def aggregate_dataverse(path):
+    """
+    Aggregate the number of dataverse TV installations
+    @param path: Directory to write to
+    @return: nothing
+    """
     logging.info('Aggregate Dataverse info')
 
     df = pd.read_csv(path + 'dataverse_tv.tsv', delimiter="\t")
@@ -107,11 +133,24 @@ def aggregate_dataverse(path):
 
 
 # Harvard Dataverse ---------------------
-def harvest_harvard_dataverse(path, config):
-    rt_harvard_dataverse(path, config)
+def harvest_harvard_dataverse(path):
+    """
+    Harvest the dataverse tickets from RT-helpdesk system
+    @param path: Directory to write to
+    @return: nothing
+    """
+    rt_harvard_dataverse(path)
 
 
 def aggregate_harvard_dataverse(path):
+    """
+    Aggregate the dataverse tickets from RT-helpdesk system:
+    - total number of tickets
+    - dataverse features
+    - tickets types
+    @param path: Directory to write to
+    @return: nothing
+    """
     logging.info('Aggregate Harvest Dataverse')
 
     df_dv_support_tickets = pd.read_csv(path + 'rt_dataverse_support.tsv', delimiter="\t")

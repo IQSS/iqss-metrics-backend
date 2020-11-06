@@ -12,7 +12,9 @@ sheets = [
 
 def harvest_rc(path):
     """
-    Harvest a range of google spreadsheet of CSS
+    Harvest a range of google spreadsheet of Research computing
+    @param path: directory to write to
+    @return: (nothing)
     """
 
     logging.info("Harvesting RC Spreadsheets")

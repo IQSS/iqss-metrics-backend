@@ -10,8 +10,11 @@ from metrics import write_metric
 
 
 def harvest_business_operations(path):
-    """Harvest Business Operations Spreadsheet"""
-
+    """
+    Harvest Business Operations Spreadsheet
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     logging.info("harvest_business_operations")
     # harvest_social_media(path)
     harvest_sheet_tsv_http(path=path,
@@ -23,6 +26,12 @@ def harvest_business_operations(path):
 
 
 def aggregate_bo(path, tsv):
+    """
+    Aggregate data for business operations
+    @param path: Directory to write to
+    @param tsv: TSV with extracted data from the Google Spreadsheet
+    @return: nothing
+    """
     df = pd.read_csv(path + tsv + ".tsv", delimiter="\t")
     df1 = df[df["Group"] == "Sponsored Research Administration"].iloc[:, 0:7]
     df2 = df[df["Group"] != "Sponsored Research Administration"].iloc[:, 0:7]
@@ -44,6 +53,13 @@ def aggregate_bo(path, tsv):
 
 
 def harvest_social_media(path):
+    """
+    Scrapes Twitter and Facebook for IQSS metrics
+    @param path: Directory to write to
+    @return: nothing
+    """
+    # note: this function is not used, because it broke after changes on the website.
+    # should be replaced with API calls
     logging.info("Harvesting Social Media")
 
     collection_name = "social_media"

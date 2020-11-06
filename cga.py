@@ -22,6 +22,8 @@ sheets = [
 def harvest_cga(path):
     """
     Harvest a range of google spreadsheet of CGA
+    @param path: path where to write the TSV
+    @return: nothing
     """
 
     logging.info("Harvesting CGA Spreadsheets")
@@ -37,6 +39,11 @@ def harvest_cga(path):
 
 
 def aggregate_cga(path):
+    """
+    Call to all separate aggregate function for CGA
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     cga_contact_time(path)
     cga_contact_status(path)
     cga_contact_school(path)
@@ -48,7 +55,12 @@ def aggregate_cga(path):
 
 
 def cga_contact_school(path):
-    # CGA contact by school last 12 months ----------------------------------------------
+    """
+    Aggregates CGA contacts by school for the last 12 months
+    @param path: path where to write the TSV
+    @return: nothing
+    """
+    #  ----------------------------------------------
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
     df_contact_12mo = filter_last_12_months(df, 'Timestamp')
     c = "Your primary affiliated school at Harvard"
@@ -60,7 +72,11 @@ def cga_contact_school(path):
 
 
 def cga_lic_req_status(path):
-    # CGA License Request last 12 months by status----------------------------------------------
+    """
+    Aggregates CGA License Requests for last 12 months by status
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
     df_lic_12mo = filter_last_12_months(df, 'Timestamp')
     c = "Your primary affiliated school at Harvard"
@@ -72,9 +88,13 @@ def cga_lic_req_status(path):
 
 
 def cga_lic_req_top10(path):
-    # CGA License Request last 12 months Top 10 products --------------------------------------------
+    """
+    Aggregates CGA License Request the last 12 months and gets the top 10 products
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cgaLicenseRequest.tsv', delimiter="\t")
-    # smaller df of last 12 months
+    # smaller df for last 12 months
     df2 = df[["Software product which you need a license for", "Timestamp"]]
     df3 = filter_last_12_months(df2, "Timestamp", drop_datetime=True)
     # count number and select top 10
@@ -88,7 +108,12 @@ def cga_lic_req_top10(path):
 
 
 def gis_institute(path):
-    # Applications GIS Institute (G1) ---------------------------
+    """
+    Aggregate the number of applications for GIS Institute and write in a main metric
+    @param path: path where to write the TSV
+    @return: nothing
+    """
+    #  ---------------------------
     df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
     applications_ytd = len(get_records_YTD(df, drop_datetime=True))
     write_metric(path=path, group="CGA", metric="GIS Institute Applications",
@@ -99,7 +124,11 @@ def gis_institute(path):
 
 
 def cga_training_evaluations(path):
-    # Training evaluations (C) ----------------------------------
+    """
+    Get the average values of the Workshop/training evaluations
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cgaWorkshopEvaluation.tsv', delimiter="\t")
     df_aggr = df.describe()[1:2].transpose()
     df_aggr = df_aggr.transform(lambda x: round(x, 2))
@@ -107,6 +136,12 @@ def cga_training_evaluations(path):
 
 
 def cga_training_aggr(path):
+    """
+    Aggregate number of registration per workshop. Selects last 12 months and only workshops with more than
+    5 registrations
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     # Training (C) --------------------------------
     df = pd.read_csv(path + 'cgaTrainingRegistration.tsv', delimiter="\t")
     df = filter_last_12_months(df, 'Date of the training workshop')
@@ -130,7 +165,11 @@ def cga_training_aggr(path):
 
 
 def cga_contact_time(path):
-    # CGA Contact  (A)
+    """
+    CGA support requests for the last 12 months and aggregate by month for timeseries plot
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
     df["date"] = df.Timestamp.transform(lambda x: convert_timestamp_str(x)[:7])
     df_aggr = pd.DataFrame({'count': df["date"].value_counts()}).sort_index()
@@ -138,7 +177,11 @@ def cga_contact_time(path):
 
 
 def cga_contact_status(path):
-    # CGA Contact: virtual helpdesk req. by status/appointment (B)
+    """
+    CGA support requests: virtual helpdesk req. by status/appointment
+    @param path: path where to write the TSV
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cgaContact.tsv', delimiter="\t")
     c = 'Your Harvard status/appointment'
     df_aggr = filter_last_12_months(df, 'Timestamp')

@@ -23,7 +23,7 @@ http = requests.Session()
 http.mount("https://", adapter)
 http.mount("http://", adapter)
 
-
+# TODO: Check if these functions are used
 def get_current_UTC_date():
     t = datetime.datetime.utcnow()
     return datetime.datetime(t.year, t.month, t.day, 0, 0, 0, 0)
@@ -121,6 +121,13 @@ def harvest_sheet_tsv(path, name, sheet_id, range_name, columns):
 
 
 def write_tsv(path, values, columns):
+    """
+    Write TSV file with the Google Spreadsheet data
+    @param path: directory to write to
+    @param values:  extracted cell values
+    @param columns: column selection to include
+    @return: None
+    """
     with open(path, 'w') as tsv_file:
         writer = csv.writer(tsv_file, delimiter='\t')
         for row in values:

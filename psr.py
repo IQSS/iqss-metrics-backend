@@ -9,9 +9,11 @@ sheets = [
 
 
 def harvest_psr(path):
-    """Harvest a range of google spreadsheet of PSR
     """
-
+    Harvest a range of google spreadsheet of PSR
+    @param path: directory to write to
+    @return: (nothing)
+    """
     logging.info("Harvesting PSR Spreadsheets")
     for s in sheets:
         collection = s[0]

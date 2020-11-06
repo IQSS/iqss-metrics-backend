@@ -9,7 +9,12 @@ import logging
 from pathlib import Path
 
 
-def rt_harvard_dataverse(path, config):
+def rt_harvard_dataverse(path):
+    """
+    Gets data from RT for Harvard dataverse tickets.
+    @param path: path to write TSV to
+    @return: nothing
+    """
     user_login = os.getenv("RT_USER")
     user_pass = os.getenv("RT_PASSWORD")
 

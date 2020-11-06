@@ -15,7 +15,10 @@ sheets = [
 
 
 def harvest_css(path):
-    """Harvest a range of google spreadsheet of CSS
+    """
+    Harvest Google spreadsheet of CSS
+    @param path: Directory to write to
+    @return: nothing
     """
 
     logging.info("Harvesting CSS Spreadsheets")
@@ -30,6 +33,11 @@ def harvest_css(path):
 
 
 def aggregate_css(path):
+    """
+    Wrapper function for aggreation of CSS data
+    @param path: Directory to write to
+    @return: nothing
+    """
     css_quarterly_tickets(path)
     css_monthly_tickets(path)
     css_device_type(path)
@@ -39,7 +47,11 @@ def aggregate_css(path):
 
 
 def css_quarterly_tickets(path):
-    # cssQuarterlyTickets:
+    """
+    Aggregate Quarterly CSS tickets the last 5 year
+    @param path: Directory to write to
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cssQuarterlyTickets.tsv', delimiter="\t",
                      dtype={'RCE': 'Int64', 'Dataverse': 'Int64', 'Desktop': 'Int64'})
     df = df.reindex(columns=["Year", "Quarter", "Year_Quarter", "Desktop", "RCE", "Dataverse"])
@@ -59,7 +71,11 @@ def css_quarterly_tickets(path):
 
 
 def css_monthly_tickets(path):
-    # cssMonthlyTickets
+    """
+    Aggregate Monthly CSS tickets the last 3 years
+    @param path: Directory to write to
+    @return: dataframe
+    """
     df = pd.read_csv(path + 'cssMonthlyTickets.tsv', delimiter="\t",
                      dtype={'Year': 'Int64', 'Month': 'Int64', 'Desktop': 'Int64', 'RCE': 'Int64',
                             'Dataverse': 'Int64'})
@@ -73,7 +89,11 @@ def css_monthly_tickets(path):
 
 
 def css_device_type(path):
-    # cssDeviceType
+    """
+    Aggregate tickets by Device Type, the last year
+    @param path: Directory to write to
+    @return: dataframe
+    """
     df = pd.read_csv(path + 'cssDeviceType.tsv', delimiter="\t")
 
     # tickets last available year
@@ -101,7 +121,11 @@ def css_device_type(path):
 
 
 def css_patron_community(path):
-    # cssPatronCommunity
+    """
+    Aggregate tickets by Patron community, last years ticket. Summarizes smaller items.
+    @param path: Directory to write to
+    @return: dataframe
+    """
     df = pd.read_csv(path + 'cssPatronCommunity.tsv', delimiter="\t")
 
     # tickets, last available year
@@ -130,6 +154,11 @@ def css_patron_community(path):
 
 
 def css_mac_pc(path):
+    """
+    Aggregate Mac vs PC tickets of the last year
+    @param path: Directory to write to
+    @return: nothing
+    """
     df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
 
     # last FY, Mac and PC
@@ -169,6 +198,11 @@ def css_mac_pc(path):
 
 
 def aggregate_lab(path):
+    """
+    Multiple aggregations of the lab tickets from CSV in ./lab sub directory
+    @param path: Directory to write to
+    @return: nothing
+    """
     path = path + 'lab/'
 
     # read data
@@ -211,7 +245,7 @@ def aggregate_lab(path):
     # requests by departement
     df_dc = df_value_counts(df, "Department/Concentration", limit=1)
 
-    # there is already on 'other' category, so we need to combine thess.
+    # there is already on 'other' category, so we need to combine these.
     sum_other = df_dc[df_dc["Department/Concentration"] == "Other"].sum(axis=0)
     count = sum_other["count"]
     percentage = sum_other["percentage"]
@@ -234,7 +268,6 @@ def aggregate_lab(path):
     df_sponsored.to_csv(f"{path}lab_request_sponsored.tsv", sep='\t', index=True, index_label="id")
 
     # what is the reason for access
-
     # the columns can contain multiple values separated by ;
     df_reasons = df["Reason for Lab Access:"].dropna()
     reasons = []
