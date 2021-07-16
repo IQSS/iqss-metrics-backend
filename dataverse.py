@@ -16,7 +16,7 @@ def harvest_dataverse(path):
     @return: nothing
     """
 
-    # pre-aggregated data on servers of Odum institute
+    # pre-aggregated data on servers of Odum Institute
     # TODO: This is a Temporary solution
     download_files_from_odum(path)
 
