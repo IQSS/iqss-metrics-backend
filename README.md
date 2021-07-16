@@ -2,7 +2,7 @@
 
 # Description of the Backend setup
 
-The Metrics dashboard contains 3 different parts:
+The Metrics dashboard contains three different parts:
 
 1. The backend. This part aggregates the data.
 2. The frontend. This part uses the aggregated data and displays the chart.
