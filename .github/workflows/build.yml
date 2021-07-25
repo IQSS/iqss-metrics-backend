@@ -6,7 +6,8 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-
+env:
+  PIPENV_VENV_IN_PROJECT: enabled
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -25,8 +26,10 @@ jobs:
       - id: cache-pipenv
         uses: actions/cache@v2
         with:
-          path: ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+          path: ./.venv
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/Pipfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pipenv
 
       - name: Install dependencies
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
