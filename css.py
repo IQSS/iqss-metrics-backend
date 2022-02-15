@@ -221,7 +221,7 @@ def aggregate_lab(path):
 
     # read data
     df = pd.read_csv(f"{path}lab_report_master_data.tsv",
-                     delimeter='\t', encoding="latin_1", parse_dates=True)
+                     delimiter='\t', encoding="latin_1", parse_dates=True)
 
     # convert timestamp
     df["timestamp"] = df["Transaction Created"].apply(
