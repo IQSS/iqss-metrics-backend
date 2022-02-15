@@ -213,13 +213,16 @@ def css_mac_pc(path):
 
 def aggregate_lab(path):
     """
-    Multiple aggregations of the lab tickets from CSV in ./lab sub directory
+    Multiple aggregations of the lab tickets from CSV
+    Output to lab ./sub-directory
     @param path: Directory to write to
     @return: nothing
     """
 
     # read data
-    df = pd.read_csv(path + 'lab_report_master_data.tsv',
+    input_path = path
+    output_path = path + 'lab/'
+    df = pd.read_csv(input_path + 'lab_report_master_data.tsv',
                      delimiter='\t', encoding="latin_1", parse_dates=True)
 
     # convert timestamp
@@ -252,16 +255,16 @@ def aggregate_lab(path):
     requests_per_month_year = requests_per_month_year.sort_values(
         "year_month", ascending=True)
     requests_per_month_year.to_csv(
-        f"{path}lab_request_per_month.tsv", sep='\t', index=True, index_label="id")
+        f"{output_path}lab_request_per_month.tsv", sep='\t', index=True, index_label="id")
 
     requests_per_quarter = df_value_counts(df, "year_quarter")
     requests_per_quarter.to_csv(
-        f"{path}lab_request_per_quarter.tsv", sep='\t', index=True, index_label="id")
+        f"{output_path}lab_request_per_quarter.tsv", sep='\t', index=True, index_label="id")
 
     # total request by school"
     df_schools = df_value_counts(df, "School", limit=1)
     df_schools["period"] = period
-    df_schools.to_csv(f"{path}lab_request_school.tsv",
+    df_schools.to_csv(f"{output_path}lab_request_school.tsv",
                       sep='\t', index=True, index_label="id")
 
     # requests by departement
@@ -277,19 +280,19 @@ def aggregate_lab(path):
         pd.DataFrame({"Department/Concentration": "Other", "count": count, "percentage": percentage}, index=[100]))
 
     df_dc["period"] = period
-    df_dc.to_csv(f"{path}lab_request_department.tsv",
+    df_dc.to_csv(f"{output_path}lab_request_department.tsv",
                  sep='\t', index=True, index_label="id")
 
     # Request by Status
     df_status = df_value_counts(df, "Status", limit=2)
     df_status["period"] = period
-    df_status.to_csv(f"{path}lab_request_status.tsv",
+    df_status.to_csv(f"{output_path}lab_request_status.tsv",
                      sep='\t', index=True, index_label="id")
 
     # Request Sponsored?
     df_sponsored = df_value_counts(df, "Sponsored?")
     df_sponsored["period"] = period
-    df_sponsored.to_csv(f"{path}lab_request_sponsored.tsv",
+    df_sponsored.to_csv(f"{output_path}lab_request_sponsored.tsv",
                         sep='\t', index=True, index_label="id")
 
     # what is the reason for access
@@ -305,11 +308,11 @@ def aggregate_lab(path):
     df_reasons.columns = ["Reason for Lab Access"]
     df_reasons = df_value_counts(df_reasons, "Reason for Lab Access")
     df_reasons["period"] = period
-    df_reasons.to_csv(f"{path}lab_request_reason.tsv",
+    df_reasons.to_csv(f"{output_path}lab_request_reason.tsv",
                       sep='\t', index=True, index_label="id")
 
     # How did you hear about us?
     df_discovery = df_value_counts(df, "Lab Discovery")
     df_discovery["period"] = period
-    df_discovery.to_csv(f"{path}lab_request_discovery.tsv",
+    df_discovery.to_csv(f"{output_path}lab_request_discovery.tsv",
                         sep='\t', index=True, index_label="id")
