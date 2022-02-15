@@ -11,6 +11,7 @@ sheets = [
     ["cssDeviceType", 2019277922, css_tickets_url, "A:K", []],
     ["cssPatronCommunity", 1186877879, css_tickets_url, "A:W", []],
     ["cssTypeOfRequestPCMac", 2070549986, css_tickets_url, "A:U", []],
+    ["lab_report_master_data", 1299232750, css_tickets_url, "A:Y", []],
 ]
 
 
@@ -28,7 +29,8 @@ def harvest_css(path):
         sheet_url = s[2]
         range_name = s[3]
         columns = s[4]
-        harvest_sheet_tsv_http(path, collection, sheet_url, range_name, columns, gid=gid)
+        harvest_sheet_tsv_http(path, collection, sheet_url,
+                               range_name, columns, gid=gid)
     return
 
 
@@ -54,19 +56,23 @@ def css_quarterly_tickets(path):
     """
     df = pd.read_csv(path + 'cssQuarterlyTickets.tsv', delimiter="\t",
                      dtype={'RCE': 'Int64', 'Dataverse': 'Int64', 'Desktop': 'Int64'})
-    df = df.reindex(columns=["Year", "Quarter", "Year_Quarter", "Desktop", "RCE", "Dataverse"])
+    df = df.reindex(columns=["Year", "Quarter",
+                    "Year_Quarter", "Desktop", "RCE", "Dataverse"])
     # tickets last 5 years
     df["year_number"] = df.apply(lambda row: int(row["Year"][2:4]), axis=1)
     last_FY = df["year_number"].unique().max()
     last_5yr = last_FY - 4
     df_aggr = df.query(f"year_number >= {last_5yr}")
-    df_aggr.to_csv(path + "css_quarterly_tickets_last_5yr.tsv", sep='\t', index=True, index_label="id")
+    df_aggr.to_csv(path + "css_quarterly_tickets_last_5yr.tsv",
+                   sep='\t', index=True, index_label="id")
 
     # # tickets last quarter
     df["quarter_number"] = df.apply(lambda row: int(row.Quarter[1:2]), axis=1)
     last_quarter = df[df["year_number"] == last_FY]["quarter_number"].max()
-    df_aggr = df.query(f"year_number == {last_FY} & quarter_number == {last_quarter}")
-    df_aggr.to_csv(path + "css_quarterly_tickets_last_year.tsv", sep='\t', index=True, index_label="id")
+    df_aggr = df.query(
+        f"year_number == {last_FY} & quarter_number == {last_quarter}")
+    df_aggr.to_csv(path + "css_quarterly_tickets_last_year.tsv",
+                   sep='\t', index=True, index_label="id")
     return
 
 
@@ -84,7 +90,8 @@ def css_monthly_tickets(path):
     yr3 = df.Year.max() - 3
     df_aggr = df[df["Year"] >= yr3]
     df_aggr = df_aggr.reset_index(drop=True)
-    df_aggr.to_csv(path + "css_monthly_tickets_last_3yr.tsv", sep='\t', index=True, index_label="id")
+    df_aggr.to_csv(path + "css_monthly_tickets_last_3yr.tsv",
+                   sep='\t', index=True, index_label="id")
     return df_aggr
 
 
@@ -105,7 +112,8 @@ def css_device_type(path):
     df_aggr = df[df["year_number"] == last_FY]
 
     # Transpose data frame
-    df_aggr = df_aggr.reset_index(drop=True)  # make sure column will be named '0'
+    # make sure column will be named '0'
+    df_aggr = df_aggr.reset_index(drop=True)
     df_aggr = df_aggr.drop(["FY", "year_number"], axis=1)
     df_aggr = df_aggr.T
 
@@ -115,7 +123,8 @@ def css_device_type(path):
     df_aggr["year"] = f"FY{last_FY}"
 
     # save dataframe
-    df_aggr.to_csv(path + "css_device_type_last_year.tsv", sep='\t', index=True, index_label="device")
+    df_aggr.to_csv(path + "css_device_type_last_year.tsv",
+                   sep='\t', index=True, index_label="device")
 
     return df_aggr
 
@@ -143,13 +152,15 @@ def css_patron_community(path):
     df_aggr2 = df_aggr2[df_aggr2.index != "Year"]
 
     # other category: < 3 %
-    df_aggr2 = combine_lower_n_percent(df_aggr2, "count", threshold=3, decimals=0)
+    df_aggr2 = combine_lower_n_percent(
+        df_aggr2, "count", threshold=3, decimals=0)
 
     # clean up the index so we can keep the order in the index
     df_aggr2 = df_aggr2.reset_index()
     df_aggr2 = df_aggr2.rename(columns={"index": "patron"})
 
-    df_aggr2.to_csv(path + "css_patron_community_last_year.tsv", sep='\t', index=True, index_label="id")
+    df_aggr2.to_csv(path + "css_patron_community_last_year.tsv",
+                    sep='\t', index=True, index_label="id")
     return df_aggr2
 
 
@@ -171,13 +182,15 @@ def css_mac_pc(path):
     df["Sum"] = df.apply(lambda row: row.PC + row.Mac, axis=1)
     df = df.sort_values("Sum", ascending=False)
     df["Year"] = last_year
-    df.to_csv(path + "css_pc_mac_last_year.tsv", sep='\t', index=True, index_label="id")
+    df.to_csv(path + "css_pc_mac_last_year.tsv",
+              sep='\t', index=True, index_label="id")
 
     # last FY, Mac and PC, total
     df_aggr = pd.DataFrame(df[["PC", "Mac"]].sum(axis=0), columns=["count"])
     df_aggr["year"] = last_year
     df_aggr.reset_index()
-    df_aggr.to_csv(path + "css_pc_mac_last_year_total.tsv", sep='\t', index=True, index_label="id")
+    df_aggr.to_csv(path + "css_pc_mac_last_year_total.tsv",
+                   sep='\t', index=True, index_label="id")
 
     # totals PC and MAC over the years
     df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
@@ -194,7 +207,8 @@ def css_mac_pc(path):
     df_mac = df_mac.drop("sum", axis=1)
     df_mac.set_index("Year", inplace=True)
     df_total["Mac"] = df_mac["Mac"]
-    df_total.to_csv(path + "css_pc_mac.tsv", sep='\t', index=True, index_label="year")
+    df_total.to_csv(path + "css_pc_mac.tsv", sep='\t',
+                    index=True, index_label="year")
 
 
 def aggregate_lab(path):
@@ -206,10 +220,12 @@ def aggregate_lab(path):
     path = path + 'lab/'
 
     # read data
-    df = pd.read_csv(f"{path}lab_report_master_data.csv", encoding="latin_1", parse_dates=True)
+    df = pd.read_csv(f"{path}lab_report_master_data.tsv",
+                     delimeter='\t', encoding="latin_1", parse_dates=True)
 
     # convert timestamp
-    df["timestamp"] = df["Transaction Created"].apply(lambda d: pd.Timestamp(d))
+    df["timestamp"] = df["Transaction Created"].apply(
+        lambda d: pd.Timestamp(d))
 
     # drop columns
     df = df.drop(["Transaction Created", "Transaction Time Worked", "Ticket ID", "Queue Name", "Ticket Requestor",
@@ -221,9 +237,12 @@ def aggregate_lab(path):
     df["month"] = df["timestamp"].apply(lambda d: d.month)
     df["month_name"] = df["timestamp"].apply(lambda d: d.month_name())
     df["quarter"] = df["timestamp"].apply(lambda d: f"Q{d.quarter}")
-    df["year_quarter"] = df["timestamp"].apply(lambda d: f"{d.year}-Q{d.quarter}")
-    df["year_month"] = df["timestamp"].apply(lambda d: f"{d.year}-{d.month:02}")
-    df["year_month_name"] = df["timestamp"].apply(lambda d: f"{d.month_name()} {d.year}")
+    df["year_quarter"] = df["timestamp"].apply(
+        lambda d: f"{d.year}-Q{d.quarter}")
+    df["year_month"] = df["timestamp"].apply(
+        lambda d: f"{d.year}-{d.month:02}")
+    df["year_month_name"] = df["timestamp"].apply(
+        lambda d: f"{d.month_name()} {d.year}")
 
     # create period value
     end = list(df["year_month_name"].value_counts()[-1:].index)[0]
@@ -231,16 +250,20 @@ def aggregate_lab(path):
     period = f"{begin} - {end}"
 
     requests_per_month_year = df_value_counts(df, "year_month")
-    requests_per_month_year = requests_per_month_year.sort_values("year_month", ascending=True)
-    requests_per_month_year.to_csv(f"{path}lab_request_per_month.tsv", sep='\t', index=True, index_label="id")
+    requests_per_month_year = requests_per_month_year.sort_values(
+        "year_month", ascending=True)
+    requests_per_month_year.to_csv(
+        f"{path}lab_request_per_month.tsv", sep='\t', index=True, index_label="id")
 
     requests_per_quarter = df_value_counts(df, "year_quarter")
-    requests_per_quarter.to_csv(f"{path}lab_request_per_quarter.tsv", sep='\t', index=True, index_label="id")
+    requests_per_quarter.to_csv(
+        f"{path}lab_request_per_quarter.tsv", sep='\t', index=True, index_label="id")
 
     # total request by school"
     df_schools = df_value_counts(df, "School", limit=1)
     df_schools["period"] = period
-    df_schools.to_csv(f"{path}lab_request_school.tsv", sep='\t', index=True, index_label="id")
+    df_schools.to_csv(f"{path}lab_request_school.tsv",
+                      sep='\t', index=True, index_label="id")
 
     # requests by departement
     df_dc = df_value_counts(df, "Department/Concentration", limit=1)
@@ -255,17 +278,20 @@ def aggregate_lab(path):
         pd.DataFrame({"Department/Concentration": "Other", "count": count, "percentage": percentage}, index=[100]))
 
     df_dc["period"] = period
-    df_dc.to_csv(f"{path}lab_request_department.tsv", sep='\t', index=True, index_label="id")
+    df_dc.to_csv(f"{path}lab_request_department.tsv",
+                 sep='\t', index=True, index_label="id")
 
     # Request by Status
     df_status = df_value_counts(df, "Status", limit=2)
     df_status["period"] = period
-    df_status.to_csv(f"{path}lab_request_status.tsv", sep='\t', index=True, index_label="id")
+    df_status.to_csv(f"{path}lab_request_status.tsv",
+                     sep='\t', index=True, index_label="id")
 
     # Request Sponsored?
     df_sponsored = df_value_counts(df, "Sponsored?")
     df_sponsored["period"] = period
-    df_sponsored.to_csv(f"{path}lab_request_sponsored.tsv", sep='\t', index=True, index_label="id")
+    df_sponsored.to_csv(f"{path}lab_request_sponsored.tsv",
+                        sep='\t', index=True, index_label="id")
 
     # what is the reason for access
     # the columns can contain multiple values separated by ;
@@ -280,9 +306,11 @@ def aggregate_lab(path):
     df_reasons.columns = ["Reason for Lab Access"]
     df_reasons = df_value_counts(df_reasons, "Reason for Lab Access")
     df_reasons["period"] = period
-    df_reasons.to_csv(f"{path}lab_request_reason.tsv", sep='\t', index=True, index_label="id")
+    df_reasons.to_csv(f"{path}lab_request_reason.tsv",
+                      sep='\t', index=True, index_label="id")
 
     # How did you hear about us?
     df_discovery = df_value_counts(df, "Lab Discovery")
     df_discovery["period"] = period
-    df_discovery.to_csv(f"{path}lab_request_discovery.tsv", sep='\t', index=True, index_label="id")
+    df_discovery.to_csv(f"{path}lab_request_discovery.tsv",
+                        sep='\t', index=True, index_label="id")
