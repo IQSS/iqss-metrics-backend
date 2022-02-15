@@ -217,10 +217,9 @@ def aggregate_lab(path):
     @param path: Directory to write to
     @return: nothing
     """
-    path = path + 'lab/'
 
     # read data
-    df = pd.read_csv(f"{path}lab_report_master_data.tsv",
+    df = pd.read_csv(path + 'lab_report_master_data.tsv',
                      delimiter='\t', encoding="latin_1", parse_dates=True)
 
     # convert timestamp
