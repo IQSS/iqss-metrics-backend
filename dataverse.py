@@ -82,7 +82,7 @@ def download_files_from_odum(path):
     odum_url = "https://dataversemetrics.odum.unc.edu/dataverse-metrics/"
 
     for t in tables:
-        tsv = requests.get(odum_url + t)
+        tsv = requests.get(odum_url + t, verify=False)
         f = open(path + t, "w")
         f.write(tsv.text)
         f.close()
