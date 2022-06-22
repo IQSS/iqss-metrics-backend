@@ -15,7 +15,7 @@ requests = "~=2.23.0"
 pandas = "~=1.0.3"
 google = "~=2.0.3"
 beautifulsoup4 = "~=4.9.1"
-numpy = "~=1.18.4"
+numpy = "~=1.22.0"
 rt = "*"
 python-dotenv = "*"
 
