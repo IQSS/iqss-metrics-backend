@@ -6,12 +6,12 @@ from myfunctions import *
 
 css_tickets_url = os.getenv("SHEET_URL_CSS")
 sheets = [
-    ["cssQuarterlyTickets", 1265380120, css_tickets_url, "A:F", []],
-    ["cssMonthlyTickets", 876621858, css_tickets_url, "A:F", []],
-    ["cssDeviceType", 2019277922, css_tickets_url, "A:K", []],
-    ["cssPatronCommunity", 1186877879, css_tickets_url, "A:W", []],
-    ["cssTypeOfRequestPCMac", 2070549986, css_tickets_url, "A:U", []],
-    ["lab_report_master_data", 1299232750, css_tickets_url, "A:Y", []],
+    ["cssQuarterlyTickets", 1872220957, css_tickets_url, "A:F", []],
+    ["cssMonthlyTickets", 258445490, css_tickets_url, "A:F", []],
+    ["cssDeviceType", 1021732063, css_tickets_url, "A:K", []],
+    ["cssPatronCommunity", 345883130, css_tickets_url, "A:W", []],
+    ["cssTypeOfRequestPCMac", 1854286511, css_tickets_url, "A:U", []],
+    ["lab_report_master_data", 799546563, css_tickets_url, "A:Y", []],
 ]
 
 
