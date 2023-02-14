@@ -18,7 +18,7 @@ def harvest_dataverse(path):
 
     # pre-aggregated data on servers of Odum Institute
     # TODO: This is a Temporary solution
-    download_files_from_odum(path)
+    # download_files_from_odum(path)
 
     # dataverse tv
     harvest_sheet_tsv_http(path, "dataverse_tv", os.getenv("SHEET_URL_DATAVERSE"), "A:E", [1, 2, 3, 4, 5])
