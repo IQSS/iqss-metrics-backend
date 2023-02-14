@@ -30,7 +30,7 @@ def main():
     harvest_psr(output_dir)
 
     # aggregate and transform the data -------------------
-    aggregate_main_metrics(output_dir)
+    # aggregate_main_metrics(output_dir)
     aggregate_cga(output_dir)
     aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
