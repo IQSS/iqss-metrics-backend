@@ -27,7 +27,7 @@ def main():
     #harvest_dataverse(output_dir)
     harvest_css(output_dir)
     harvest_rc(output_dir)
-    harvest_psr(output_dir)
+    #harvest_psr(output_dir)
 
     # aggregate and transform the data -------------------
     # aggregate_main_metrics(output_dir)
