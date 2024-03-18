@@ -30,7 +30,7 @@ def write_metric(path, group, metric, title, value, unit, icon="fa fa-chart", co
         else:
             logging.info('Updating main metric %s' % metric)
             df_file = df_file.drop(df_file[(df_file['metric'] == metric) & (df_file['group'] == group)].index)
-        df_file = df_file.append(df)
+        df_file = df_file._append(df)
         df_file.to_csv(file_name, sep="\t", index=False)
     else:
         logging.info("%s not found. Creating new file." % file_name)

@@ -21,7 +21,7 @@ def main():
 
     # Harvest Data -----------------------------------
     #harvest_main_metrics(output_dir)
-    #harvest_business_operations(output_dir)
+    harvest_business_operations(output_dir)
     #harvest_cga(output_dir)
     #harvest_harvard_dataverse(output_dir)
     #harvest_dataverse(output_dir)
@@ -32,7 +32,7 @@ def main():
     # aggregate and transform the data -------------------
     # aggregate_main_metrics(output_dir)
     #aggregate_cga(output_dir)
-    #aggregate_bo(output_dir, "business_operations")
+    aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
     #aggregate_harvard_dataverse(output_dir)
 
