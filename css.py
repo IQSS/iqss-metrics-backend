@@ -194,7 +194,7 @@ def css_mac_pc(path):
 
     # totals PC and MAC over the years
     df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
-    df["sum"] = df.sum(axis=1)
+    df["sum"] = df.isnull().sum(axis=1)
     df2 = df[["Year", "Type", "sum"]]
 
     df_total = df2[df2["Type"] == "PC"][["Year", "sum"]]
