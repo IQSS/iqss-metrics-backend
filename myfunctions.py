@@ -147,7 +147,7 @@ def create_other_category(df, cut_off=0.05):
             x[c] = df[df.fraction < cut_off][c].sum()
     new_df = pd.DataFrame(x, index=[0])
     df = df[df.fraction >= cut_off]
-    df = df.append(new_df)
+    df = df._append(new_df)
 
     return df
 
@@ -202,7 +202,7 @@ def combine_lower_n_percent(df, column, threshold=5, decimals=0):
     # keep
     df = df[df["percentage"] >= threshold]
     other = pd.DataFrame({column: other, "percentage": 100 * other / total}, index=["Other"])
-    df = df.append(other)
+    df = df._append(other)
     if decimals > 0:
         df["percentage"] = df.apply(lambda row: round(row["percentage"], decimals), axis=1)
     elif decimals == 0:
@@ -243,7 +243,7 @@ def combine_lower_n_percent_complete(df, column, other_cols=[], sum_columns=[], 
             x[c] = ["Other"]
         other = pd.DataFrame(x)
 
-    df = df.append(other)
+    df = df._append(other)
     if decimals > 0:
         df["percentage"] = df.apply(lambda row: round(row["percentage"], decimals), axis=1)
     elif decimals == 0:
