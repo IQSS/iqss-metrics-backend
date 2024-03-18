@@ -276,7 +276,7 @@ def aggregate_lab(path):
     percentage = sum_other["percentage"]
 
     df_dc = df_dc[df_dc["Department/Concentration"] != "Other"]
-    df_dc = df_dc.append(
+    df_dc = df_dc._append(
         pd.DataFrame({"Department/Concentration": "Other", "count": count, "percentage": percentage}, index=[100]))
 
     df_dc["period"] = period
