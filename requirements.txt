@@ -3,7 +3,7 @@ google-auth-httplib2
 google-auth-oauthlib
 bs4~=0.0.1
 oauth2client
-requests~=2.23.0
+requests~=2.32.0
 pandas~=1.0.3
 google~=2.0.3
 beautifulsoup4~=4.9.1
