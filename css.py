@@ -55,11 +55,12 @@ def css_quarterly_tickets(path):
     @return: nothing
     """
     df = pd.read_csv(path + 'cssQuarterlyTickets.tsv', delimiter="\t",
-                     dtype={'RCE': 'Int64', 'Dataverse': 'Int64', 'Desktop': 'Int64'})
+                     dtype={"Year": 'str', 'RCE': 'Int64', 'Dataverse': 'Int64', 'Desktop': 'Int64'})
     df = df.reindex(columns=["Year", "Quarter",
-                    "Year_Quarter", "Desktop", "RCE", "Dataverse"])
+                    "Year_Quarter", "Desktop", "RCE", "Dataverse"]).dropna()
     # tickets last 5 years
     df["year_number"] = df.apply(lambda row: int(row["Year"][2:4]), axis=1)
+
     last_FY = df["year_number"].unique().max()
     last_5yr = last_FY - 4
     df_aggr = df.query(f"year_number >= {last_5yr}")
