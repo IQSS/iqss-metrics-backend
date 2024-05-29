@@ -40,10 +40,10 @@ def aggregate_bo(path, tsv):
     pd.DataFrame({"Department": ["Business Operations"], "Last Update": update_date}).to_csv(path + "update_dates.tsv",
                                                                                              sep='\t', index=False)
 
-    metric_df = df[df["Homepage"].isnull() == False].values.tolist()[0]
+    metric_df = df[df["Homepage"].isnull() == False].fillna("").values.tolist()[0]
 
-    df1.to_csv(path + "sponsored_research_administration.tsv", sep='\t', index=False)
-    df2.to_csv(path + "finance_and_administration.tsv", sep='\t', index=False)
+    df1.fillna("").to_csv(path + "sponsored_research_administration.tsv", sep='\t', index=False)
+    df2.fillna("").to_csv(path + "finance_and_administration.tsv", sep='\t', index=False)
 
     write_metric(path=path, group=metric_df[0], metric=metric_df[1],
                  title=metric_df[1],
