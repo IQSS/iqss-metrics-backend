@@ -22,19 +22,19 @@ def main():
     # Harvest Data -----------------------------------
     harvest_main_metrics(output_dir)
     harvest_business_operations(output_dir)
-    #harvest_cga(output_dir)
-    #harvest_harvard_dataverse(output_dir)
-    #harvest_dataverse(output_dir)
+    harvest_cga(output_dir)
+    harvest_harvard_dataverse(output_dir)
+    harvest_dataverse(output_dir)
     harvest_css(output_dir)
     #harvest_rc(output_dir)
     #harvest_psr(output_dir)
 
     # aggregate and transform the data -------------------
     aggregate_main_metrics(output_dir)
-    #aggregate_cga(output_dir)
+    aggregate_cga(output_dir)
     #aggregate_bo(output_dir, "business_operations")
     aggregate_css(output_dir)
-    #aggregate_harvard_dataverse(output_dir)
+    aggregate_harvard_dataverse(output_dir)
 
     logging.info("Finished ETL cycle")
 

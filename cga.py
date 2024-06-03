@@ -116,7 +116,7 @@ def gis_institute(path):
     #  ---------------------------
     df = pd.read_csv(path + 'cgaGISApplication.tsv', delimiter="\t")
     applications_ytd = len(get_records_YTD(df, drop_datetime=True))
-    write_metric(path=path, group="CGA", metric="GIS Institute Applications",
+    write_metric(path=path+'cgaGISApplication.tsv', group="CGA", metric="GIS Institute Applications",
                  title="GIS Institute",
                  value=applications_ytd, unit="Number of applications " + get_current_year_str() + " YTD",
                  icon="fa fa-university", color="blue",

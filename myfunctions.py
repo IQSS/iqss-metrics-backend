@@ -79,7 +79,7 @@ def filter_last_12_months(df, field, drop_datetime=False):
     @return: pd.DataFrame
     """
     df2 = df.copy()
-    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))
+    df2["datetime"] = pd.to_datetime(df2[field],errors='coerce') # .transform(lambda x: pd.Timestamp(x))
     df3 = df2[(df2['datetime'] >= get_last_year()) & (df2['datetime'] < get_beginning_of_this_month())]
 
     if drop_datetime:
@@ -108,7 +108,7 @@ def get_records_YTD(df, field="Timestamp", drop_datetime=False):
     @return: pd.DataFrame
     """
     df2 = df.copy()
-    df2["datetime"] = df2[field].transform(lambda x: pd.Timestamp(x))
+    df2["datetime"] =  pd.to_datetime(df2[field],errors='coerce') # df2[field].transform(lambda x: pd.Timestamp(x))
     df3 = df2[df2['datetime'] >= get_beginning_of_this_year()]
 
     if drop_datetime:

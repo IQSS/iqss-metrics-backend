@@ -45,6 +45,9 @@ def aggregate_bo(path, tsv):
     df1.fillna("").to_csv(path + "sponsored_research_administration.tsv", sep='\t', index=False)
     df2.fillna("").to_csv(path + "finance_and_administration.tsv", sep='\t', index=False)
 
+    print(df1)
+    print(df2)
+    print(metric_df[1])
     write_metric(path=path, group=metric_df[0], metric=metric_df[1],
                  title=metric_df[1],
                  value=metric_df[6], unit=metric_df[5],

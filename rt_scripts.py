@@ -2,7 +2,7 @@
 import csv
 import os
 import re
-import rt
+from rt.rest1 import Rt
 # import time
 import datetime
 import logging
@@ -34,7 +34,7 @@ def rt_harvard_dataverse(path):
     # Logging into RT
     logging.info('Logging into RT')
 
-    tracker = rt.Rt('https://help.hmdc.harvard.edu/REST/1.0/', user_login, user_pass)
+    tracker = Rt('https://help.hmdc.harvard.edu/REST/1.0/', user_login, user_pass)
 
     tracker.login()
 
