@@ -168,7 +168,7 @@ def aggregate_harvard_dataverse(path):
 
     other = df_features[df_features["value"] == "Other"]
     not_other = df_features[df_features["value"] != "Other"].sort_values(by="count", ascending=False)
-    df_features = not_other.append(other).reset_index(drop=True)
+    df_features = pd.concat([not_other, other]).reset_index(drop=True)
     df_features["period"] = period
 
     df_features.to_csv(f"{path}dvs-feature_aggr.tsv", sep='\t', index=True, index_label="id")
