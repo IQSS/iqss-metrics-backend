@@ -10,7 +10,7 @@ sheets = [
     ["cssMonthlyTickets", 258445490, css_tickets_url, "A:F", []],
     ["cssDeviceType", 1021732063, css_tickets_url, "A:K", []],
     ["cssPatronCommunity", 345883130, css_tickets_url, "A:W", []],
-    ["cssTypeOfRequestPCMac", 1854286511, css_tickets_url, "A:U", []],
+    ["cssTypeOfRequestPCMac", 1854286511, css_tickets_url, "A:V", []],
     ["lab_report_master_data", 799546563, css_tickets_url, "A:Y", []],
 ]
 
@@ -195,7 +195,7 @@ def css_mac_pc(path):
 
     # totals PC and MAC over the years
     df = pd.read_csv(path + 'cssTypeOfRequestPCMac.tsv', delimiter="\t")
-    df["sum"] = df.isnull().sum(axis=1)
+    df["sum"] = df["Sum"]
     df2 = df[["Year", "Type", "sum"]]
 
     df_total = df2[df2["Type"] == "PC"][["Year", "sum"]]
