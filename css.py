@@ -63,7 +63,7 @@ def css_quarterly_tickets(path):
 
     last_FY = df["year_number"].unique().max()
     last_5yr = last_FY - 4
-    df_aggr = df.query(f"year_number >= {last_5yr}")
+    df_aggr = df.query(f"year_number >= {last_5yr}").sort_values(by=['year_number'])
     df_aggr.to_csv(path + "css_quarterly_tickets_last_5yr.tsv",
                    sep='\t', index=True, index_label="id")
 
