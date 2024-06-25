@@ -11,7 +11,7 @@ sheets = [
     # OK
     ["cgaGISApplication", 1021617292, os.getenv("SHEET_URL_CGA_GIS_APPLICATION"), "A:N", [0, 1, 5, 6, 7]],
     # OK
-    ["cgaEventRegistration", 0, os.getenv("SHEET_URL_CGA_EVENT_REGISTRATION"), "A:L", [0, 1, 5, 6, 7]],
+    ["cgaEventRegistration", 340045856, os.getenv("SHEET_URL_CGA_EVENT_REGISTRATION"), "A:L", [0, 1, 5, 6, 7]],
     # OK
     ["cgaTrainingRegistration", 2068274999, os.getenv("SHEET_URL_CGA_TRAINING_REGISTRATION"), "A:M",
      [0, 1, 2, 6, 7, 8, 11, 12]],
