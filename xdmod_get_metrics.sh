@@ -1,11 +1,11 @@
 #!/bin/sh
-curl 'https://xdmod.rc.fas.harvard.edu/controllers/user_interface.php' \
+curl -x socks5h://localhost:1080 'https://xdmod.rc.fas.harvard.edu/controllers/user_interface.php' \
   -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
   -H 'Accept-Language: en-US' \
   -H 'Cache-Control: max-age=0' \
   -H 'Connection: keep-alive' \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -H 'Cookie: PHPSESSID=; xdmod_token=;' \
+  -H 'Cookie: PHPSESSID=;xdmod_token=;' \
   -H 'Origin: https://xdmod.rc.fas.harvard.edu' \
   -H 'Referer: https://xdmod.rc.fas.harvard.edu/' \
   -H 'Sec-Fetch-Dest: document' \
