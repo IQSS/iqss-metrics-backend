@@ -154,7 +154,7 @@ def aggregate_harvard_dataverse(path):
     logging.info('Aggregate Harvest Dataverse')
 
     df_dv_support_tickets = pd.read_csv(path + 'rt_dataverse_support.tsv', delimiter="\t")
-    period = df_dv_support_tickets["period"][0]
+    period = df_dv_support_tickets["period"].iloc[0]
 
     # total number of tickets
     count = len(df_dv_support_tickets["ticket_url"].unique())

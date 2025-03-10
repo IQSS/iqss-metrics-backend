@@ -227,7 +227,7 @@ def cga_event_registration_aggr(path):
     df3 = df2.merge(df3, how="inner", on="name").drop_duplicates()[["name", "datetime"]]
     df_aggr = df3.rename(columns={"name": "course", "datetime": "registration_count"})
     # save
-    registrations_ytd = int(df_aggr.tail(1)['registration_count'][0])
+    registrations_ytd = int(df_aggr.tail(1)['registration_count'].iloc[0])
 
     write_metric(
         path=path,
