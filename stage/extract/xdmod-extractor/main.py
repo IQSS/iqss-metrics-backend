@@ -31,7 +31,7 @@ from xdmod_data.warehouse import DataWarehouse
 _METRICS: dict[str, str] = {
     "CPU Hours: Total": "cpu-consumed",
     "GPU Hours: Total": "gpu-consumed",
-    "Number of Jobs Ended": "jobs-executed"
+    "Number of Jobs Ended": "jobs-executed",
 }
 
 
@@ -39,7 +39,7 @@ _METRICS: dict[str, str] = {
 @click.argument(
     "output_dir",
     type=click.Path(file_okay=False, dir_okay=True, path_type=Path),
-    default=".",
+    default="./__output__",
 )
 def cli(output_dir: Path) -> None:
     """Generate last-year usage CSVs and save them in OUTPUT_DIR."""
@@ -59,7 +59,7 @@ def cli(output_dir: Path) -> None:
             csv_path = output_dir / f"{year}-{stem}-xdmod-rc-fas-harvard-edu.csv"
 
             if Path.exists(csv_path):
-                click.echo("{csv_path} exists. skipping...")
+                click.echo(f"{csv_path} exists. skipping...")
                 continue
 
             data = dw.get_data(
@@ -67,10 +67,11 @@ def cli(output_dir: Path) -> None:
                 realm="Jobs",
                 filters={},
                 dimension="person",
-                dataset_type='timeseries',
-                aggregation_unit='Auto',
+                dataset_type="timeseries",
+                aggregation_unit="Auto",
                 metric=metric_name,
             )
+
             df = _pd.DataFrame(data)  # ensure DataFrame regardless of return type
             df.to_csv(csv_path, index=False)
             click.echo(f"Wrote {csv_path}")
