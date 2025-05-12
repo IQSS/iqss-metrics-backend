@@ -1,0 +1,782 @@
+﻿sAMAccountName,displayname,mail,company,department,title,CanonicalNameC,HomeDirectory,PrimaryGroup,gidNumber,uidNumber,loginShell,Created
+buckner,Randy Buckner,randy_buckner@harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Buckner Lab,/users/buckner,cnl,5003,20131,/bin/bash,10/18/2010 12:23
+fcushman,Fiery Cushman,cushman@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/NCF/Cushman Lab,/users/fcushman,cushman_lab,403030,5079,/bin/bash,10/18/2010 12:23
+jgreene,Joshua Greene,jgreene@wjh.harvard.edu,FAS,PSYCHOLOGY,FACULTY,Domain Users/NCF/Greene Lab,/users/jgreene,mcl,5006,5027,/bin/bash,10/18/2010 12:23
+jmitchel,Jason Mitchell,jason_mitchell@harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Mitchell Lab,/users/jmitchel,scn,5007,5030,/bin/bash,10/18/2010 12:23
+ken,Ken Nakayama,ken@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/NCF/Nakayama lab,/users/ken,vsl,5008,5034,/bin/bash,10/18/2010 12:23
+acaramazza,Alfonso Caramazza,caram@wjh.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Caramazza Lab,/users/acaramazza,cnp,5012,5081,/bin/bash,10/18/2010 12:23
+caroline,Caroline West,wcwest@fas.harvard.edu,FAS,Neuroimaging Compute Facility,STAFF,Domain Users/NCF/Administration/West Group,/users/caroline,ncf_users,402753,5056,/bin/bash,10/18/2010 12:23
+akarger,Amir Karger,Amir_Karger@hms.harvard.edu,HMS,HMS Research Computing,STAFF,Domain Users/HMS/HMS RC,/n/home05/akarger,hms_users,402915,2417,/bin/tcsh,11/24/2010 15:06
+acohen,Adam Cohen,cohen@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Cohen Lab,/n/home14/acohen,cohen_lab,33136,34363,/bin/bash,1/5/2011 10:36
+ameissner,Alexander Meissner,alexander_meissner@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Meissner Lab,/n/meissner_lab2/Users/ameissner,meissner_lab,34755,35143,/bin/bash,1/5/2011 10:37
+andy,Andy Strominger,andy@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/AStrominger Lab,/n/home/andy,hetg,34737,34935,/sbin/nologin,1/5/2011 10:37
+apakes,Ariel Pakes,apakes@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Pakes Lab,/n/home08/apakes,pakes_lab,40043,40894,/bin/bash,1/5/2011 10:37
+schwartz,Matthew Schwartz,schwartz@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/MSchwartz Lab,/n/home01/schwartz,schwartz_lab,40090,34952,/bin/bash,1/5/2011 10:37
+awm,Andrew Murray,awm@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home02/awm,murray_lab,10600,40258,/bin/bash,1/5/2011 10:38
+olveczky,Bence Olveczky,olveczky@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Olveczky Lab,/n/home00/olveczky,olveczky_lab,40013,40078,/bin/bash,1/5/2011 10:38
+blemos,Bernardo Lemos,blemos@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Lemos Lab,/n/home04/blemos,lemos_lab,402901,10147,/bin/bash,1/5/2011 10:38
+meade,Brendan Meade,meade@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Meade Lab,/n/home11/meade,meade_lab,35022,35264,/bin/bash,1/5/2011 10:38
+bfarrell,Brian D. Farrell,bfarrell@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Farrell Lab,/n/home01/bfarrell,farrell_lab,34759,40227,/bin/bash,1/5/2011 10:38
+cextavour,Cassandra Extavour,cextavour@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Extavour Lab,/n/home02/cextavour,extavour_lab,35015,34702,/bin/bash,1/5/2011 10:38
+cdavis,Charles Davis,cdavis@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Davis Lab,/n/home07/cdavis,davis_lab,10209,10241,/bin/bash,1/5/2011 10:38
+cconroy,Charlie Conroy,cconroy@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Conroy Lab,/n/home12/cconroy,conroy_lab,403048,40869,/bin/bash,1/5/2011 10:38
+warinner,Christina Warinner,warinner@fas.harvard.edu,FAS,Anthropology,FACULTY,Domain Users/Anthropology,/n/home03/warinner,warinner_lab,10464,40435,/bin/bash,1/5/2011 10:39
+stubbs,Christopher Stubbs,stubbs@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Stubbs Lab,/n/home08/stubbs,stubbs_lab,34726,34726,/bin/bash,1/5/2011 10:39
+vafa,Cumrun Vafa,vafa@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Vafa Lab,/n/home/vafa,vafa_lab,40149,34956,/bin/bash,1/5/2011 10:39
+shoag,Daniel Shoag,dan_shoag@hks.harvard.edu,HKS,Economics,FACULTY,Domain Users/ECON/Shoag Lab,/n/home05/shoag,shoag_lab,402917,40712,/bin/bash,1/5/2011 10:39
+devans,David Evans,evans@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB,/n/home/external/devans,evans_lab,33148,33410,/sbin/nologin,1/5/2011 10:39
+ddyang,David Yang,davidyang@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/DDYang Lab,/n/home06/ddyang,dyang_lab,10258,40790,/bin/bash,1/5/2011 10:40
+dfink,Doug Finkbeiner,dfinkbeiner@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Finkbeiner Lab,/n/home08/dfink,finkbeiner_lab,34758,34902,/bin/bash,1/5/2011 10:40
+berger,Edo Berger,eberger@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Berger Lab,/n/home02/berger,panstarrs,5002,40017,/bin/tcsh,1/5/2011 10:40
+ehelpman,Elhanan Helpman,ehelpman@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Helpman Lab,/n/home07/ehelpman,helpman_lab,40029,40340,/bin/bash,1/5/2011 10:40
+eli,Eli Tziperman,eli@seas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Tziperman Lab,/n/home03/eli,tziperman_lab,34730,34910,/bin/bash,1/5/2011 10:40
+keto,Eric Keto,keto@cfa.harvard.edu,FAS,Institute for Theory and Computation and Institute for,FACULTY,Domain Users/SEER,/n/home05/keto,keto_lab,10677,20163,/bin/bash,1/5/2011 10:40
+fmichor,Franziska Michor,michor@jimmy.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Michor Lab,/dev/null,michor_lab,402713,10270,/bin/bash,1/5/2011 10:41
+ggiribet,Gonzalo Giribet,ggiribet@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Giribet Lab,/n/home01/ggiribet,giribet_lab,10216,10289,/bin/bash,1/5/2011 10:41
+hpfister,Hanspeter Pfister,pfister@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home01/hpfister,pfister_lab,40134,20122,/bin/bash,1/5/2011 10:41
+georgi,Howard Georgi,georgi@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Georgi Lab,/n/home/georgi,georgi_lab,402830,34944,/sbin/nologin,1/5/2011 10:41
+silvera,Isaac Silvera,silvera@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Silvera,/n/home02/silvera,silvera_lab,40230,40860,/bin/bash,1/5/2011 10:42
+lichtman,Jeff Lichtman,jeff@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home08/lichtman,lichtman_lab,40118,20124,/bin/bash,1/5/2011 10:42
+jbloxham,Jeremy Bloxham,jeremy_bloxham@harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Bloxham Lab,/n/home04/jbloxham,bloxham_lab,40015,40084,/bin/bash,1/5/2011 10:42
+huth,John Huth,huth@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Huth Lab,/n/home10/huth,huth_lab,402190,20005,/bin/bash,1/5/2011 10:43
+jmkovac,John Kovac,jmkovac@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Kovac Lab,/n/home07/jmkovac,kovac_lab,40122,40433,/bin/bash,1/5/2011 10:43
+jwakeley,John Wakeley,wakeley@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Wakeley Lab,/n/home10/jwakeley,wakeley_lab,33143,34398,/bin/bash,1/5/2011 10:43
+jlosos,Jonathan Losos,jlosos@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Losos Lab,/n/home08/jlosos,losos_group,33253,40573,/bin/bash,1/5/2011 10:43
+sanesj,Joshua Sanes,sanesj@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home08/sanesj,sanes_lab,40025,33467,/bin/bash,1/5/2011 10:43
+lhernqui,Lars Hernquist,lhernquist@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Hernquist Lab,/odyssey/home/lhernqui,hernquist_lab,33234,34709,/bin/bash,1/5/2011 10:44
+randall,Lisa Randall,randall@g.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Randall Lab,/dev/null,randall_lab,40076,34951,/sbin/nologin,1/5/2011 10:44
+mmelitz,Marc Melitz,mmelitz@fas.harvard.edu,FAS,Economics,,Domain Users/ECON/PI,/n/home09/mmelitz,melitz_lab,40040,40187,/bin/bash,1/5/2011 10:44
+mmcfee,Maggie McFee,mmcfee@g.harvard.edu,RC,Research Computing,STAFF,Domain Users/RC/RCSS,/n/home_rc/mmcfee,rc_admin,40273,20010,/bin/bash,1/5/2011 10:44
+margo,Margo Seltzer,margo@eecs.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home02/margo,seltzer_lab,35019,35252,/bin/bash,1/5/2011 10:44
+mlinz,Marianna Linz,mlinz@seas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Linz Lab,/n/home13/mlinz,linz_lab,5094,40626,/bin/bash,1/5/2011 10:44
+mloncar,Marko Loncar,loncar@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Loncar Lab,/n/home15/mloncar,mloncar_lab,402795,10226,/bin/bash,1/5/2011 10:44
+morii,Masahiro Morii,morii@g.harvard.edu,FAS,PHYSICS,FACULTY,Domain Users/Physics,/n/home05/morii,hepl,20030,20009,/bin/bash,1/5/2011 10:45
+mholman,Matthew Holman,mholman@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA,/n/home01/mholman,holman_lab,40220,35062,/bin/bash,1/5/2011 10:45
+msantillana,Mauricio Santillana,msantill@fas.harvard.edu,HMS,SEAS,FACULTY,Domain Users/SEAS/Santillana Lab,/n/home06/msantillana,santillana_lab,403027,34924,/bin/bash,1/5/2011 10:45
+franklin,Melissa Franklin,melissafranklin@g.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Franklin Lab,/n/home06/franklin,hepl,20030,20018,/bin/bash,1/5/2011 10:45
+mdesai,Michael Desai,mdesai@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Desai Lab,/n/home09/mdesai,desai_lab,40216,40809,/bin/bash,1/5/2011 10:45
+milan,Milan Kupcevic,milan_kupcevic@harvard.edu,RC,Research Computing,STAFF,Domain Users/RC/Operations,/n/home_rc/milan,rc_admin,40273,40853,/bin/bash,1/5/2011 10:45
+chetty,Nadarajan Chetty,chetty@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Chetty Lab,/n/home12/chetty,chetty_lab,40003,35230,/bin/bash,1/5/2011 10:45
+tuross,Noreen Tuross,tuross@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HEB/Tuross Lab,/n/home09/tuross,tuross_lab,40123,40703,/bin/bash,1/5/2011 10:46
+psabeti,Pardis Sabeti,pardis@broadinstitute.org,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Sabeti Lab,/n/home/psabeti,sabeti_lab,35004,34732,/bin/bash,1/5/2011 10:46
+prm,Paul Moorcroft,paul_moorcroft@harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Moorcroft Lab,/n/home00/prm,moorcroft_lab,33118,8229,/bin/bash,1/5/2011 10:46
+pavlos,Pavlos Protopapas,protopapas@gmail.com,SEAS,SEAS,FACULTY,Domain Users/SEAS/Protopapas Lab,/n/home10/pavlos,protopapas_lab,403031,20106,/bin/bash,1/5/2011 10:46
+pgirguis,Peter Girguis,pgirguis@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Girguis Lab,/dev/null,girguis_lab,33218,34630,/bin/bash,1/5/2011 10:46
+phuybers,Peter Huybers,phuybers@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Huybers Lab,/n/home00/phuybers,huybers_lab,34728,34918,/bin/bash,1/5/2011 10:46
+pantras,Pol Antras,pantras@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Antras Lab,/n/home/pantras,antras_lab,40027,40188,/bin/bash,1/5/2011 10:46
+rnarayan,Ramesh Narayan,rnarayan@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Narayan Lab,/n/home11/rnarayan,narayan_lab,10288,40006,/bin/bash,1/5/2011 10:46
+rogerfu,Roger Fu,rogerfu@fas.harvard.edu,,EPS,FACULTY,Domain Users/SEER,/n/home/rogerfu,rogerfu_lab,10353,40004,/bin/bash,1/5/2011 10:47
+skou,Shingchang Samuel Kou,kou@stat.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Kou Lab,/n/home08/skou,kou_lab,10208,10228,/bin/bash,1/5/2011 10:47
+smathews,Sarah Mathews,smathews@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Mathews Lab,/n/home04/smathews,mathews_lab,10176,10176,/bin/bash,1/5/2011 10:47
+sstewart,Sarah Stewart,sstewart@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Stewart Lab,/n/home02/sstewart,stewart_lab,35012,35177,/bin/tcsh,1/5/2011 10:47
+sedwards,Scott Edwards,sedwards@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Edwards Lab,/n/home06/sedwards,edwards_lab,10202,10205,/bin/bash,1/5/2011 10:47
+zheng,Shao-Liang Zheng,zheng@chemistry.harvard.edu,FAS,Department of Chemistry and Chemical Biology,FACULTY,Domain Users/CCB,/n/home00/zheng,zheng_lab,40038,40173,/bin/bash,1/5/2011 10:48
+sramanathan,Sharad Ramanathan,ramanath@g.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Ramanathan Lab,/n/Ramanathan_Lab/Users/sramanathan,ramanathan_lab,2113,34792,/bin/bash,1/5/2011 10:48
+steven_wofsy,Steven Wofsy,steven_wofsy@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Wofsy Lab,/n/home03/steven_wofsy,wofsy_lab,40047,40213,/bin/bash,1/5/2011 10:48
+srusso,Susan Russo Gelbart,russo@morgan.harvard.edu,FAS,Molecular and Cellular Biology,NONFACPI,Domain Users/MCB/Labs/Russo Lab,/n/home09/srusso,russo_lab,10100,10100,/bin/bash,1/5/2011 10:48
+tbetley,Theodore Betley,betley@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Betley Lab,/n/Betley_Lab/Users/tbetley,betley_lab,33251,34780,/sbin/bash,1/5/2011 10:48
+tsackton,Tim Sackton,tsackton@g.harvard.edu,RC,Research Computing,UNKNOWN,Domain Users/RC/Informatics,/n/home12/tsackton,informatics,403265,40591,/bin/bash,1/5/2011 10:48
+zickler,Todd Zickler,zickler@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home00/zickler,zickler_lab,40175,40764,/bin/bash,1/5/2011 10:49
+strzalecki,Tomasz Strzalecki,strzalec@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Strzalecki Lab,/n/home03/strzalecki,strzalecki_lab,40274,41089,/bin/bash,1/5/2011 10:49
+dsouza,Victoria D'Souza,dsouza@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/DSouza Lab,/n/home06/dsouza,dsouza_lab,33089,33059,/bin/bash,1/5/2011 10:49
+wanderson,William Anderson,william_anderson@harvard.edu,FAS,SCRB,STAFF,Domain Users/MCB/SCRB/Administrative,/dev/null,wanderson_lab,11252,99775,/sbin/nologin,1/5/2011 10:49
+xiyin,Xi Yin,xiyin@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Yin Lab,/n/home11/xiyin,yin_lab,40185,34957,/bin/bash,1/5/2011 10:49
+kuang,Zhiming Kuang,kuang@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Kuang Lab,/n/home10/kuang,kuang_lab,34720,34720,/bin/bash,1/5/2011 10:50
+jgrindlay,Jonathan Josh Grindlay,josh@head.cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Grindlay Lab,/n/home04/jgrindlay,dasch_project,402020,50062,/bin/bash,3/28/2011 12:07
+creardon,Claire Reardon Hartmann,creardon@cgr.harvard.edu,CSB,Center for Systems Biology,STAFF,Domain Users/CSB/Lab Services/Reardon Lab,/n/home00/creardon,g_nwl_core_admins,33230,33863,/bin/bash,4/21/2011 14:31
+yhgrad,Yonatan Grad,ygrad@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Lipsitch Lab,/n/home08/yhgrad,grad_lab,5085,50117,/bin/bash,5/4/2011 11:42
+jaizenberg,Joanna Aizenberg,jaiz@seas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/CCB Administrators,/dev/null,aizenberg_lab,402101,52572,/bin/bash,5/26/2011 23:12
+mshair,Matthew Shair,shair@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/CCB Administrators,/n/home01/mshair,shair_lab,40144,52573,/bin/bash,5/26/2011 23:12
+xzhuang,Xiaowei Zhuang,zhuang@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/CCB Administrators,/dev/null,zhuang_lab,40189,52571,/sbin/nologin,5/26/2011 23:12
+parlotta,Paola Arlotta,paola_arlotta@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Arlotta Lab,/n/home/parlotta,arlotta_lab,402055,52416,/bin/sh,5/26/2011 23:15
+ejacobsen,Eric Jacobsen,jacobsen@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Jacobsen Lab,/n/home03/ejacobsen,jacobsen_lab,33130,33136,/bin/bash,5/27/2011 8:35
+strauger,Sunia Trauger,strauger@fas.harvard.edu,CSB,Center for Systems Biology,STAFF,Domain Users/CSB/Lab Services/Mass Spectrometry/Small Molecule SMMS,/n/home05/strauger,trauger_lab,402036,34803,/bin/bash,5/27/2011 8:36
+alvarez,George Alvarez,alvarez@wjh.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/VSL,/n/home02/alvarez,alvarez_lab,402099,52224,/bin/bash,5/27/2011 8:37
+dneedleman,daniel needleman,dan_needleman@harvard.edu,FAS,Center for Systems Biology,FACULTY,Domain Users/CSB/Labs/Needleman Lab,/n/home07/dneedleman,needleman_lab,40002,33398,/bin/bash,5/27/2011 8:37
+nelson,David Nelson,drnelson@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Nelson_Lab,/dev/null,nelson_lab,10217,52239,/bin/bash,5/27/2011 8:37
+ekane,Elizabeth Kane,ekane@fas.harvard.edu,FAS,Rowland Institute,FACULTY,Domain Users/Rowland Institute/Labs/Kane Lab,/n/home04/ekane,kane_lab,402995,52246,/bin/bash,5/27/2011 8:39
+bdebivort,Benjamin de Bivort,debivort@oeb.harvard.edu,FAS,Rowland Institute,FACULTY,Domain Users/Rowland Institute/Labs/de Bivort Lab,/n/home15/bdebivort,debivort_lab,402802,52206,/bin/bash,5/27/2011 8:39
+gwhitesides,George M. Whitesides,gwhitesides@gmwgroup.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Whitesides Lab,/dev/null,whitesides_lab,10218,33692,/bin/bash,5/27/2011 8:44
+mbanaji,Mahzarin R. Banaji,mahzarin_banaji@harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology/Banaji Lab,/dev/null,mbanaji_lab,403371,52895,/bin/bash,5/27/2011 8:45
+xie,Sunney Xiaoliang Xie,xie@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CSB/Labs/Xie Lab,/dev/null,xie_lab,402013,52787,/sbin/nologin,5/27/2011 8:45
+hberg,Howard Berg,hberg@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Berg Lab,/dev/null,berg_lab,34741,34036,/sbin/nologin,5/27/2011 8:51
+cluzel,Philippe Cluzel,cluzel@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Cluzel Lab,/dev/null,cluzel_lab,35008,33811,/sbin/nologin,5/27/2011 8:52
+ccowan,Chad Cowan,chad_cowan@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Cowan Lab,/dev/null,cowan_lab,402062,55243,/sbin/nologin,5/27/2011 8:52
+vdenic,Vladimir Denic,vdenic@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Denic Lab,/dev/null,denic_lab,402507,34513,/sbin/nologin,5/27/2011 8:52
+florian,Florian Engert,florian@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Engert Lab,/home/florian,engert_lab,402114,33478,/bin/bash,5/27/2011 8:53
+gaudet,Rachelle Gaudet,gaudet@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Gaudet Lab,/n/home05/gaudet,gaudet_lab,20200,34257,/bin/bash,5/27/2011 8:55
+hensch,Takao Hensch,hensch@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Hensch Lab,/n/home14/hensch,hensch_users,402070,34184,/bin/bash,5/27/2011 8:56
+ldaheron,Laurence Daheron,Laurence_Daheron@harvard.edu,FAS,Molecular and Cellular Biology,STAFF,Domain Users/MCB/SCRB/iPS Core,/dev/null,iPS_Core,402183,33176,/sbin/nologin,5/27/2011 8:57
+kleckner,Nancy Kleckner,kleckner@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Kleckner Lab,/dev/null,kleckner_users,402170,34161,/sbin/nologin,5/27/2011 8:58
+kunes,Sam Kunes,kunes@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Kunes Lab,/n/home04/kunes,kunes_lab,40026,34255,/bin/bash,5/27/2011 8:58
+losick,Richard Losick,losick@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Losick Lab,/home/losick,losick_lab,40229,33201,/bin/sh,5/27/2011 8:59
+smango,Susan Mango,smango@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Mango Lab,/dev/null,mango_lab,40121,34005,/sbin/nologin,5/27/2011 9:00
+maniatis,Tom Maniatis,maniatis@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Maniatis Lab,/dev/null,maniatis_lab,40014,33498,/sbin/nologin,5/27/2011 9:00
+mcmahon,Andy McMahon,mcmahon@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/McMahon Lab,/dev/null,mcmahon_users,402066,32896,/sbin/nologin,5/27/2011 9:00
+dmelton,Doug Melton,dmelton@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Melton lab,/dev/null,melton_users,402067,32791,/bin/bash,5/27/2011 9:01
+meselson,Matthew Meselson,meselson@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Meselson Lab,/n/home12/meselson,meselson_lab,402204,34567,/bin/bash,5/27/2011 9:02
+jrivera,Jose Rivera-Feliciano,jrivera@fas.harvard.edu,FAS,Molecular and Cellular Biology,NONFACPI,Domain Users/MCB,/n/home09/jrivera,jrivera_lab,10325,54030,/bin/bash,5/27/2011 9:02
+vnmurthy,Venkatesh Murthy,vnmurthy@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Murthy Lab,/dev/null,murthy_users,402553,33561,/sbin/nologin,5/27/2011 9:03
+lrubin,Lee Rubin,Lee_Rubin@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Rubin Lab,/n/home09/lrubin,rubin_users,402560,33123,/bin/bash,5/27/2011 9:06
+dscadden,David Scadden,David_Scadden@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Scadden Lab,/dev/null,scadden_lab,40276,33003,/bin/bash,5/27/2011 9:06
+jenmbli,Jennifer Li,jli@rowland.harvard.edu,FAS,Rowland Institute,NONFACPI,Domain Users/Rowland Institute/Labs/Jennifer Li Lab,/dev/null,jenmbli_lab,403127,33240,/sbin/nologin,5/27/2011 9:06
+strominger,Jack Strominger,jack_strominger@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/JStrominger Lab,/dev/null,strominger_lab,34745,34372,/sbin/nologin,5/27/2011 9:10
+uchida,Naoshige Uchida,uchida@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Uchida Lab,/home/uchida,uchida_users,402072,33810,/bin/sh,5/27/2011 9:11
+awagers,Amy Wagers,amy_wagers@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Wagers Lab,/home/awagers,wagers_lab,402102,33775,/bin/sh,5/27/2011 9:12
+nfriedman,Ned Friedman,ned@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Arnold Arboretum,/dev/null,friedman_lab,402069,34091,/bin/bash,5/27/2011 10:53
+abiewener,Andrew Biewener,abiewener@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Biewener Lab,/dev/null,biewener_lab,402116,34395,/sbin/nologin,5/27/2011 10:53
+dlieberman,Daniel Lieberman,danlieb@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HEB/Lieberman_Lab,/dev/null,lieberman_lab,402019,55057,/sbin/nologin,5/27/2011 10:53
+rcarmody,Rachel Carmody,carmody@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HEB/Carmody Lab,/n/home13/rcarmody,carmody_lab,403293,55055,/bin/bash,5/27/2011 10:53
+CCavanaugh,Colleen Cavanaugh,cavanaug@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Cavanaugh Lab,/dev/null,cavanaugh_users,402502,33115,/sbin/nologin,5/27/2011 10:54
+dhaig,David Haig,dhaig@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Haig Lab,/dev/null,haig_lab,40231,34088,/sbin/nologin,5/27/2011 10:57
+DHartl,Daniel Hartl,dhartl@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Hartl Lab,/dev/null,hartl,10902,34326,/sbin/nologin,5/27/2011 10:57
+hhoekstra,Hopi Hoekstra,hoekstra@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Hoekstra Lab,/n/home05/hhoekstra,hoekstra_lab,33235,33397,/bin/bash,5/27/2011 10:58
+nholbrook,Noel Michele Holbrook,holbrook@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Holbrook Lab,/dev/null,holbrook_lab,402624,55159,/bin/bash,5/27/2011 10:58
+DJohnston,David Johnston,johnston@eps.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Knoll Lab,/n/home06/DJohnston,johnston_lab,40117,55385,/sbin/nologin,5/27/2011 10:58
+ekramer,Elena Kramer,ekramer@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Kramer Lab,/n/home15/ekramer,kramer_lab,40092,33627,/bin/bash,5/27/2011 10:58
+GLauder,George Lauder,glauder@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Lauder Lab,/dev/null,lauder_lab,34756,33358,/sbin/nologin,5/27/2011 10:59
+DPfister,Donald Pfister,dpfister@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Pfister Lab,/dev/null,donald_pfister_lab,402776,33298,/sbin/nologin,5/27/2011 11:04
+npierce,Naomi Pierce,npierce@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Pierce Lab,/dev/null,pierce_lab,10210,34336,/sbin/nologin,5/27/2011 11:04
+yun_zhang,Yun Zhang,yzhang@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Zhang Lab,/n/home07/yun_zhang,zhang_lab,40124,55266,/bin/bash,5/27/2011 11:05
+ECorey,E.J. Corey,corey@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Corey Lab,/dev/null,corey_lab,40268,51284,/sbin/nologin,5/27/2011 11:19
+rgordon,Roy Gordon,gordon@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Gordon Lab,/n/home11/rgordon,gordon_lab,402115,51332,/bin/bash,5/27/2011 11:20
+DKahne,Daniel Kahne,kahne@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Kahne-Walker Lab,/home/DKahne,kahne_lab,402018,33828,/bin/sh,5/27/2011 11:21
+dliu,David Liu,liu@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Liu Lab,/n/home10/dliu,drliu_lab,40201,51223,/bin/bash,5/27/2011 11:22
+hpark,Hongkun Park,hongkun_park@harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Park Lab,/dev/null,park_lab,40105,33217,/bin/bash,5/27/2011 11:23
+bliau,Brian Liau,liau@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Liau Lab,/n/home14/bliau,liau_lab,403309,34857,/bin/bash,5/27/2011 11:24
+eshakhnovich,Eugene Shakhnovich,eugene@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Shakhnovich Lab,/n/home10/eshakhnovich,shakhnovich_lab,10206,51442,/bin/bash,5/27/2011 11:24
+gverdine,Gregory Verdine,gregory_verdine@harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/_DISABLED,/home/GVerdine,verdine_lab,40245,51151,/bin/sh,5/27/2011 11:25
+jclardy,Jon Clardy,jon_clardy@hms.harvard.edu,HMS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Jon Clardy Lab,/n/home15/jclardy,jclardy_lab,402800,51043,/bin/bash,5/27/2011 11:25
+SSchreiber,Stuart Schreiber,stuart_schreiber@harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Shrieber Lab,/dev/null,schreiber_lab,40265,54810,/sbin/nologin,5/27/2011 14:04
+schier,Alexander Schier,schier@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Schier Lab,/dev/null,schier_users,10220,33219,/bin/bash,5/31/2011 10:41
+dulac,Catherine Dulac,dulac@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Dulac Lab,/dev/null,dulac_lab,10905,33932,/sbin/nologin,5/31/2011 12:50
+Hanken,James Hanken,hanken@oeb.harvard.edu,FAS,Museum of Comparative Zoology,FACULTY,Domain Users/OEB/MCZ Museum,/dev/null,hanken_lab,10221,34766,/sbin/nologin,5/31/2011 12:59
+hunter,Craig Hunter,hunter@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Hunter Lab,/n/home06/hunter,hunter_lab,20400,33027,/bin/bash,5/31/2011 13:03
+ebalskus,Emily Balskus,balskus@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Balskus Lab,/n/home04/ebalskus,balskus_lab,402063,100058,/bin/bash,6/16/2011 10:32
+shosui,Shannan Ho Sui,shosui@hsph.harvard.edu,HCSPH,Bioinformatics,NONFACPI,Domain Users/HSPH/BIOSTAT/Bioinformatics,/n/home03/shosui,hsph_bioinfo,402209,56175,/bin/bash,7/14/2011 16:05
+apallais,Amanda Pallais,apallais@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/PI,/n/home09/apallais,pallais_lab,402039,56182,/bin/bash,7/18/2011 19:01
+amir,Ariel Amir,arielamir@seas.harvard.edu,SEAS,Physics,FACULTY,Domain Users/Physics/Amir Lab,/n/home02/amir,amir_lab,402172,56191,/bin/bash,7/21/2011 11:05
+spelke,Elizabeth Spelke,spelke@wjh.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/LDS Lab,/dev/null,lds,403297,100062,/sbin/nologin,7/22/2011 10:49
+nnunn,Nathan Nunn [Economics],nnunn@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Nunn Lab,/n/home04/nnunn,n_nunn_lab,402671,56222,/bin/bash,8/4/2011 14:45
+buckholtz,Joshua Buckholtz,joshuabuckholtz@fas.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Buckholtz Lab,/users/buckholtz,jwb,402041,5152,/bin/bash,8/6/2011 9:17
+chuttenhower,Curtis Huttenhower,chuttenh@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Huttenhower Lab,/n/home10/chuttenhower,huttenhower_lab,402050,56259,/bin/bash,8/17/2011 16:24
+shaw,John H. Shaw,shaw@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Shaw Lab,/n/home12/shaw,shaw_lab,35020,56312,/bin/bash,9/7/2011 12:10
+gluk,Gigi Luk,gigi_luk@gse.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Luk Lab,/users/gluk,luk_lab,402104,56363,/bin/bash,9/20/2011 13:32
+pillai,Natesh Pillai,pillai@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Pillai Lab,/n/home13/pillai,pillai_lab,402065,56388,/bin/bash,9/29/2011 14:47
+dls,Daniel Schacter,dls@wjh.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Schacter Lab,/dev/null,sml,5016,100083,/bin/bash,10/6/2011 10:05
+mreece,Matthew Reece,mreece@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Reece Lab,/n/home03/mreece,reece_lab,402196,56431,/bin/bash,10/19/2011 8:54
+pmanuelian,Peter Manuelian,peter_manuelian@harvard.edu,FAS,Archaeology,FACULTY,Domain Users/ARCH/Manuelian_Lab,/dev/null,manuelian_lab,402078,56477,/bin/bash,10/31/2011 12:23
+dholt,Daphne Holt,dholt@partners.org,HMS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Holt Lab,/users/dholt,holt_lab,402700,58551,/bin/bash,10/31/2011 23:17
+pedmon,Paul Edmon,pedmon@cfa.harvard.edu,RC,Research Computing,UNKNOWN,Domain Users/RC/DSRF,/n/home_rc/pedmon,rc_admin,40273,56483,/bin/bash,11/1/2011 12:26
+pearson,Ann Pearson,pearson@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS,/n/home02/pearson,pearson_lab,402035,56521,/bin/bash,11/15/2011 9:37
+kha,Kyu Ha,klee@hsph.harvard.edu,HCSPH,Nutrition Department,FACULTY,Domain Users/HSPH,/n/home09/kha,ha_lab,5151,56538,/bin/bash,11/18/2011 23:46
+lneedleman,Leigh Needleman,lneedleman@fas.harvard.edu,FAS,Molecular and Cellular Biology,STAFF,Domain Users/MCB/Labs/Dulac Lab,/home/lneedleman,seas,34739,57672,/bin/bash,11/21/2011 10:33
+lliang,Liming Liang,lliang@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Liang Lab,/n/home11/lliang,liang_lab,402187,56549,/bin/bash,11/28/2011 14:55
+pkbol,Peter Bol,pkbol@fas.harvard.edu,FAS,East Asian Languages and Civilizations,FACULTY,Domain Users/Linguistics,/n/home11/pkbol,bol_lab,402081,56578,/bin/bash,12/8/2011 12:07
+pgalison,Peter Galison,galison@fas.harvard.edu,FAS,Collection of Historical Scientific Instruments,FACULTY,Domain Users/Museums/CHSI,/dev/null,chsi_museum,402087,56598,/sbin/nologin,12/14/2011 17:46
+azanobet,Antonella Zanobetti,azanobet@hsph.harvard.edu,HCSPH,Environmental Health,NON-FACULTY PI,Domain Users/_DISABLED,/n/home11/azanobet,zanobetti_lab,10243,56619,/bin/bash,1/3/2012 8:55
+finale,Finale Doshi-Velez,finale@seas.harvard.edu,SEAS,Ryan Adams - SEAS,FACULTY,Domain Users/SEAS/Doshi-Velez Lab,/n/home05/finale,doshi-velez_lab,403036,56676,/bin/bash,1/20/2012 11:35
+kmclaughlin,Katie McLaughlin,kmclaughlin@fas.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/McLaughlin Lab,/users/kmclaughlin,mclaughlin_lab,402094,56729,/bin/bash,2/10/2012 10:03
+msheridan,Margaret Sheridan,sheridan.margaret@unc.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Sheridan Lab,/users/msheridan,sheridan_lab,402110,56755,/bin/bash,2/22/2012 13:20
+mwang,Molin Wang,stmow@channing.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/mwang Lab,/n/home08/mwang,mwang_lab_hsph,10169,56777,/bin/bash,3/1/2012 14:05
+nhendren,Nathaniel Hendren,nhendren@gmail.com,FAS,Economics,FACULTY,Domain Users/ECON/Hendren Lab,/n/home03/nhendren,hendren_lab,10034,56925,/bin/bash,4/12/2012 10:32
+mlipsitc,Marc Lipsitch,mlipsitc@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Lipsitch Lab,/n/home07/mlipsitc,lipsitch_lab,402931,56955,/bin/bash,4/24/2012 14:18
+ralonso,Raquel Alonso-Perez,ralonso@fas.harvard.edu,FAS,Earth and Planetary Sciences,STAFF,Domain Users/Museums/Geology,/dev/null,Geology_Museum,402591,56966,/sbin/nologin,4/30/2012 15:14
+nyao,Norman Yao,nyao@fas.harvard.edu,FAS,Physics,NON-FACULTY PI,Domain Users/Physics/Yao Lab,/n/home08/nyao,yao_lab,10011,56987,/bin/bash,5/8/2012 9:15
+meldaief,Mark Eldaief,Mark.Eldaief@MGH.HARVARD.EDU,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/halko_lab,/users/meldaief,eldaief_lab,403259,56996,/bin/bash,5/11/2012 14:45
+egarner,Ethan Garner,egarner@fas.harvard.edu,FAS,Center for Systems Biology,FACULTY,Domain Users/CSB/Labs/Garner Lab,/h/home12/egarner,garner_lab,402171,57086,/bin/bash,6/8/2012 16:30
+pkraft,Peter Kraft,pkraft@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Kraft Lab,/n/home06/pkraft,kraft_lab,402745,57125,/bin/bash,6/19/2012 9:02
+mshepard,Mark Shepard,mark_shepard@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Shepard Lab,/n/home06/mshepard,shepard_lab,10557,57153,/bin/bash,6/26/2012 11:18
+mishii,Miaki Ishii,ishii@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Ishii_Lab,/n/home01/mishii,ishii_lab,402176,57173,/bin/bash,6/29/2012 14:02
+davidcox,David Cox,davidcox@fas.harvard.edu,SEAS,,FACULTY,Domain Users/MCB/Labs/Cox Lab,/n/home04/davidcox,cox_lab,402177,57175,/bin/bash,7/2/2012 10:39
+lsomerville,Leah Somerville,somerville@fas.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Somerville Lab,/users/lsomerville,somerville_lab,402180,57236,/bin/bash,7/18/2012 17:35
+lzon,Leonard Zon,lzon@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Zon Lab,/dev/null,zon_lab,402108,99934,/sbin/nologin,7/26/2012 9:48
+jmacklis,Jeffrey Macklis,jeffreymacklis@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Macklis Lab,/dev/null,macklis_lab,402109,57285,/bin/bash,7/31/2012 15:54
+tkonkle,Talia Konkle,tkonkle@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology/Konkle Lab,/n/home07/tkonkle,konkle_lab,403248,57602,/bin/bash,9/17/2012 14:28
+bhanage,Bill Hanage,whanage@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Hanage Lab,/dev/null,hanage_lab,402193,57628,/bin/bash,9/24/2012 14:11
+jasonur,Jason Ur,jasonur@fas.harvard.edu,FAS,Anthropology,FACULTY,Domain Users/Anthropology/Ur Lab,/dev/null,ur_lab,402902,99999,/sbin/nologin,9/27/2012 21:47
+dchristiani,David Christiani,dchris@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Christiani Lab,/n/home04/dchristiani,christiani_lab,402807,57663,/bin/bash,10/1/2012 11:24
+junliu,Jun Liu,jliu@stat.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Jun Liu Lab,/dev/null,junliu_lab,10212,58298,/sbin/nologin,10/15/2012 11:26
+dmooney,David Mooney,mooneyd@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Mooney Lab,/dev/null,seas,34739,57907,/bin/bash,11/30/2012 15:15
+dnocera,Daniel Nocera,dnocera@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Nocera Lab,/n/home11/dnocera,nocera_lab,402677,57967,/bin/bash,12/18/2012 11:36
+dwang,Daniel Dong Wang,nhdow@channing.harvard.edu,HCSPH,Nutrition,FACULTY,Domain Users/HSPH/Nutrition Department/DWang Lab,/n/home10/dwang,dwang_lab,10444,57992,/bin/bash,12/21/2012 11:03
+jhooley,Jill Hooley,jmh@wjh.harvard.edu,FAS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Hooley Lab,/users/jhooley,hooley_lab,402681,58014,/bin/bash,1/7/2013 11:25
+apleone,Alvaro Pascual-Leone,apleone@bidmc.harvard.edu,HMS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/halko_lab,/users/apleone,halko_lab,402122,58091,/bin/bash,1/25/2013 11:24
+dap,Diego A. Pizzagalli,dap@mclean.harvard.edu,HMS,Neuroimaging Compute Facility,FACULTY,Domain Users/NCF/Pizzagalli Lab,/users/dap,anl,5005,58921,/bin/bash,1/25/2013 11:32
+mas,Maurice Smith,mas@seas.harvard.edu,SEAS,BIOENGINEERING,FACULTY,Domain Users/SEAS/Smith Lab,/n/home00/mas,smith_lab,402691,58109,/bin/bash,1/30/2013 14:04
+mspringer,Michael Springer,Michael_springer@hms.harvard.edu,HMS,Center for Systems Biology,FACULTY,Domain Users/CSB/External Users/HMS/Springer Lab,/dev/null,springer_lab,402693,58140,/sbin/nologin,2/5/2013 13:21
+dbrubin,Donald B. Rubin,rubin@stat.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Rubin Lab,/n/home02/dbrubin,rubin_lab,402695,58147,/bin/bash,2/6/2013 9:46
+eglaeser,Edward L. Glaeser,edward_glaeser@hks.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Glaeser Lab,/sbin/nologin,glaeser_lab,40100,58173,/bin/bash,2/11/2013 14:15
+njoshi,Neel Joshi,njoshi@seas.harvard.edu,SEAS,BIOPHYSICS,FACULTY,Domain Users/SEAS/Joshi Lab,/dev/null,njoshi_lab,402699,58238,/sbin/nologin,2/19/2013 11:49
+nmenzies,Nicolas Menzies,nmenzies@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population/Salomon Lab,/n/home00/nmenzies,menzies_lab,4033795,58245,/bin/bash,2/20/2013 11:15
+fdobbin,Frank Dobbin,frank_dobbin@harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology/Dobbin Lab,/dev/null,dobbin_lab,402710,58360,/sbin/nologin,3/20/2013 10:42
+wruzicka,William B. Ruzicka,wruzicka@mclean.harvard.edu,HMS,Harvard Medical School,EXTERNAL,Domain Users/_DISABLED,/n/home02/wruzicka,bauer_core_user,4033752,58368,/bin/bash,3/22/2013 16:28
+gmc,George M. Church,gc@harvard.edu,HMS,GENETICS,FACULTY,Domain Users/CCB/Labs/Church,/dev/null,church_lab,40086,58386,/sbin/nologin,4/4/2013 11:18
+yacoby,Amir Yacoby,yacoby@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Yacoby,/dev/null,yacoby_lab,40091,58407,/sbin/nologin,4/8/2013 13:02
+tanzi,Rudolph E. Tanzi,tanzi@helix.mgh.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS/Genetics/Tanzi Lab,/dev/null,tanzi_lab,402721,58408,/sbin/nologin,4/8/2013 13:11
+xihonglin,Xihong Lin,xlin@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Xihong Lin Lab,/n/home03/xihonglin,xlin,402185,58409,/bin/bash,4/8/2013 15:09
+aloeb,Avi Loeb,aloeb@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Loeb Lab,/dev/null,loeb_lab,34746,58416,/sbin/nologin,4/11/2013 15:56
+westervelt,Robert Westervelt,westervelt@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Westervelt_Lab,/dev/null,westervelt_lab,402676,58431,/sbin/nologin,4/17/2013 12:21
+lukin,Mikhail Lukin,lukin@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Lukin_Lab,/dev/null,lukin_lab,34744,58432,/sbin/nologin,4/17/2013 12:27
+bcoull,Brent A. Coull,bcoull@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Coull Lab,/n/home05/bcoull,coull_lab,402725,58438,/bin/bash,4/17/2013 13:13
+esunder,Elsie Sunderland,elsie_sunderland@harvard.edu,SEAS,,FACULTY,Domain Users/SEAS/Sunderland,/dev/null,sunderland_lab,402726,58495,/sbin/nologin,4/22/2013 17:08
+vnovitsky,Vladimir Novitsky,vnovi@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Novitsky Lab,/n/home07/vnovitsky,novitsky_lab,402730,58512,/bin/bash,4/29/2013 15:49
+jhoffman,Jenny Hoffman,jhoffman@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Hoffman Lab,/n/home12/jhoffman,hoffman_lab,402074,58523,/bin/bash,5/1/2013 9:47
+manoharan,Vinothan Manoharan,vnm@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Manoharan Lab,/n/home00/manoharan,manoharan_lab,34742,58593,/bin/bash,5/17/2013 16:44
+mcastro,Marcia Castro,mcastro@hsph.harvard.edu,HCSPH,Population and International Health,FACULTY,Domain Users/HSPH/Population and International Health/Marcia Castro Lab,/dev/null,mcastro_lab,402741,58665,/bin/bash,5/23/2013 10:54
+djacob,Daniel Jacob,djacob@fas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Jacob Lab,/n/home11/djacob,jacob_lab,40114,58700,/bin/bash,5/29/2013 9:37
+sachdev,Subir Sachdev,sachdev@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Sachdev Lab,/dev/null,sachdev_lab,40275,58754,/sbin/nologin,5/30/2013 11:34
+dwirth,Dyann Wirth,dfwirth@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Wirth Lab,/dev/null,dwirth_lab,402744,58780,/bin/bash,6/5/2013 12:33
+gparmigiani,Giovanni Parmigiani,gp@jimmy.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Parmigiani Lab,/dev/null,parmigiani_lab,402808,58933,/bin/bash,6/20/2013 13:05
+jdoyle,John Doyle,jdoyle@g.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/JDoyle Lab,/n/home02/jdoyle,doyle_lab,40004,58970,/bin/bash,6/25/2013 10:49
+shaneuse,Sebastien Haneuse,shaneuse@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Haneuse Lab,/n/home03/shaneuse,haneuse_lab,402842,58980,/bin/bash,6/25/2013 11:37
+ssinger,Sara Singer,ssinger@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Singer Lab,/n/home02/ssinger,singer_lab,402857,58999,/bin/bash,6/26/2013 9:39
+ticai,Tianxi Cai,tcai@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Cai Lab,/dev/null,cai_lab,402201,99787,/sbin/nologin,6/27/2013 9:34
+bgelaye,Bizu Gelaye,bgelaye@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Williams Lab,/n/home07/bgelaye,gelaye_lab,5106,59133,/bin/bash,6/30/2013 15:49
+dbrooks,David Brooks,dbrooks@eecs.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Brooks Lab,/n/home06/dbrooks,acc_lab,402758,100079,/bin/bash,7/2/2013 9:37
+rbetensky,Rebecca Betensky,betensky@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Betensky Lab,/n/home11/rbetensky,betensky_lab,402760,59198,/bin/bash,7/2/2013 14:50
+mwilliams,Michelle Williams,mawilliams@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Williams Lab,/dev/null,williams_lab,402837,99892,/sbin/nologin,7/3/2013 10:26
+tcapellini,Terence Capellini,tcapellini@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Capellini Lab,/n/home03/tcapellini,capellini_lab,403037,59344,/bin/bash,7/11/2013 11:11
+dreich,David Reich,reich@genetics.med.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HMS/Genetics/Reich Lab,/dev/null,reich_lab,402762,59350,/sbin/nologin,7/11/2013 15:15
+ririzarr,Rafael Irizarry,rafa@jimmy.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Irizarry Lab,/n/home05/ririzarr,irizarry_lab,402764,59353,/bin/bash,7/12/2013 12:49
+dmarks,Debora Marks,debbie@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS/Systems Biology/Marks Lab,/n/home06/dmarks,marks_lab,402766,59373,/bin/bash,7/16/2013 14:32
+sshieber,Stuart Shieber,shieber@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Shieber Lab,/dev/null,shieber_lab,40088,59380,/dev/null,7/18/2013 10:37
+jschwrtz,Joel Schwartz,jschwrtz@hsph.harvard.edu,HCSPH,Environmental Epidemiology,FACULTY,Domain Users/HSPH/Environmental Epidemiology/JSchwartz Lab,/n/home00/jschwrtz,jschwartz_lab,402771,59390,/bin/bash,7/22/2013 11:29
+rwang01,Rui Wang,rwang@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Wang Lab,/n/home15/rwang01,rwang_lab,10225,59391,/bin/bash,7/22/2013 11:40
+bsabatini,Bernardo Sabatini,bernardo_sabatini@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS/Neurobiology/Sabatini Lab,/n/home08/bsabatini,bsabatini_lab,10328,59393,/bin/bash,7/22/2013 16:13
+svadhan,Salil Vadhan,salil_vadhan@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Vadhan Lab,/dev/null,vadhan_lab,40228,99828,/sbin/nologin,7/23/2013 13:27
+bpiquet,Brenda Piquet,bpiquet@fas.harvard.edu,FAS,Economics,STAFF,Domain Users/ECON/Piquet Lab,/dev/null,piquet_lab,402774,59405,/sbin/nologin,7/23/2013 14:30
+htk,H.T. Kung,kung@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Kung Lab,/n/home12/htk,kung_lab,40278,59433,/bin/bash,7/30/2013 16:43
+lhau,Lene Hau,hau@g.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Hau Lab,/dev/null,hau_lab,402781,99935,/sbin/nologin,8/2/2013 10:44
+samuel,Aravinthan Samuel,samuel@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Samuel,/dev/null,samuel_lab,402684,59480,/sbin/nologin,8/7/2013 11:09
+clange,Christoph Lange,clange@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Christoph Lange lab,/n/home13/clange,clange_lab,402210,59543,/bin/bash,8/22/2013 12:07
+xlmeng,Xiao-Li Meng,xlmeng@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Xiao-Li Meng Lab,/dev/null,meng_lab,40120,59568,/bin/bash,8/27/2013 14:19
+aascherio,Alberto Ascherio,aascheri@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Ascherio Lab,/n/home10/aascherio,ascherio_lab,402801,59581,/bin/bash,8/28/2013 11:49
+msong,Mingyang Song,mis911@mail.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Song Lab,/n/home04/msong,song_lab,4033781,59601,/bin/bash,8/29/2013 11:11
+janderson,Jim Anderson,anderson@huarp.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Anderson Lab,/n/home15/janderson,anderson_lab,34734,59716,/bin/bash,9/3/2013 14:37
+kkn,Kang-Kuen Ni,ni@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Ni Lab,/n/home15/kkn,ni_lab,402805,59717,/bin/bash,9/3/2013 15:08
+deisenstein,Daniel Eisenstein,deisenstein@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Eisenstein Lab,/n/home15/deisenstein,eisenstein_lab,40249,59747,/bin/bash,9/6/2013 12:32
+lmucci,Lorelei Mucci,lmucci@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Mucci Lab,/n/home15/lmucci,mucci_lab,402811,59759,/bin/bash,9/9/2013 9:39
+karplus,Martin Karplus,marci@tammy.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Karplus Lab,/dev/null,mkarplus,10105,59802,/sbin/nologin,9/12/2013 12:51
+schrag,Daniel Schrag,schrag@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Schrag Lab,/dev/null,schrag_lab,40224,99688,/sbin/nologin,9/17/2013 16:30
+mgreiner,Markus Greiner,greiner@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Greiner Lab,/n/home11/mgreiner,greiner_lab,34743,99718,/bin/sh,9/19/2013 11:39
+eheller,Eric Heller,heller@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Heller Lab,/dev/null,heller_lab,34748,100162,/sbin/nologin,9/20/2013 10:44
+zsuo,Zhigang Suo,suo@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Suo Lab,/dev/null,suo_lab,40271,100200,/sbin/nologin,9/26/2013 12:18
+fdominici,Francesca Dominici,fdominic@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Dominici Lab,/n/home06/fdominici,dominici_lab,402838,100209,/bin/bash,9/27/2013 13:37
+weitz,David A. Weitz,weitz@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Weitz Lab,/dev/null,weitz_lab,40016,100222,/bin/bash,9/30/2013 16:08
+jponnela,Jukka-Pekka Onnela,onnela@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Onnela Lab,/n/home15/jponnela,onnela_lab,402846,100236,/bin/bash,10/1/2013 16:03
+erimm,Eric Rimm,erimm@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Rimm Lab,/n/home02/erimm,rimm_lab,402849,100245,/bin/sh,10/3/2013 10:52
+dfinkelstein,Dianne Finkelstein,finkel@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Finkelstein Lab,/dev/null,finkelstein_lab,402852,100252,/sbin/nologin,10/3/2013 20:33
+gdanaei,Goodarz Danaei,gdanaei@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Danaei Lab,/n/home01/gdanaei,danaei_lab,402853,100275,/bin/bash,10/4/2013 17:26
+jthomps,Jonathan Thompson,jthomps@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Harvard Forest/Thompson Lab,/n/home02/jthomps,thompson_lab,402855,100276,/bin/bash,10/5/2013 14:18
+akitzmiller,Aaron Kitzmiller,akitzmiller@g.harvard.edu,RC,Research Computing,STAFF,Domain Users/RC/Informatics,/n/home_rc/akitzmiller,rc_admin,40273,100278,/bin/bash,10/7/2013 10:34
+brw,Brian White,brwhite@g.harvard.edu,RC,Research Computing,STAFF,Domain Users/RC/Operations,/n/home_rc/brw,rc_admin,40273,100584,/bin/bash,10/25/2013 14:13
+luqi,Lu Qi,luqi@hsph.harvard.edu,HCSPH,Nutrition,FACULTY,Domain Users/HSPH/Nutrition Department/Lu Qi Lab,/n/home05/luqi,luqi_lab,402869,100605,/bin/bash,10/31/2013 11:53
+fcatter,Flaminia Catteruccia,fcatter@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Catteruccia Lab,/dev/null,catteruccia_lab,402867,100607,/sbin/nologin,10/31/2013 13:19
+srubinstein,Shmuel Rubinstein,shmuel@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Rubinstein_Lab,/dev/null,rubinstein_lab,402886,100679,/sbin/nologin,11/19/2013 12:45
+asinaiko,Anna Sinaiko,asinaiko@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Sinaiko Lab,/n/home13/asinaiko,sinaiko_lab,402897,100741,/bin/bash,12/5/2013 10:28
+mrosenthal,Meredith Rosenthal,mrosenth@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Rosenthal Lab,/dev/null,rosenthal_lab,402880,100761,/sbin/nologin,12/10/2013 10:32
+jmallet,James Mallet,jmallet@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Mallet Lab,/n/home05/jmallet,mallet_lab,402716,100770,/bin/bash,12/12/2013 14:30
+jwmunger,J William Munger,jwmunger@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,POSTDOC,Domain Users/SEAS,/n/home03/jwmunger,jwmunger_lab,10772,101080,/bin/bash,1/9/2014 15:11
+parkes,David C. Parkes,parkes@eecs.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Parkes,/n/home07/parkes,parkes_lab,40269,59872,/bin/bash,1/10/2014 15:11
+mbrenner,Michael Brenner,brenner@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Brenner Lab,/dev/null,brenner_lab,40034,101578,/bin/bash,1/15/2014 10:28
+jszostak,Jack Szostak,szostak@molbio.mgh.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Szostak Lab,/dev/null,szostak_lab,402735,101593,/sbin/nologin,1/17/2014 15:05
+jennasamra,Jenna Samra,jsamra@cfa.harvard.edu,CFA,CFA,STAFF,Domain Users/SEAS/Wofsy Lab,/n/home11/jennasamra,jennasamra_lab,11175,555108,/bin/bash,1/22/2014 16:08
+dbranton,Daniel Branton,dbranton@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Branton Lab,/dev/null,branton_lab,402929,555156,/sbin/nologin,1/29/2014 15:38
+maziz,Michael Aziz,maziz@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Aziz Lab,/n/home11/maziz,aziz_lab,40052,555387,/bin/bash,2/19/2014 8:35
+elanger,Ellen Langer,langer@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/WJH/Langer Lab,/dev/null,langer_lab,40279,557482,/sbin/nologin,2/21/2014 13:22
+mazitschek,Ralph Mazitschek,ralph@broadinstitute.org,HMS,Chemistry and Systems Biology,FACULTY,Domain Users/CCB/Labs/Mazitschek Lab,/n/home02/mazitschek,hsph_users,402083,555401,/bin/bash,2/21/2014 13:25
+pwilliam,Peter Williams,pwilliams@cfa.harvard.edu,FAS,Center for Astrophysics,POSTDOC,Domain Users/CFA/Berger Lab,/n/home01/pwilliam,panstarrs,5002,555409,/bin/bash,2/24/2014 14:57
+lmiratrix,Luke Miratrix,lmiratrix@stat.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Miratrix Lab,/n/home10/lmiratrix,miratrix_lab,402932,10501,/bin/bash,2/28/2014 10:04
+kbertoldi,Katia Bertoldi,bertoldi@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Bertoldi Lab,/n/home06/kbertoldi,bertoldi_lab,402934,555440,/bin/bash,2/28/2014 15:31
+minilek,Jelani Nelson,minilek@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,jnelson_lab,402999,555477,/sbin/nologin,3/6/2014 13:13
+jjohnson,John Johnson,jjohnson@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Johnson Lab,/dev/null,jjohnson_lab,402936,555483,/sbin/nologin,3/6/2014 14:54
+jenniferlewis,Jennnifer Lewis,jalewis@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/JLewis Lab,/dev/null,jlewis_lab,402953,555564,/sbin/nologin,3/31/2014 10:35
+lmickley,Loretta Mickley,mickley@fas.harvard.edu,SEAS,EPS,STAFF,Domain Users/SEAS/Mickley Lab,/n/home01/lmickley,mickley,402983,555597,/bin/bash,4/8/2014 16:27
+fawwazhabbal,Fawwaz Habbal,habbalf@seas.harvard.edu,SEAS,,FACULTY,Domain Users/SEAS/Habbal Lab,/dev/null,habbal_lab,402974,555605,/bin/bash,4/10/2014 12:11
+kkparker,Kit Parker,kkparker@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Parker Lab,/dev/null,parker_lab,40253,555624,/bin/sh,4/15/2014 12:07
+cevans,Connor Evans,Evans.Conor@mgh.harvard.edu,HMS,Graduate School of Arts and Sciences,FACULTY,Domain Users/GSAS/Connor Evans Lab,/dev/null,connor_evans_lab,402996,556000,/bin/bash,4/25/2014 10:39
+dspiegelman,Donna Spiegelman,stdls@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/Epidemiology/Spiegelman Lab,/sbin/nologin,spiegelman_lab,402998,556011,/bin/bash,4/30/2014 13:06
+ekaxiras,Efthimios Kaxiras,kaxiras@physics.harvard.edu,SEAS,Physics,FACULTY,Domain Users/SEAS/Kaxiras Lab,/dev/null,kaxiras_lab,34735,556031,/bin/bash,5/5/2014 11:47
+bfreeman,Bob Freeman,rfreeman@hbs.edu,HBS,Harvard Business School,STAFF,Domain Users/HBS/Labs/HBS RCS,/n/home14/bfreeman,hbs_rcs,403121,556036,/bin/bash,5/5/2014 16:11
+jquackenbush,John Quackenbush,johnq@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Quackenbush Lab,/n/home11/jquackenbush,quackenbush_lab,403005,556041,/bin/bash,5/6/2014 13:31
+mnowak,Martin Nowak,martin_nowak@harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Nowak Lab,/n/home13/mnowak,nowak,10183,556063,/bin/bash,5/12/2014 9:33
+capasso,Federico Capasso,capasso@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Capasso Lab,/dev/null,capasso_lab,10207,556064,/bin/bash,5/12/2014 9:47
+philipkim,Philip Kim,pkim@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Philip Kim Lab,/n/home04/philipkim,philipkim_lab,403012,556094,/bin/bash,5/21/2014 13:36
+emazur,Eric Mazur,mazur@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Mazur Lab,/n/home12/emazur,mazur_lab_seas,403015,556104,/bin/bash,5/23/2014 12:57
+ehu,Evelyn Hu,ehu@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Hu Lab,/dev/null,hu_lab_seas,403016,556105,/bin/bash,5/27/2014 10:55
+rkirshner,Robert Kirshner,rkirshner@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Kirshner Lab,/n/home08/rkirshner,kirshner_lab,40020,556181,/bin/bash,6/12/2014 10:16
+smullainathan,Sendhil Mullainathan,mullain@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Mullainathan Lab,/n/home08/smullainathan,mullainathan_lab,402703,556246,/bin/bash,6/24/2014 20:26
+dclarke,David Clarke,clarke@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Clarke Lab,/n/home10/dclarke,clarke_lab,402117,557479,/bin/bash,6/30/2014 15:42
+elietamer,Elie Tamer,elietamer@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Tamer Lab,/n/home10/elietamer,tamer_lab,403126,556276,/bin/bash,7/1/2014 13:04
+stephenchong,Stephen Chong,chong@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Chong Lab,/n/home02/stephenchong,chong_lab_seas,403034,556332,/bin/bash,7/13/2014 10:55
+mduraisingh,Manoj T. Duraisingh,mduraisi@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Duraisingh Lab,/dev/null,duraisingh_lab,403033,556344,/sbin/nologin,7/14/2014 15:56
+fspaepen,Frans Spaepen,spaepen@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Spaepen Lab,/n/home09/fspaepen,spaepen_lab,40218,556347,/bin/bash,7/14/2014 22:25
+sstantcheva,Stefanie Stantcheva,sstantcheva@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Stantcheva Lab,/n/home08/sstantcheva,stantcheva_lab,403066,556348,/bin/bash,7/15/2014 10:17
+chodorowreich,Gabriel Chodorow-Reich,chodorowreich@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Chodorow-Reich Lab,/n/home03/chodorowreich,chodorow-reich_lab,403111,556368,/bin/bash,7/17/2014 16:49
+mcikara,Mina Cikara,mcikara@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/NCF/Cikara Lab,/users/mcikara,cikara_lab,403038,556387,/bin/bash,7/22/2014 12:30
+yachiehhsu,Ya-Chieh Hsu,yachiehhsu@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Hsu Lab,/n/home14/yachiehhsu,hsu_lab,403040,556406,/bin/bash,7/28/2014 12:33
+bburleigh,Barbara Burleigh,bburleig@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Burleigh Lab,/home/bburleigh,burleigh_lab,403044,556452,/bin/sh,8/7/2014 13:27
+rwordsworth,Robin Wordsworth,rwordsworth@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Wordsworth Lab,/n/home04/rwordsworth,wordsworth_lab,403045,556460,/bin/bash,8/11/2014 12:01
+jamesrice,James Rice,rice@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Rice Lab Seas,/n/home08/jamesrice,rice_lab_seas,403047,556466,/bin/bash,8/12/2014 13:32
+rslee,Robin Lee,robinlee@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Lee Lab,/n/home12/rslee,rslee_lab,403051,556485,/bin/bash,8/18/2014 11:47
+prhstark,peter stark,prhstark@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Stark Lab,/n/home11/prhstark,stark_lab,403058,556536,/bin/bash,9/2/2014 16:19
+hsadeghpour,Hossein Sadeghpour,hsadeghpour@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Sadeghpour Lab,/dev/null,sadeghpour_lab,402195,556583,/sbin/nologin,9/10/2014 13:32
+kawachi,Ichiro Kawachi,ikawachi@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH/Social and Behavioral Sciences/Kawachi Lab,/dev/null,kawachi_lab,403060,556595,/sbin/nologin,9/11/2014 16:45
+cdvorkin,Cora Dvorkin,cora.dvorkin@cfa.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Dvorkin Lab,/n/home13/cdvorkin,dvorkin_lab,403199,556672,/bin/bash,9/24/2014 20:21
+jmitrovica,Jerry Mitrovica,jxm@eps.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Mitrovica Lab,/dev/null,mitrovica_lab,402015,5154,/bin/bash,9/26/2014 14:37
+rhowe,Robert Howe,howe@seas.harvard.edu,SEAS,SEAS,STAFF,Domain Users/SEAS/Howe Lab,/n/home07/rhowe,howe_lab_seas,403067,556761,/bin/bash,10/7/2014 10:48
+spierce,Stephanie Pierce,spierce@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Pierce Lab,/n/home04/spierce,spierce_lab,403069,556790,/bin/bash,10/13/2014 13:40
+jcampbell,John Campbell,john_campbell@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Campbell,/dev/null,campbell_lab,40042,8307,/bin/bash,10/18/2014 10:09
+jweisz,John Weisz,john_weisz@harvard.edu,FAS,PSYCHOLOGY,FACULTY,Domain Users/NCF/Weisz Lab,/users/jweisz,weisz_lab,403076,556866,/bin/bash,10/28/2014 12:44
+rjwood,Robert J. Wood,rjwood@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Wood Lab,/n/home04/rjwood,wood_lab,403075,556878,/bin/bash,10/29/2014 10:27
+dlaibson,David I. Laibson,dlaibson@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/DLaibson Lab,/n/home04/dlaibson,laibson_lab,40030,556893,/bin/bash,10/31/2014 12:02
+dld,David Desmarais,desmarais@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,STAFF,Domain Users/OEB/Labs/Desmarais Lab,/n/home10/dld,desmarais_lab,403118,556927,/bin/bash,11/5/2014 16:16
+dsasselov,Dimitar Sasselov,dsasselov@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Sasselov Lab,/dev/null,sasselov_lab,35006,556925,/sbin/nologin,11/6/2014 11:29
+rhopkins,Robin Hopkins,rhopkins@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Hopkins Lab,/n/home10/rhopkins,hopkins_lab,403084,556973,/bin/bash,11/17/2014 12:50
+snedeker,Jesse Snedeker,snedeker@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology/Snedeker Lab,/dev/null,snedeker_lab,403087,557202,/sbin/nologin,12/17/2014 14:46
+sfortune,Sarah Fortune,sfortune@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Fortune Lab,/dev/null,sfortune_lab,403089,557206,/sbin/nologin,12/18/2014 12:05
+ysinger,Yaron Singer,yaron@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/YSinger Lab,/n/home14/ysinger,ysinger_group,403091,557500,/bin/bash,1/6/2015 10:17
+ashleifer,Andrei Shleifer,ashleifer@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Shleifer,/dev/null,shleifer_lab,40070,557247,/bin/bash,1/8/2015 14:00
+bgolub,Benjamin Golub,bgolub@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/n/home12/bgolub,golub_lab,403105,557249,/bin/bash,1/8/2015 14:00
+cfoote,Chris Foote,clfoote@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,foote_lab,403108,557250,/bin/bash,1/8/2015 14:00
+cgoldin,Claudia Goldin,cgoldin@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,goldin_lab,40113,557478,/sbin/nologin,1/8/2015 14:00
+lsummers,Lawrence Summers,lawrence_summers@harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Summers Lab,/dev/null,summers_lab,403093,557266,/bin/bash,1/8/2015 14:00
+dcutler,David Cutler,dcutler@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Cutler Lab,/dev/null,cutler_lab,40196,557252,/bin/bash,1/8/2015 14:00
+jmiron,Jeffrey Miron,miron@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Miron Lab,/dev/null,miron_lab,403097,557261,/bin/bash,1/8/2015 14:00
+jstein,Jeremy Stein,jeremy_stein@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Stein Lab,/dev/null,stein_lab,403094,557262,/bin/bash,1/8/2015 14:00
+jstock,James Stock,james_stock@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,stock_lab,40077,557260,/bin/bash,1/8/2015 14:00
+krogoff,Kenneth Rogoff,krogoff@harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Rogoff Lab,/dev/null,rogoff_lab,40039,557264,/bin/bash,1/8/2015 14:00
+lkatz,Lawrence Katz,katz2@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Katz Lab,/n/home00/lkatz,katz_lab,40165,557265,/bin/bash,1/8/2015 14:00
+mdell,Melissa Dell,melissadell@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,dell_lab,403109,557269,/bin/bash,1/8/2015 14:00
+mkremer,Michael Kremer,mkremer@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,kremer_lab,40032,557270,/bin/bash,1/8/2015 14:00
+nsheppard,Neil Shephard,shephard@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Sheppard Lab,/dev/null,sheppard_lab,403095,557272,/bin/bash,1/8/2015 14:00
+rfreeman,Richard Freeman,freeman@nber.org,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,freeman_lab,40243,557276,/bin/bash,1/8/2015 14:00
+rfryer,Roland Fryer,rfryer@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/import,/dev/null,fryer_lab,403107,557279,/bin/bash,1/8/2015 14:00
+jfigueroa,Jose Figueroa,jfigueroa@hsph.harvard.edu,HCSPH,Health Policy and Management,POSTDOC,Domain Users/HSPH/Health Policy and Management/Jha Lab,/dev/null,thomas_tsai_lab,10445,557391,/bin/bash,1/23/2015 13:09
+dngwe,Donald Ngwe,dngwe@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Ngwe Lab,/n/home03/dngwe,ngwe_hbs_lab,403146,557655,/bin/bash,2/11/2015 13:38
+dgilbert,Daniel Todd Gilbert,gilbert@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology/Gilbert Lab,/dev/null,gilbert_lab,403129,557683,/sbin/nologin,2/18/2015 13:15
+walsh,Conor Walsh,walsh@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Walsh Lab,/dev/null,walsh_lab_seas,403131,557704,/bin/bash,2/24/2015 20:30
+scotmartin,Scot Martin,smartin@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Martin Lab,/n/home10/scotmartin,martin_lab_seas,403136,557804,/bin/bash,3/12/2015 20:35
+jkwerfel,Justin Werfel,jkwerfel@seas.harvard.edu,SEAS,SEAS,NON_FACULTY_PI,Domain Users/SEAS/Nagpal Lab,/n/home00/jkwerfel,jkwerfel_lab,11185,557819,/bin/bash,3/16/2015 22:23
+yuemlu,Yue Lu,yuelu@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Lu Lab,/n/home04/yuemlu,lu_lab,402694,557844,/bin/bash,3/23/2015 12:07
+mprentiss,Mara Prentiss,prentiss@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Prentiss Lab,/dev/null,prentiss_lab,40211,557928,/sbin/nologin,4/7/2015 16:45
+grao1,Gautam Rao,grao@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/rao_lab,/n/home08/grao,rao_lab,403151,558105,/bin/bash,5/11/2015 15:18
+mansi,Mansi Srivastava,mansi@oeb.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB/Labs/Srivastava Lab,/n/home11/mansi,srivastava_lab,403164,558129,/bin/bash,5/16/2015 23:11
+koberg,Karin Oberg,koberg@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Oberg Lab,/home/koberg,oberg_lab,403153,13000,/bin/sh,5/19/2015 11:27
+pkoutrakis,Petros Koutrakis,petros@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Koutrakis_lab,/dev/null,koutrakis_lab,403162,11870,/bin/bash,6/5/2015 11:38
+lvaliant,Leslie Valiant,valiant@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Valiant Lab,/n/home06/lvaliant,valiant_lab,40244,5699050,/bin/bash,6/17/2015 11:57
+samuelmehr,Samuel Mehr,sam@wjh.harvard.edu,FAS,Psychology,NON-FACULTY PI,Domain Users/Psychology/Krasnow Lab,/n/home13/samuelmehr,krasnow_lab,403168,558328,/bin/bash,6/26/2015 17:56
+sgershman,Samuel Gershman,gershman@fas.harvard.edu,FAS,PSYCHOLOGY,FACULTY,Domain Users/NCF/Gershman_Lab,/users/sgershman,gershman_lab,403169,558339,/bin/bash,6/30/2015 12:01
+servin,Stephen Ervin,servin@gsd.harvard.edu,GSD,Graduate School of Design,STAFF,Domain Users/GSD/ervin_lab,/n/home11/servin,ervin_lab,403173,558404,/bin/bash,7/13/2015 15:01
+seddy,Sean Eddy,seaneddy@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Eddy Lab,/n/home14/seddy,eddy_lab,403174,558409,/bin/bash,7/14/2015 11:25
+erivas,Elena Rivas,elenarivas@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Rivas Lab,/n/home14/erivas,rivas_lab,403175,558410,/bin/bash,7/14/2015 11:44
+jkrieger,Joshua Krieger,jkrieger@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Li Lab,/n/home07/jkrieger,jkrieger_hbs_lab,4033767,558439,/bin/bash,7/20/2015 20:55
+srush,Alexander Rush,srush@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Rush Lab,/n/home00/srush,rush_lab,403176,558441,/bin/bash,7/21/2015 10:34
+wfawzi,Wafaie Fawzi,mina@hsph.harvard.edu,HCSPH,Nutrition,FACULTY,Domain Users/HSPH/Nutrition Department/Fawzi Lab,/n/home00/wfawzi,fawzi_lab,403178,558490,/bin/bash,7/23/2015 14:39
+tbrennan314,Thomas Brennan,tbrennan@law.harvard.edu,HLS,Harvard Law School,FACULTY,Domain Users/HLS/Brennan Lab,/n/home10/tbrennan314,brennan_lab,403182,558538,/bin/bash,8/4/2015 14:53
+jchavarro,Jorge Chavarro,jchavarr@hsph.harvard.edu,HCSPH,Nutrition,FACULTY,Domain Users/HSPH/Nutrition Department/Chavarro Lab,/dev/null,chavarro_lab,403200,14386,/sbin/nologin,9/16/2015 15:59
+fdoyle,Francis Doyle,frank_doyle@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/FDoyle Lab,/n/home01/fdoyle,fdoyle_lab,403201,558743,/bin/bash,9/16/2015 17:24
+swarner,Stephanie Smith-Warner,swarner@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Smith-Warner Lab,/n/home09/swarner,smith-warner_lab,403211,14663,/bin/bash,10/15/2015 16:29
+tnicholas,Tom Nicholas,tnicholas@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Nicholas Lab,/n/home10/tnicholas,nicholas_hbs_lab,403218,559142,/bin/bash,11/16/2015 14:26
+fkeutsch,Frank Keutsch,keutsch@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Keutsch Lab,/n/home11/fkeutsch,keutsch_lab,403224,559204,/bin/bash,12/7/2015 12:42
+wframe,Warren Frame,wframe@g.harvard.edu,RC,Research Computing,STAFF,Domain Users/RC/Security,/n/home_rc/wframe,rc_admin,40273,559205,/bin/bash,12/7/2015 12:59
+dselkoe,Dennis Selkoe,dselkoe@partners.org,HMS,Harvard Medical School,FACULTY,Domain Users/HMS/Neurobiology/Selkoe Lab,/dev/null,selkoe_lab,403181,5698997,/bin/bash,12/16/2015 17:00
+demba,Demba Ba,demba@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Ba Lab,/n/home08/demba,ba_lab,403237,5699096,/bin/bash,1/21/2016 17:47
+malan,David Malan,malan@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Malan Lab,/n/home01/malan,malan_lab_seas,403238,5699121,/bin/bash,1/25/2016 12:00
+dkeith,David Keith,david_keith@harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Keith Lab,/n/home00/dkeith,keith_lab_seas,403243,5699300,/bin/bash,2/1/2016 14:41
+mdenolle,Marine Denolle,mdenolle@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Denolle Lab,/n/home10/mdenolle,denolle_lab,403244,5699334,/bin/bash,2/4/2016 10:28
+jvlassak,Joost Vlassak,vlassak@esag.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Vlassak Lab,/dev/null,vlassak_lab,40222,5699450,/bin/bash,2/25/2016 15:10
+llwang,Linda Wang,llwang@fas.harvard.edu,FAS,Center for Nanoscale Systems,STAFF,Domain Users/CNS/CNS-Admin,/n/home12/llwang,CNS_Staff,402642,5699480,/bin/bash,3/2/2016 13:50
+sgortler,Steven Gortler,sjg@cs.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Gortler Lab,/n/home03/sgortler,gortler_lab_seas,403251,5699485,/bin/bash,3/3/2016 10:46
+lixin,Xin Li,lixin@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Li Lab,/home15/lixin,li_lab_seas,403252,5799528,/bin/bash,3/15/2016 10:32
+rbrucker,Robert Brucker,brucker@rowland.harvard.edu,FAS,Rowland Institute,FACULTY,Domain Users/Rowland Institute/Labs/Brucker Lab,/n/home00/rbrucker,brucker_lab,403256,5799550,/bin/bash,3/22/2016 12:21
+cfriend,Cynthia Friend,friend@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Friend lab,/n/home15/cfriend,friend_lab,34736,5799637,/bin/bash,4/1/2016 11:38
+skuindersma,Scott Kuindersma,scottk@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Kuindersma Lab,/dev/null,kuindersma_lab_seas,403260,45001,/bin/bash,4/8/2016 16:51
+bsommers,Benjamin Sommers,bsommers@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Sommers Lab,/n/home07/bsommers,sommers_lab,403261,5799669,/bin/bash,4/12/2016 8:50
+ballen,Branden Allen,ballen@cfa.harvard.edu,FAS,Center for Astrophysics,POSTDOC/RESEARCHER,Domain Users/CFA/Grindlay Lab,/n/home02/ballen,allen_lab,10509,5899723,/bin/bash,4/29/2016 17:05
+michaelm,Michael Mitzenmacher,michaelm@eecs.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Mitzenmacher Lab,/n/home02/michaelm,mitzenmacher_lab_seas,403272,5899739,/bin/bash,5/4/2016 9:26
+pjacob,Pierre Jacob,pjacob@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Jacob Lab,/n/home12/pjacob,jacob_lab_stat,4033770,5899795,/bin/bash,5/18/2016 16:37
+yilingchen,Yiling Chen,yiling@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Chen Lab,/n/home01/yilingchen,chen_lab_seas,403274,5899823,/bin/bash,5/25/2016 9:36
+syelin,Susanne Yelin,syelin@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Yelin Lab,/n/home04/syelin,yelin_lab,403275,5899827,/bin/bash,5/25/2016 14:42
+jsgoodman,Joshua Goodman,joshua_goodman@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Goodman Lab,,,,,,6/16/2016 10:52
+jbliebman,Jeffrey B. Liebman,jeffrey_liebman@harvard.edu,HKS,HKS,FACULTY,Domain Users/HKS/Liebman Lab,,,,,,6/16/2016 11:27
+cwoo,Christina Woo,cwoo@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Woo Lab,/n/home10/cwoo,woo_lab,403335,5900041,/bin/bash,7/18/2016 15:37
+mronn,Minttu Roenn,mronn@hsph.harvard.edu,HCSPH,Global Health and Population,NONFACPI,Domain Users/HSPH/Global Health and Population/Ronn Lab,/n/home12/mronn,ronn_lab,10548,5900043,/bin/bash,7/19/2016 9:31
+richardlee,Richard Lee,richard_lee@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/SCRB/Richard Lee Lab,/n/home00/richardlee,richardlee_lab,403290,590001,/bin/bash,7/27/2016 15:06
+kmkoenig,Kristen Koenig,kmkoenig@fas.harvard.edu,FAS,Center for Systems Biology,NONFACPI,Domain Users/CSB/Labs/Koenig Lab,/n/home13/kmkoenig,koenig_lab,403292,5900083,/bin/bash,7/27/2016 15:43
+wgarrett,Wendy Garrett,wgarrett@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases/Garrett Lab,/n/home00/wgarrett,garrett_lab,403295,13037,/bin/bash,8/11/2016 9:57
+edaviesescobar,Emmerich Davies Escobar,emmerich_davies_escobar@gse.harvard.edu,GSE,Graduate School of Education,FACULTY,Domain Users/GSE/Davies Escobar Lab,/n/home08/edaviesescobar,davies_escobar_lab,403300,5900168,/bin/bash,8/15/2016 14:49
+lnguyen,Long Nguyen,lnguyen24@mgh.harvard.edu,HMS,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Nguyen_lab,/n/home10/lnguyen,nguyen_lab,10683,5900178,/bin/bash,8/18/2016 10:41
+ashvinv,Ashvin Vishwanath,ashvin_vishwanath@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Vishwanath Lab,/n/home11/ashvinv,vishwanath_lab,403303,5900219,/bin/bash,8/29/2016 11:47
+mbm,Michael McElroy,mbm@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/McElroy Lab,/dev/null,mcelroy_lab,403305,58999180,/bin/bash,8/31/2016 16:09
+kdavidson,Kathryn Davidson,kathryndavidson@fas.harvard.edu,FAS,Linguistics,FACULTY,Domain Users/Linguistics/davidson_lab,/n/home00/kdavidson,davidson_lab,403310,58999181,/bin/bash,9/8/2016 15:16
+jwmiller,Jeffrey Miller,jwmiller@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Miller Lab,/n/home01/jwmiller,miller_lab,403312,5900293,/bin/bash,9/10/2016 11:29
+mbarnett,Michael Barnett,mbarnett@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Jha Lab,/n/home10/mbarnett,barnett_lab,10023,5900375,/bin/bash,9/21/2016 12:31
+apandya,Ankur Pandya,anpandya@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management/Pandya Lab,/dev/null,pandya_lab,403318,13248,/bin/bash,9/22/2016 11:03
+maryee,Martin Aryee,aryee.martin@mgh.harvard.edu,HCSPH,,FACULTY,Domain Users/HSPH/BIOSTAT/Aryee Lab,/n/home05/maryee,aryee_lab,403321,10009,/bin/bash,9/27/2016 9:40
+jafferis,Daniel Jafferis,jafferis@physics.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics/Jafferis Lab,/n/home11/jafferis,jafferis_lab,403326,10101,/bin/bash,10/3/2016 11:52
+henrich,Joseph Henrich,henrich@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HEB/Henrich Lab,/n/home07/henrich,henrich_lab,403330,10245,/bin/bash,10/6/2016 23:06
+sidreos,Stratos Idreos,stratos@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Idreos Lab,/dev/null,idreos_lab,403333,58999188,/bin/bash,10/19/2016 15:54
+rmcnally,Richard McNally,rjm@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology,/n/home07/rmcnally,mcnally_lab,403337,10180,/bin/bash,11/4/2016 16:32
+ghotamis,Gokhan Hotamisligil,ghotamis@hsph.harvard.edu,HCSPH,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/dev/null,hotamisligil_lab,403341,10242,/bin/bash,11/18/2016 12:22
+dhekstra,Doeke Hekstra,doeke_hekstra@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home12/dhekstra,hekstra_lab,403342,10244,/bin/bash,11/18/2016 14:07
+jwaldo,James Waldo,jim_waldo@harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,waldo_lab,403360,10539,/bin/bash,1/18/2017 14:26
+lmahadevan,Lakshminarayanan Mahadevan,lm@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Mahadevan Lab,/dev/null,mahadevan_lab,40106,58999189,/bin/bash,1/18/2017 15:17
+mmurray,Megan Murray,mmurray@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Murray Lab,/n/home05/mmurray,mmurray_lab,403361,10562,/bin/bash,1/24/2017 13:14
+pmarsden,Peter Marsden,peter_marsden@harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology/marsden_lab,/n/home04/pmarsden,marsden_lab,403187,10663,/bin/bash,2/3/2017 13:26
+scarter,Scott Carter,scarter@broadinstitute.org,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/SCarter  Lab,/n/home14/scarter,scarter_lab,403369,10702,/bin/bash,2/9/2017 16:22
+mkalouptsidi,Myrto Kalouptsidi,myrto@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Kalouptsidi Lab,/n/home03/mkalouptsidi,kalouptsidi_lab,403370,10711,/bin/bash,2/10/2017 15:02
+kmccoll,Kaighin McColl,kaighin_mccoll@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/McColl Lab,/n/home08/kmccoll,mccoll_lab,5029,10766,/bin/bash,2/16/2017 14:44
+pshamble,Paul Shamble,paul_shamble@fas.harvard.edu,FAS,Center for Systems Biology,NONFACPI,Domain Users/CSB,/n/home10/pshamble,shamble_lab,403374,10816,/bin/bash,2/28/2017 11:32
+mkruk,Margaret Kruk,mkruk@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population/Kruk Lab,/n/home11/mkruk,kruk_lab,403376,10828,/bin/bash,3/2/2017 9:30
+mtesta,Marcia Testa,testa@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Testa Lab,/n/home11/mtesta,testa_lab,4033742,10869,/bin/bash,3/8/2017 13:35
+ylei,Ya-Wen Lei,yawenlei@fas.harvard.edu,FAS,Sociology,FACULTY,Domain Users/_approved_accounts,/dev/null,ylei_lab,11209,10877,/bin/bash,3/9/2017 13:41
+fcalmon,Flavio Calmon,fcalmon@fas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home05/fcalmon,calmon_lab,4033745,10933,/bin/bash,3/22/2017 16:43
+jmitchell,James Mitchell,jmitchel@hsph.harvard.edu,HCSPH,Genetics and Complex Diseases,FACULTY,Domain Users/HSPH/Genetics and Complex Diseases/Mitchell Lab,/n/home09/jmitchell,mitchell_lab,4033746,10949,/bin/bash,3/27/2017 9:36
+dbell,David Bell,dcb@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home00/dbell,bell_lab,4033754,11016,/bin/bash,4/19/2017 14:45
+harthanari,Haribabu Arthanari,hari@hms.harvard.edu,HMS,DSI,FACULTY,Domain Users/DSI,/n/home/14/harthanari,arthanari_lab,4033759,11117,/bin/bash,5/4/2017 10:17
+mmsh,Max Shad,max_shad@harvard.edu,HUIT,Harvard University RC,STAFF,Domain Users/RC/UNIV_RC,/n/home14/mmsh,univ_rc,10648,11222,/bin/bash,6/7/2017 9:37
+cliffmeyer,Clifford Meyer,cliff_meyer@mail.dfci.harvard.edu,HCSPH,Biostatistics,NON-FACULTY PI,Domain Users/HSPH/BIOSTAT/Meyer Lab,/n/home08/cliffmeyer,meyer_lab,10501,11290,/bin/bash,6/20/2017 11:02
+samurphy11,Susan Murphy,samurphy@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Murphy Lab,/n/home00/samurphy11,murphy_lab,10003,11334,/bin/bash,6/28/2017 16:23
+donhee,Donhee Ham,donhee@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS/Ham Lab,/n/home09/donhee,ham_lab,403768,11382,/bin/bash,7/11/2017 9:11
+ljanson,Lucas Janson,ljanson@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/Janson Lab,/n/home13/ljanson,janson_lab,403769,11386,/bin/bash,7/11/2017 12:57
+lshaw,Laurie Shaw,laurieshaw@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics/LShaw Lab,/n/home03/lshaw,lshaw_lab,403761,11466,/bin/bash,8/1/2017 9:08
+jaffe,Arthur Jaffe,jaffe@g.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics,/n/home01/jaffe,jaffe_lab,5018,11499,/bin/bash,8/8/2017 17:55
+smitragotri,Samir Mitragotri,mitragotri@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS/Mitragotri Lab,/n/home00/smitragotri,mitragotri_lab,5019,11500,/bin/bash,8/9/2017 9:10
+hsompolinsky,Haim Sompolinsky,hsompolinsky@mcb.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB/Labs/Sompolinsky Lab,/n/home11/hsompolinsky,sompolinsky_lab,40191,11517,/bin/bash,8/16/2017 10:35
+lcohen,Lauren Cohen,lcohen@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Cohen Lab,/n/home11/lcohen,cohen_hbs_lab,5021,11543,/bin/bash,8/21/2017 16:24
+klakhani,Karim Lakhani,klakhani@hbs.edu,HBS,Institute for Quantitative Social Sciences,FACULTY,Domain Users/IQSS/Lakhani Lab,/n/home07/klakhani,lakhani_lab,5023,11582,/bin/bash,8/31/2017 11:33
+jwebb,Jacqueline Webb,jacquelinewebb@fas.harvard.edu,FAS,Museum of Comparative Zoology,FACULTY,Domain Users/OEB/MCZ/Webb Lab,/dev/null,webb_lab,5024,11614,/bin/bash,9/5/2017 14:08
+alainviel,Alain Viel,aviel@g.harvard.edu,FAS,Molecular and Cellular Biology,NON-FACULTY PI,Domain Users/MCB,/dev/null,viel_lab,4033772,11640,/bin/bash,9/8/2017 15:36
+mickens,James Mickens,mickens@g.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Mickens Lab,/n/home13/mickens,mickens_lab,10032,11718,/bin/bash,9/21/2017 14:46
+bkoz,Boris Kozinsky,bkoz@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home00/bkoz,kozinsky_lab,403774,11733,/bin/bash,9/25/2017 15:14
+kgajos,Krzysztof Gajos,kgajos@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home13/kgajos,gajos_lab,40198,11782,/bin/bash,10/2/2017 14:54
+krypton,Sergey Ovchinnikov,so@fas.harvard.edu,FAS,Center for Systems Biology,NONFACPI,Domain Users/CSB/Labs/Ovchinnikov Lab,/n/home07/krypton,ovchinnikov_lab,10009,11807,/bin/bash,10/3/2017 15:05
+amackay,Alexander Mackay,amackay@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Mackay Lab,/n/home05/amackay,mackay_hbs_lab,5028,11860,/bin/bash,10/11/2017 13:19
+rnethery,Rachel Nethery,rnethery@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT/Nethery Lab,/n/home03/rnethery,nethery_lab,5141,11951,/bin/bash,10/24/2017 20:19
+pnarang,Prineha Narang,prineha@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS/Narang Lab,/n/home10/pnarang,narang_lab,5030,11964,/bin/bash,10/30/2017 9:26
+jfrieden,Jeffry Frieden,jfrieden@harvard.edu,FAS,Government,FACULTY,Domain Users/GOV/Frieden Lab,/dev/null,frieden_lab,10022,11978,/bin/bash,10/31/2017 16:02
+mason,Jarad Mason,mason@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Mason Lab,/dev/null,mason_lab,5031,11990,/bin/bash,11/2/2017 14:43
+minlanyu,Minlan Yu,minlanyu@seas.harvard.edu,SEAS,Computer Science,FACULTY,Domain Users/SEAS/Yu Lab,/n/home11/minlanyu,yu_lab,5034,12019,/bin/bash,11/13/2017 11:44
+jamesrobins,James Robins,robins@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Robins Lab,/n/home00/jamesrobins,robins_lab,5032,12108,/bin/bash,12/5/2017 9:42
+jdalton,Jesse Dalton,jesse_dalton@gse.harvard.edu,Graduate School of Education,Graduate School of Education,STAFF,Domain Users/GSE/CEPR,/dev/null,cepr_lab,10093,12116,/bin/bash,12/5/2017 15:56
+jrichedwards,Janet Rich-Edwards,JR33@PARTNERS.ORG,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Rich-Edwards Lab,/dev/null,rich_edwards_lab,5033,12152,/bin/bash,12/14/2017 14:54
+rhausmann,Ricardo Hausmann,Ricardo_Hausmann@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Hausmann Lab,/dev/null,hausmann_lab,40260,12186,/bin/bash,1/2/2018 17:24
+adoria,Alessandro Doria,alessandro.doria@joslin.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Doria Lab,/n/home13/adoria,doria_lab,10025,12192,/bin/bash,1/4/2018 11:59
+msyed,Muneeba Syed,msyed1@g.harvard.edu,FAS,Research Computing,STAFF,Domain Users/RC/RCSS,/n/home_rc/msyed,rc_admin,40273,12242,/bin/bash,1/10/2018 10:44
+cnelya,Carolyn Elya,cnelya@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/Rowland Institute/Labs/de Bivort Lab,/n/home01/cnelya,cnelya_lab,11148,12320,/bin/bash,1/25/2018 16:05
+syau,Shing-Tung Yau,yau@math.harvard.edu,FAS,Math,FACULTY,Domain Users/SEAS/Yau2 Lab,/dev/null,yau2_lab,5036,10010,/bin/bash,2/14/2018 15:22
+lkubzansky,Laura Kubzansky,lkubzans@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH/Social and Behavioral Sciences/Kubzansky Lab,/dev/null,kubzansky_lab,5035,12515,/bin/bash,2/14/2018 15:28
+clight,Caroline Light,clight@fas.harvard.edu,FAS,"Women, Gender, and Sexuality",FACULTY,Domain Users/WGS/Light Lab,/dev/null,light_lab,5037,12559,/bin/bash,2/26/2018 14:08
+dcongreve,Daniel Congreve,congreve@rowland.harvard.edu,FAS,Rowland Institute,NON-FACULTY PI,Domain Users/Rowland Institute/Labs/Congreve Lab,/dev/null,congreve_lab,5038,12621,/bin/bash,3/14/2018 15:55
+rfischer,Rebecca Fischer,rebeccafischer@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Fischer Lab,/n/home08/rfischer,fischer_lab,5039,12704,/bin/bash,4/2/2018 14:17
+rjsingh,Raminder Singh,r_singh@g.harvard.edu,FAS,Research Computing,STAFF,Domain Users/RC/DSRF,/n/home_rc/rjsingh,rc_admin,40273,12725,/bin/bash,4/10/2018 10:33
+jkennedy,Jonathan Kennedy,jonathan_kennedy@harvard.edu,FAS,Organismic and Evolutionary Biology,STAFF,Domain Users/OEB,/n/home01/jkennedy,kennedy_lab,5049,12726,/bin/bash,4/10/2018 13:39
+xgchen,Xingang Chen,xingangchen01@gmail.com,FAS,Astronomy,FACULTY,Domain Users/CFA,/n/home04/xgchen,xchen_lab,10040,12774,/bin/bash,4/20/2018 11:41
+achalah,Anas Chalah,achalah@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS/Undergraduates Lab,/home09/achalah,undergraduates_seas_lab,4033778,12843,/bin/bash,5/8/2018 12:28
+nbellono,Nicholas Bellono,nbellono@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home07/nbellono,bellono_lab,5041,12856,/bin/bash,5/10/2018 12:15
+mlapotre,Mathieu Lapotre,mlapotre@fas.harvard.edu,FAS,Earth and Planetary Sciences,NONFACPI,Domain Users/EPS,/n/home06/mlapotre,lapotre_lab,5042,12864,/bin/bash,5/14/2018 9:56
+gadamkiewicz,Gary Adamkiewicz,gadamkie@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Adamkiewicz Lab,/dev/null,adamkiewicz_lab,5043,12872,/bin/bash,5/15/2018 15:03
+uvool,Uri Vool,uri_vool@fas.harvard.edu,FAS,Physics,NONFACPI,Domain Users/Physics,/n/home00/uvool,vool_lab,4033788,12934,/bin/bash,5/30/2018 15:34
+dchung,Doug Chung,dchung@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS/Labs/Chung Lab,/dev/null,chung_lab,5044,12935,/bin/bash,5/31/2018 11:10
+jlegewie,Joscha Legewie,jlegewie@fas.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology/Legewie Lab,/n/home11/jlegewie,legewie_lab,10046,13030,/bin/bash,6/20/2018 11:36
+ppershan,Peter Pershan,pershan@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home01/ppershan,pershan_lab,5045,13049,/bin/bash,6/21/2018 14:16
+wadduwage,Dushan Wadduwage,wadduwage@fas.harvard.edu,FAS,FAS Other,NONFACPI,Domain Users/FAS/FAS other/Wadduwage Lab,/n/home04/wadduwage,wadduwage_lab,5046,13069,/bin/bash,6/29/2018 10:51
+jz,Jonathan Zittrain,zittrain@law.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/FAS/Zittrain Lab,/n/home07/jz,zittrain_lab,5047,13150,/bin/bash,7/13/2018 9:21
+jhochschild,Jennifer Hochschild,hochschild@gov.harvard.edu,FAS,GOVERNMENT,FACULTY,Domain Users/GOV/Hochschild Lab,/n/home11/jhochschild,hochschild_lab,10049,13170,/bin/bash,7/18/2018 10:58
+mmathis,Mackenzie Mathis,mathis@rowland.harvard.edu,FAS,Rowland Institute,NONFACPI,Domain Users/Rowland Institute,/n/home05/mmathis,mathis_lab,5048,13224,/bin/bash,8/1/2018 11:25
+nli,Na Li,nali@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home09/nli,nali_lab_seas,403263,13230,/bin/bash,8/2/2018 13:28
+junweil,Junwei Lu,junweilu@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/Epidemiology/Christiani Lab,/n/home13/junweil,junweil_lab,11236,13296,/bin/bash,8/20/2018 15:02
+rkoning,Rem Koning,rkoning@hbs.edu,HBS,Business Administration,FACULTY,Domain Users/HBS/Labs/Koning Lab,/n/home03/rkoning,koning_lab,5050,13306,/bin/bash,8/23/2018 8:53
+agreer1,Angie Greer,agreer@g.harvard.edu,FAS,Harvard Center for Biological Imaging,STAFF,Domain Users/MCB/HCBI External Users,/dev/null,seas,34739,13320,/bin/bash,8/27/2018 11:53
+kimai,Kosuke Imai,imai@harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home10/kimai,imai_lab,5051,13359,/bin/bash,9/4/2018 16:18
+zke,Tracey Zheng Ke,zke@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home01/zke,ke_lab,5053,13479,/bin/bash,9/21/2018 12:39
+dwa905,Desmond Ang,desmond_ang@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Ang Lab,/n/home00/dwa905,ang_lab,5054,13462,/bin/bash,9/21/2018 13:36
+renos,Ryan Enos,renos@gov.harvard.edu,FAS,GOVERNMENT,FACULTY,Domain Users/GOV/Enos Lab,/n/home13/renos,enos_lab,5055,13561,/bin/bash,10/2/2018 11:35
+mundy,Julia Mundy,mundy@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics,/dev/null,mundy_lab,5056,13562,/bin/bash,10/2/2018 11:36
+nancykrieger,Nancy Krieger,nkrieger@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH/Social and Behavioral Sciences/Krieger Lab,/dev/null,krieger_lab,403255,13576,/bin/bash,10/3/2018 12:44
+cengiz,Cengiz Pehlevan,cpehlevan@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home02/cengiz,pehlevan_lab,5057,13577,/bin/bash,10/3/2018 12:44
+aseeber,Andrew Seeber,aseeber@fas.harvard.edu,FAS,FAS Other,NONFACPI,Domain Users/MCB/HCBI/Internal HCBI Users,/n/home11/aseeber,seeber_lab,5058,13585,/bin/bash,10/4/2018 15:31
+agoodman,Alyssa Goodman,agoodman@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA/Goodman Lab,/n/home07/agoodman,goodman_lab,40064,13586,/bin/bash,10/4/2018 17:16
+avillar,Ashley Villar,vvillar@g.harvard.edu,FAS,CFA,FACULTY,Domain Users/CFA/Villar Lab,/n/home01/avillar,avillar_lab,10771,13627,/bin/bash,10/16/2018 15:06
+mlemm,Marius Lemm,mlemm@math.harvard.edu,FAS,Math,FACULTY,Domain Users/Math/Lemm Lab,/n/home02/mlemm,lemm_lab,5059,13648,/bin/bash,10/19/2018 10:09
+ephelps,Elizabeth Phelps,phelps@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/NCF/Phelps Lab,/n/home05/ephelps,phelps_lab,10144,13703,/bin/bash,10/23/2018 9:05
+pmair,Patrick Mair,mair@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology,/n/home11/pmair,mair_lab,5061,13720,/bin/bash,10/25/2018 13:50
+jortegahernandez,Javier OrtegaHernandez,jortegahernandez@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB,/dev/null,ortegahernandez_lab,5062,13721,/bin/bash,10/25/2018 14:19
+creece,Christian Reece,christianreece@fas.harvard.edu,FAS,Chemistry and Chemical Biology,NONFACPI,Domain Users/CCB/Labs/Friend lab,/n/home07/creece,creece_lab,10224,13757,/bin/bash,11/2/2018 12:29
+jbuenrostro,Jason Buenrostro,jdbuenrostro@fas.harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/MCB/SCRB/Buenrostro Lab,/n/home01/jbuenrostro,buenrostro_lab,5064,13787,/bin/bash,11/9/2018 9:40
+jrosen,Jacob Rosen,jacobrosen@fas.harvard.edu,FAS,PHILOSOPHY,FACULTY,Domain Users/FAS,/n/home11/jrosen,rosen_lab,5063,13808,/bin/bash,11/13/2018 12:37
+ltsai1,Linus Tsai,ltsai@bidmc.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/dev/null,tsai_lab,5065,13894,/bin/bash,11/28/2018 10:23
+jwhited,Jessica Whited,jessica_whited@harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/MCB/SCRB/Whited Lab,/n/home05/jwhited,whited_lab,5066,13905,/bin/bash,11/29/2018 17:23
+drogulja,Dragana Rogulja,dragana_rogulja@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/dev/null,rogulja_lab,5067,13950,/bin/bash,12/12/2018 11:11
+pmillett,Paul Millett,paul_millett@harvard.edu,FAS,Economics,STAFF,Domain Users/ECON/Economics,/n/home02/pmillett,economics,35016,14004,/bin/bash,1/8/2019 13:04
+paulkelley,Paul Kelley,pkelley@fas.harvard.edu,FAS,Research Computing,STAFF,Domain Users/RC,/n/home00/paulkelley,pkelley_lab,4033784,14034,/bin/bash,1/10/2019 13:11
+hsamuelson,Holly Samuelson,hsamuelson@gsd.harvard.edu,FAS,Graduate School of Design,FACULTY,Domain Users/GSE/CEPR,/n/home06/hsamuelson,samuelson_lab,5068,14076,/bin/bash,1/18/2019 15:27
+jperezmercader,Juan Perez-Mercader,jperezmercader@fas.harvard.edu,FAS,Earth and Planetary Sciences,FACULTY,Domain Users/EPS/Perez-Mercader Lab,/dev/null,perez-mercader_lab,402030,14082,/bin/bash,1/22/2019 12:51
+jmucciarone,Jen Mucciarone,jen@hbs.edu,HBS,Research Computing,STAFF,Domain Users/HBS/Labs/HBS Doctoral,/n/home07/jmucciarone,hbs_doctoral,403340,14109,/bin/bash,1/28/2019 11:46
+cdwork,Cynthia Dwork,dwork@seas.harvard.edu,SEAS,Computer Science,FACULTY,Domain Users/SEAS/Dwork Lab,/n/home07/cdwork,dwork_lab,5069,14113,/bin/bash,1/29/2019 12:55
+jcheckelsky,Joseph Checkelsky,checkelsky@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,checkelsky_lab,5070,14114,/bin/bash,1/29/2019 12:56
+ncira,Nathaniel Cira,cira@rowland.harvard.edu,FAS,Rowland Institute,NONFACPI,Domain Users/Rowland Institute,/n/home07/ncira,cira_lab,5071,14115,/bin/bash,1/29/2019 12:57
+mwaldor,Matthew Waldor,mwaldor@rics.bwh.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home03/mwaldor,waldor_lab,5072,14128,/bin/bash,1/31/2019 12:25
+ehecht,Erin Hecht,erin_hecht@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/NCF/Hecht Lab,/users/ehecht,hecht_lab,5073,14188,/bin/bash,2/5/2019 16:13
+hrvsnarr,Heidi Vollmer-Snarr,hrvsnarr@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB/Labs/Vollmer Snarr Lab,/n/home03/hrvsnarr,vollmer_snarr_lab,5075,14402,/bin/bash,2/25/2019 15:19
+jessicaleecohen,Jessica Cohen,cohenj@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population/JessicaCohen Lab,/n/home04/jessicaleecohen,jessicacohen_lab,10154,14448,/bin/bash,3/12/2019 16:48
+mmcconnell,Margaret McConnell,mmcconne@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population/McConnell Lab,/n/home07/mmcconnell,mcconnell_lab,5077,14471,/bin/bash,3/18/2019 14:18
+ddeconti,Derrick DeConti,ddeconti@hsph.harvard.edu,HCSPH,Biostatistics,POSTDOC/RESEARCHER,Domain Users/HSPH/BIOSTAT/Quackenbush Lab,/n/home04/ddeconti,qbrc_center,10157,14484,/bin/bash,3/22/2019 1:10
+vjreddi,Vijay Janapa Reddi,vjreddi@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home10/vjreddi,janapa_reddi_lab,5076,14486,/bin/bash,3/22/2019 11:13
+jbrain,Joseph Brain,brain@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Brain Lab,/n/home07/jbrain,brain_lab,5078,14487,/bin/bash,3/22/2019 11:39
+qisun,Qi Sun,qisun@hsph.harvard.edu,HCSPH,Nutrition Department,FACULTY,Domain Users/HSPH/Nutrition Department,/n/home10/qisun,sun_lab,5080,14497,/bin/bash,3/25/2019 17:13
+snagai,Shigemi Nagai,shigemi_nagai@hsdm.harvard.edu,HSDM,Harvard School of Dental Medicine,FACULTY,Domain Users/HSDM/Nagai Lab,/dev/null,nagai_lab,5079,14498,/bin/bash,3/25/2019 17:13
+kmichaelhays,K. Hays,mhays@gsd.harvard.edu,GSD,Graduate School of Design,FACULTY,Domain Users/GSD/Hays Lab,/n/home07/kmichaelhays,hays_lab,5081,14540,/bin/bash,4/4/2019 10:56
+rsampson,Robert Sampson,rsampson@wjh.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/dev/null,sampson_lab,5082,14630,/bin/bash,5/1/2019 15:37
+jcain,John Wes Cain,jcain2@math.harvard.edu,FAS,Math,FACULTY,Domain Users/Math,/n/home10/jcain,cain_lab,5084,20030,/bin/bash,5/8/2019 15:44
+jeffreyschnapp,Jeffrey Schnapp,jeffrey@metalab.harvard.edu,GSD,Graduate School of Design,FACULTY,Domain Users/GSD,/n/home08/jeffreyschnapp,schnapp_lab,5083,20031,/bin/bash,5/8/2019 15:45
+awhipple,Amanda Whipple,amanda_whipple@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home06/awhipple,whipple_lab,5086,20116,/bin/bash,5/21/2019 13:56
+malsan,Marcella Alsan,marcella_alsan@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Alsan Lab,/n/home11/malsan,alsan_lab,5088,20280,/bin/bash,6/13/2019 11:24
+msmall,Mario Small,mario_small@harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/n/home05/msmall,small_lab,5089,20285,/bin/bash,6/13/2019 12:30
+vcurto,Vilsa Curto,vcurto@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management,/n/home07/vcurto,vcurto_lab,10533,20334,/bin/bash,6/20/2019 14:18
+zyuan,Zhi-Min Yuan,zyuan@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health,/n/home05/zyuan,yuan_lab,5091,20470,/bin/bash,7/12/2019 21:14
+bstephenson,Briana Joy Stephenson,bstephenson@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT,/n/home00/bstephenson,stephenson_lab,5090,20471,/bin/bash,7/12/2019 21:16
+skominers,Scott Kominers,kominers@fas.harvard.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home13/skominers,kominers_lab,5092,20472,/bin/bash,7/12/2019 22:36
+wdobbie,Will Dobbie,will_dobbie@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Dobbie Lab,/dev/null,dobbie_lab,5074,20548,/bin/bash,7/31/2019 10:13
+abdavies,Andrew Davies,andrew_davies@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB,/n/home03/abdavies,davies_lab,10175,20554,/bin/bash,7/31/2019 13:20
+msurbeck,Martin Surbeck,msurbeck@fas.harvard.edu,FAS,Human Evolutionary Biology,FACULTY,Domain Users/HEB,/n/home04/msurbeck,surbeck_lab,5095,20681,/bin/bash,8/29/2019 17:07
+zubizarreta,Jose Zubizarreta,zubizarreta@hcp.med.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home06/zubizarreta,zubizarreta_lab,5097,20739,/bin/bash,9/5/2019 17:05
+bdickerman,Barbra Dickerman,barbra_dickerman@g.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology,/n/home01/bdickerman,dickerman_lab,10531,20769,/bin/bash,9/10/2019 10:38
+svsubramanian,S.V. Subramanian,svsubram@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH/Social and Behavioral Sciences,/n/home00/svsubramanian,subramanian_lab,5098,20773,/bin/bash,9/10/2019 13:12
+mfishman,Mark Fishman,mark_fishman@harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/MCB/SCRB,/dev/null,fishman_lab,5099,20792,/bin/bash,9/12/2019 12:04
+mtambe,Milind Tambe,tambe@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home09/mtambe,tambe_lab,5100,20801,/bin/bash,9/13/2019 10:50
+rcochrane,Rachel Cochrane,rcochrane@fas.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA,/n/home05/rcochrane,cochrane_lab,5101,20803,/bin/bash,9/13/2019 11:01
+gulab,Chenghua Gu,chenghua_gu@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/dev/null,gu_lab,5102,20812,/bin/bash,9/13/2019 16:25
+wguan,Weihe Guan,wguan@cga.harvard.edu,IQSS,Institute for Quantitative Social Sciences,FACULTY,Domain Users/IQSS/CGA,/dev/null,cga,5103,20824,/bin/bash,9/16/2019 23:39
+dcui,Dongtao Cui,dongtao_cui@fas.harvard.edu,FAS,Chemistry and Chemical Biology,STAFF,Domain Users/CCB/Labs/NMR Lab,/dev/null,nmr_lab,402683,20893,/bin/bash,9/26/2019 16:40
+mprigozhin,Maxim Prigozhin,maxim_prigozhin@harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home10/mprigozhin,prigozhin_lab,5105,20955,/bin/bash,10/7/2019 15:08
+jspengler,John Spengler,spengler@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health,/n/home02/jspengler,spengler_lab,5108,21027,/bin/bash,10/21/2019 13:07
+mcarlana,Michela Carlana,michela_carlana@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Calana Lab,/dev/null,carlana_lab,5109,21096,/bin/bash,10/31/2019 11:55
+stopsack,Konrad Stopsack,stopsack@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology,/n/home08/stopsack,stopsack_lab,10809,21148,/bin/bash,11/13/2019 10:05
+ctabin,Clifford Tabin,tabin@genetics.med.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/dev/null,tabin_lab,402173,21182,/bin/bash,11/18/2019 16:40
+wgilpin,William Gilpin,wgilpin@fas.harvard.edu,FAS,MCB,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home03/wgilpin,gilpin_lab,5110,21194,/bin/bash,11/21/2019 15:32
+namin,Nada Amin,namin@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home07/namin,amin_lab,5114,21283,/bin/bash,12/20/2019 16:05
+sverguet,Stephane Verguet,verguet@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population,/dev/null,verguet_lab,5115,21364,/bin/bash,1/15/2020 13:07
+wtrible,Waring Trible,bucktrible@fas.harvard.edu,FAS,Center for Systems Biology,FACULTY,Domain Users/CSB,/n/home11/wtrible,trible_lab,5116,21410,/bin/bash,1/24/2020 16:25
+gnallamala,Gautam Nallamala,gautam_nallamala@fas.harvard.edu,FAS,Molecular and Cellular Biology,NONFACPI,Domain Users/MCB,/n/home09/gnallamala,nallamala_lab,10472,21552,/bin/bash,2/3/2020 21:23
+ahaber,Adam Haber,ahaber@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Haber Lab,/n/home04/ahaber,haber_lab,5119,21590,/bin/bash,2/11/2020 11:06
+jarvis,Jarvis Chen,jarvis@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,NON-FACULTY PI,Domain Users/HSPH/Social and Behavioral Sciences,/n/home13/jarvis,chen_lab,5121,21608,/bin/bash,2/13/2020 11:27
+bbarak,Boaz Barak,boaz@seas.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/SEAS/Barak Lab,/n/home08/bbarak,barak_lab,5117,21737,/bin/bash,2/28/2020 13:40
+lwisniewski,Leonard Wisniewski,lwisniewski@iq.harvard.edu,IQSS,Institute for Quantitative Social Science,NON-FACULTY PI,Domain Users/IQSS/Staff,/n/home05/lwisniewski,iqss_users,10241,21743,/bin/bash,3/2/2020 11:41
+lalfaro,Laura Alfaro,lalfaro@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home13/lalfaro,alfaro_lab,5120,21793,/bin/bash,3/5/2020 12:16
+krader,Kevin Rader,rader@stat.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home04/krader,rader_lab,5122,21794,/bin/bash,3/5/2020 12:20
+farrell02138,Brian F Farrell,farrell@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,,5124,21812,/bin/bash,3/10/2020 11:05
+jchristodoulou,Joanna Christodoulou,joanna_christodoulou@gse.harvard.edu,FAS,Graduate School of Education,NON-FACULTY PI,Domain Users/GSE,/n/home09/jchristodoulou,christodoulou_lab,5123,21813,/bin/bash,3/10/2020 14:45
+remahanna,Rema Hanna,rema_hanna@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS/Hanna Lab,/n/home01/remahanna,hanna_lab,5125,21824,/bin/bash,3/12/2020 11:03
+quantumtopo,Suyang Xu,suyangxu@fas.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB,/dev/null,sxu_lab,10229,21859,/bin/bash,3/23/2020 16:12
+vgladyshev,Vadim Gladyshev,vgladyshev@rics.bwh.harvard.edu,HMS,Biological and Biomedical Sciences,FACULTY,Domain Users/HMS,/n/home03/vgladyshev,gladyshev_lab,5126,21951,/bin/bash,4/2/2020 23:26
+ghanson,Gordon Hanson,gordon_hanson@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/dev/null,hanson_lab,5127,22003,/bin/bash,4/17/2020 12:10
+asdevlin,Abigail Devlin,Sloan_Devlin@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home03/asdevlin,devlin_lab,10234,22041,/bin/bash,4/28/2020 10:16
+dneafsey,Daniel Neafsey,neafsey@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases,/n/home07/dneafsey,neafsey_lab,5128,22058,/bin/bash,5/1/2020 10:29
+apwilson62,Anna Wilson,anna_wilson@fas.harvard.edu,FAS,FAS Other,FACULTY,Domain Users/FAS,/n/home05/apwilson62,wilson_lab,5130,22082,/bin/bash,5/6/2020 10:36
+gking,Gary King,King@harvard.edu,IQSS,Institute for Quantitative Social Science,FACULTY,Domain Users/IQSS/King Lab,/n/home07/gking,king_lab,5131,22083,/bin/bash,5/6/2020 12:10
+ebreza,Emily Breza,ebreza@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Breza Lab,/dev/null,breza_lab,5132,22096,/bin/bash,5/11/2020 13:09
+mcouger,Matthew Couger,mcouger@bwh.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home11/mcouger,couger_lab,5133,22098,/bin/bash,5/12/2020 9:56
+aprice,Alkes Price,aprice@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Price Lab,/n/home01/aprice,price_lab,5135,22123,/bin/bash,5/15/2020 13:57
+mvanrooyen,Michael VanRooyen,mvanrooy@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH/Global Health and Population,/n/home13/mvanrooyen,vanrooyen_lab,5136,22133,/bin/bash,5/20/2020 6:50
+gkreindler,Gabriel Kreindler,gkreindler@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/Kreindler Lab,/n/home12/gkreindler,kreindler_lab,5138,22137,/bin/bash,5/20/2020 12:12
+carguelles,Carlos Arguelles Delgado,carguelles@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics,/n/home06/carguelles,arguelles_delgado_lab,5137,22135,/bin/bash,5/20/2020 16:46
+sdoeleman,Sheperd Doeleman,sdoeleman@cfa.harvard.edu,FAS,Center for Astrophysics,NON-FACULTY PI,Domain Users/CFA,/n/home07/sdoeleman,doeleman_lab,5139,22170,/bin/bash,5/26/2020 12:00
+dustintingley,Dustin Tingley,dtingley@gov.harvard.edu,IQSS,Institute for Quantitative Social Science,FACULTY,Domain Users/IQSS,/n/home04/dustintingley,tingley_lab,5140,22234,/bin/bash,6/4/2020 16:28
+sgil,Stephanie Gil,sgil@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home10/sgil,gil_lab,5142,22283,/bin/bash,6/15/2020 18:37
+abeam,Andrew Beam,andrew_beam@hms.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Beam Lab,/n/home04/abeam,beam_lab,5143,22291,/bin/bash,6/16/2020 10:14
+jonathangrinham,Jonathan Grinham,jgrinham@gsd.harvard.edu,FAS,Graduate School of Design,FACULTY,Domain Users/CCB,/n/home02/jonathangrinham,jonathangrinham_lab,11225,22321,/bin/bash,6/24/2020 7:51
+ekhalaf,Eslam Khalaf,eslam_khalaf@fas.harvard.edu,FAS,Physics,POSTDOC/RESEARCHER,Domain Users/Physics,/n/home12/ekhalaf,ekhalaf_lab,11163,22333,/bin/bash,6/25/2020 16:42
+celler,Christina Eller,cceller@fas.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/n/home07/celler,eller_lab,5145,22413,/bin/bash,7/16/2020 9:35
+hspamann,Holger Spamann,hspamann@law.harvard.edu,IQSS,Harvard Law School,FACULTY,Domain Users/IQSS/Spamann Lab,/n/home10/hspamann,spamann_lab,5146,22446,/bin/bash,7/23/2020 16:09
+mmitrano,Matteo Mitrano,mmitrano@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics,/n/home03/mmitrano,mitrano_lab,5147,22478,/bin/bash,8/3/2020 14:29
+sbauhoff,Sebastian Bauhoff,sbauhoff@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/HSPH,/n/home06/sbauhoff,bauhoff_lab,5148,22509,/bin/bash,8/13/2020 12:56
+jialiu,Jia Liu,jia_liu@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS/Jia Liu Lab,/n/home07/jialiu,jialiu_lab,10260,22605,/bin/bash,9/3/2020 16:52
+rduan,Rui Duan,rduan@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH,/n/home12/rduan,duan_lab,5152,22684,/bin/bash,9/17/2020 13:27
+mnock,Matthew Nock,nock@wjh.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology,/n/home06/mnock,nock_lab,5153,22716,/bin/bash,9/23/2020 14:26
+young1062,Alex Young,alexander_young@fas.harvard.edu,FAS,Statistics,NON-FACULTY PI,Domain Users/Statistics,/n/home05/young1062,young_lab,5154,30011,/bin/bash,10/5/2020 16:59
+ngaab,Nadine Gaab,nadine_gaab@gse.harvard.edu,Graduate School of Education,Graduate School of Education,FACULTY,Domain Users/GSE,/n/home03/ngaab,gaab_lab,5155,30062,/bin/bash,10/21/2020 11:30
+abalazs,Alejandro Balazs,abalazs@mgh.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home01/abalazs,balazs_lab,5156,30104,/bin/bash,11/3/2020 6:14
+mliska,Matthew Liska,matthewliska92@gmail.com,FAS,Center for Astrophysics,NON-FACULTY PI,Domain Users/CFA,/n/home03/mliska,liska_lab,5157,30105,/bin/bash,11/3/2020 6:17
+hsphparklab,Jin-Ah Park,jpark@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH,/n/home03/hsphparklab,jpark_lab,5158,30106,/bin/bash,11/3/2020 6:20
+eglassman,Elena Glassman,glassman@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home12/eglassman,glassman_lab,5159,30164,/bin/bash,11/20/2020 13:04
+kshrinivas,Krishna Shrinivas,krishnashrinivas@fas.harvard.edu,FAS,Molecular and Cellular Biology,NONFACPI,Domain Users/MCB,/n/home00/kshrinivas,shrinivas_lab,10678,30177,/bin/bash,11/25/2020 15:49
+mblackwell,Matthew Blackwell,mblackwell@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/GOV,/n/home00/mblackwell,blackwell_lab,5161,30305,/bin/bash,1/4/2021 9:57
+cpeters,Claire Peters,clairepeters@g.harvard.edu,FAS,Research Computing,STAFF,Domain Users/RC/DSRF,/n/home05/cpeters,rc_admin,40273,60006,/bin/bash,1/21/2021 20:47
+kterry,Kathryn Terry,kterry@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology/Terry Lab,/n/home09/kterry,terry_lab,10273,60151,/bin/bash,2/1/2021 12:22
+mkijewski,Marie Kijewski,mkijewski@partners.org,FAS,Center for Systems Biology,NON-FACULTY PI,Domain Users/CSB,/dev/null,kijewski_lab,10275,60221,/bin/bash,2/12/2021 13:21
+kmckinley,Kara McKinley,kara_mckinley@harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/MCB/SCRB,/n/home12/kmckinley,mckinley_lab,10276,60276,/bin/bash,3/1/2021 13:30
+akillewald,Alexandra Killewald,killewald@fas.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/n/home12/akillewald,killewald_lab,10277,60297,/bin/bash,3/10/2021 10:53
+sansolabehere,Stephen Ansolabehere,sda@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/GOV,/n/home07/sansolabehere,ansolabehere_lab,10278,60303,/bin/bash,3/11/2021 14:34
+dcharbonneau,David Charbonneau,dcharbonneau@cfa.harvard.edu,FAS,Center for Astrophysics,FACULTY,Domain Users/CFA,/n/home13/dcharbonneau,charbonneau_lab,10280,60321,/bin/bash,3/16/2021 9:48
+cimai,Christina Imai,cldavis@harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/GOV,/n/home09/cimai,christina_imai_lab,10281,60325,/bin/bash,3/17/2021 14:24
+jrogowski,Jon Rogowski,rogowski@fas.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/GOV,/dev/null,rogowski_lab,10283,60368,/bin/bash,4/5/2021 13:08
+ddeming,David Deming,david_deming@harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home11/ddeming,deming_lab,10285,60382,/bin/bash,4/8/2021 10:51
+xuehongzhang,Xuehong Zhang,xuehongzhang@hsph.harvard.edu,HCSPH,Nutrition Department,FACULTY,Domain Users/HSPH/Nutrition Department,/n/home09/xuehongzhang,xuehong_zhang_lab,10286,60395,/bin/bash,4/9/2021 18:16
+dschneider,Daniel Schneider,dschneider@hks.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/dev/null,dschneider_lab,10293,60451,/bin/bash,4/28/2021 11:26
+drgold,Diane Gold,dgold@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health/Gold Lab,/dev/null,drgold_lab,10298,60452,/bin/bash,4/28/2021 11:26
+cbuckee,Caroline Buckee,cbuckee@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH/Epidemiology,/n/home05/cbuckee,buckee_lab,10296,60462,/bin/bash,5/3/2021 9:54
+pbarreira,Paul Barreira,paul_barreira@harvard.edu,FAS,FAS Other,FACULTY,Domain Users/FAS,/dev/null,barreira_lab,10297,60467,/bin/bash,5/4/2021 10:56
+mlopezmorales,Mercedes Lopez-Morales,mlopez-morales@cfa.harvard.edu,FAS,Center for Astrophysics,NON-FACULTY PI,Domain Users/CFA,/n/home02/mlopezmorales,lopez_morales_lab,10396,60552,/bin/bash,5/28/2021 14:11
+wvandijk,Winnie van Dijk,winnie_vandijk@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON/van Dijk Lab,/n/home00/wvandijk,van_dijk_lab,10399,60702,/bin/bash,6/22/2021 12:22
+nslopen,Natalie Slopen,nslopen@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH,/dev/null,slopen_lab,10402,60703,/bin/bash,6/22/2021 12:29
+julzdefreitas,Julian De Freitas,jdefreitas@hbs.edu,FAS,Psychology,FACULTY,Domain Users/Psychology,/n/home03/julzdefreitas,de_freitas_lab,10403,60704,/bin/bash,6/22/2021 12:33
+dbloome,Deirdre Bloome,dbloome@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home07/dbloome,bloome_lab,10413,60775,/bin/bash,7/13/2021 13:56
+rmukherjee,Rajarshi Mukherjee,rmukherj@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH/BIOSTAT,/n/home01/rmukherjee,mukherjee_lab,10414,60780,/bin/bash,7/14/2021 11:53
+bentontaylor,Benton Taylor,bentontaylor@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/OEB,/n/home06/bentontaylor,taylor_lab,10415,60781,/bin/bash,7/14/2021 11:54
+jdthaler,Jesse Thaler,jthaler@mit.edu,FAS,Physics,NON-FACULTY PI,Domain Users/Physics,/n/home11/jdthaler,iaifi_lab,10416,60799,/bin/bash,7/26/2021 14:44
+jaldy,Joseph Aldy,joseph_aldy@hks.harvard.edu,GSE,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home01/jaldy,aldy_lab,10417,60827,/bin/bash,8/5/2021 10:27
+znagel,Zachary Nagel,znagel@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH/Environmental Health,/dev/null,nagel_lab,10420,60853,/bin/bash,8/9/2021 12:48
+fichinose,Fumito Ichinose,fichinose@partners.org,HMS,Harvard Medical School,NON-FACULTY PI,Domain Users/HMS,/n/home11/fichinose,ichinose_lab,10422,60941,/bin/bash,8/26/2021 11:58
+sgoel,Sharad Goel,sgoel@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home12/sgoel,goel_lab,10427,61084,/bin/bash,9/15/2021 12:56
+pkoumoutsakos,Petros Koumoutsakos,petros@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,koumoutsakos_lab,10428,61206,/bin/bash,10/13/2021 21:57
+agoldfeld,Anne Goldfeld,anne.goldfeld@childrens.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home06/agoldfeld,goldfeld_lab,10429,61220,/bin/bash,10/15/2021 15:54
+tullman,Tomer Ullman,tullman@fas.harvard.edu,FAS,Psychology,FACULTY,Domain Users/Psychology,/dev/null,ullman_lab,10430,61249,/bin/bash,10/22/2021 13:03
+mwattenberg,Martin Wattenberg,wattenberg@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,wattenberg_lab,10431,61258,/bin/bash,10/22/2021 13:15
+ghills,Gage Hills,ghills@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home13/ghills,hills_lab,10432,61259,/bin/bash,10/22/2021 13:30
+thomastsai,Thomas Tsai,ttsai@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management,/dev/null,thomas_tsai_lab,10445,61269,/bin/bash,10/27/2021 10:36
+nmckenna,Natalie McKenna,nmckenna@fas.harvard.edu,FAS,Human Evolutionary Biology,NON-FACULTY PI,Domain Users/HEB,/dev/null,mckenna_lab,10448,61283,/bin/bash,10/28/2021 17:08
+mwaters,Mary Waters,mcw@wjh.harvard.edu,FAS,Sociology,FACULTY,Domain Users/Sociology,/dev/null,waters_lab,10449,61305,/bin/bash,11/3/2021 12:17
+ssaghafian,Soroush Saghafian,soroush_saghafian@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home02/ssaghafian,saghafian_lab,10460,61379,/bin/bash,11/17/2021 10:22
+mattsmith,Matthew Smith,msmith@hsph.harvard.edu,HCSPH,Environmental Health,NON-FACULTY PI,Domain Users/HSPH,/n/home03/mattsmith,mattsmith_lab,10476,61420,/bin/bash,11/30/2021 11:35
+gnair,Gautam Nair,gnair@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home08/gnair,nair_lab,10478,61433,/bin/bash,12/2/2021 12:01
+jdbk,Justin de Benedictis-Kessner,jdbk@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home09/jdbk,de_benedictis_kessner_lab,10479,61434,/bin/bash,12/2/2021 12:05
+mkatkinson,Mariam Atkinson,mkrikorian@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH/Health Policy and Management,/dev/null,atkinson_lab,10481,61484,/bin/bash,12/15/2021 11:04
+srichardson,Sarah Richardson,srichard@fas.harvard.edu,FAS,Physics,FACULTY,Domain Users/Physics,/n/home02/srichardson,srichardson_lab,10482,61491,/bin/bash,12/16/2021 17:22
+jeryang,Jeremy Yang,jeryang@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home09/jeryang,jyang_lab,10488,61548,/bin/bash,1/19/2022 11:01
+psur,Pragya Sur,pragya@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home13/psur,sur_lab,10491,61581,/bin/bash,1/27/2022 19:21
+jmshapir,Jesse Shapiro,jesse_shapiro@fas.harvard.edu,FAS,ECON,FACULTY,Domain Users/ECON,/n/home08/jmshapir,jshapiro_lab,10496,61582,/bin/bash,1/27/2022 19:25
+shunyuanz,Shunyuan Zhang,szhang@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home01/shunyuanz,szhang_lab,10498,61585,/bin/bash,1/28/2022 14:01
+akhwaja,Asim Khwaja,khwaja@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home13/akhwaja,khwaja_lab,10511,61791,/bin/bash,3/14/2022 16:56
+sraayaiardakani,Shabnam Raayai Ardakani,sraayai@fas.harvard.edu,FAS,Rowland Institute,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home08/sraayaiardakani,raayai_ardakani_lab,10512,61794,/bin/bash,3/16/2022 10:01
+idahabreh,Issa Dahabreh,idahabreh@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH,/n/home01/idahabreh,dahabreh_lab,10517,61796,/bin/bash,3/16/2022 14:54
+jallen,Joseph Allen,jgallen@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH,/dev/null,jallen_lab,10519,61829,/bin/bash,3/24/2022 14:03
+fcamargo,Fernando Camargo,camargo@fas.harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/MCB/SCRB,/dev/null,camargo_lab,10520,61987,/bin/bash,5/3/2022 16:59
+ekohler,Eddie Kohler,kohler@fas.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/FAS,/n/home02/ekohler,kohler_lab,10521,62015,/bin/bash,5/10/2022 11:20
+jamessnyderjr,James Snyder,jsnyder@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/GOV,/n/home06/jamessnyderjr,snyder_lab,10569,62131,/bin/bash,6/13/2022 10:02
+cmesserlian,Carmen Messerlian,cmesser@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH,/dev/null,messerlian_lab,10572,62144,/bin/bash,6/13/2022 17:34
+hzziwa,Hellen Zziwa,hellen_zziwa@harvard.edu,HUIT,HUIT,NON-FACULTY PI,Domain Users/_approved_accounts,/dev/null,zziwa_lab,10573,62151,/bin/bash,6/14/2022 13:08
+mdwyer,Michelle Dwyer,michelle_dwyer@hks.harvard.edu,HKS,Harvard Kennedy School of Government,NON-FACULTY PI,Domain Users/HKS,/n/home09/mdwyer,dwyer_lab,10574,62158,/bin/bash,6/15/2022 10:58
+csirois,Christina Sirois,christina_sirois@hks.harvard.edu,HKS,Harvard Kennedy School of Government,NON-FACULTY PI,Domain Users/HKS,/n/home09/csirois,sirois_lab,10575,62160,/bin/bash,6/15/2022 11:03
+pnatarajan,Priyamvada Natarajan,priyamvada_natarajan@fas.harvard.edu,FAS,Center for Astrophysics,NON-FACULTY PI,Domain Users/CFA,/n/home02/pnatarajan,natarajan_lab,10583,62163,/bin/bash,6/15/2022 15:31
+spapatheodorou,Stefania Papatheodorou,spapathe@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH,/n/home08/spapatheodorou,papatheodorou_lab,10586,62200,/bin/bash,6/23/2022 15:14
+jdesimini,Jill Desimini,desimini@gsd.harvard.edu,IQSS,Institute for Quantitative Social Science,FACULTY,Domain Users/IQSS,/dev/null,desimini_lab,10589,62201,/bin/bash,6/23/2022 16:12
+lezhang,Letian Zhang,lzhang@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home09/lezhang,lezhang_lab,10605,62239,/bin/bash,6/28/2022 15:48
+mwood,Melanie Wood,mmwood@math.harvard.edu,FAS,Math,FACULTY,Domain Users/FAS,/dev/null,mwood_lab,10619,62243,/bin/bash,6/29/2022 10:39
+ryl,Richard Liu,richardliu@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/CCB,/n/home09/ryl,ryl_lab,10620,62244,/bin/bash,6/29/2022 10:39
+matthewlee,Matthew Lee,matthew_lee@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home06/matthewlee,matthewlee_lab,10621,62249,/bin/bash,6/29/2022 16:08
+cgolden,Christopher Golden,golden@hsph.harvard.edu,HCSPH,Nutrition,FACULTY,Domain Users/HSPH,/n/home09/cgolden,cgolden_lab,10624,62300,/bin/bash,7/11/2022 15:51
+lberkman,Lisa Berkman,lberkman@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH,/dev/null,lberkman_lab,10627,62302,/bin/bash,7/11/2022 16:12
+nhejazi,Nima Hejazi,nhejazi@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH,/n/home07/nhejazi,nhejazi_lab,10628,62312,/bin/bash,7/13/2022 14:23
+bschneer,Benjamin Schneer,benjamin_schneer@hks.harvard.edu,IQSS,Institute for Quantitative Social Science,FACULTY,Domain Users/IQSS,/n/home09/bschneer,bschneer_lab,10629,62313,/bin/bash,7/13/2022 14:53
+siacus,Stefano Iacus,siacus@iq.harvard.edu,IQSS,Institute for Quantitative Social Science,NON-FACULTY PI,Domain Users/IQSS/Siacus Lab,/n/home11/siacus,siacus_lab,10662,62339,/bin/bash,7/21/2022 11:05
+elinos,Elizabeth Linos,elizabeth_linos@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/dev/null,elinos_lab,10623,62340,/bin/bash,7/21/2022 15:46
+bertrand,Bertrand Schneider,bertrand_schneider@g.harvard.edu,Graduate School of Education,Graduate School of Education,FACULTY,Domain Users/GSE,/n/home00/bertrand,bertrand_lab,10644,62354,/bin/bash,7/25/2022 11:40
+kmcconville,Kelly McConville,kmcconville@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/Statistics,/n/home07/kmcconville,kmcconville_lab,10643,62358,/bin/bash,7/25/2022 15:59
+jellias,Jared Ellias,jellias@law.harvard.edu,HLS,Harvard Law School,FACULTY,Domain Users/HLS,/n/home04/jellias,jellias_lab,10645,62379,/bin/bash,7/28/2022 11:07
+kfranich,Kathryn Franich,kfranich@g.harvard.edu,FAS,Linguistics,FACULTY,Domain Users/FAS,/n/home05/kfranich,kfranich_lab,10646,62387,/bin/bash,7/29/2022 10:15
+rnett,Ryan Nett,rnett@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/MCB,/n/home07/rnett,rnett_lab,10647,62388,/bin/bash,7/29/2022 10:15
+sternullo,Stephanie Ternullo,sternullo@fas.harvard.edu,FAS,FAS Department of Government,POSTDOC/RESEARCHER,Domain Users/GOV,/n/home01/sternullo,sternullo_lab,11288,62410,/bin/bash,8/3/2022 9:52
+cvoulgaris,Carole Voulgaris,cvoulgaris@gsd.harvard.edu,FAS,Graduate School of Design,FACULTY,Domain Users/GSD,/n/home04/cvoulgaris,cvoulgaris_lab,10659,62512,/bin/bash,8/26/2022 11:32
+ctaubes,Clifford Taubes,chtaubes@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/FAS,/n/home05/ctaubes,ctaubes_lab,10663,62552,/bin/bash,9/2/2022 15:31
+derekmiller,Derek Miller,dmiller@fas.harvard.edu,FAS,English,FACULTY,Domain Users/FAS,/n/home11/derekmiller,derekmiller_lab,10664,62588,/bin/bash,9/9/2022 10:33
+aavedian,Arevik Avedian,aavedian@law.harvard.edu,HLS,Harvard Law School,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home04/aavedian,aavedian_lab,10669,60616,/bin/bash,9/14/2022 10:09
+nzipser,Nina Zipser,zipser@g.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/FAS,/dev/null,nzipser_lab,10684,60198,/bin/bash,9/15/2022 16:26
+jrohr,Julia Rohr,jkrohr@hsph.harvard.edu,HCSPH,Global Health and Population,NON-FACULTY PI,Domain Users/HSPH,/n/home07/jrohr,jrohr_lab,10590,62638,/bin/bash,9/19/2022 17:24
+ejrubin,Eric Rubin,erubin@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH/Immunology and Infectious Diseases,/n/home00/ejrubin,ejrubin_lab,10686,62667,/bin/bash,9/20/2022 13:30
+xgabaix1,Xavier Gabaix,xgabaix@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/ECON,/n/home07/xgabaix1,xgabaix1_lab,10691,62696,/bin/bash,9/23/2022 10:40
+alcohen,Alma Cohen,alcohen@law.harvard.edu,HLS,Harvard Law School,FACULTY,Domain Users/HLS,/dev/null,alcohen_lab,10694,62791,/bin/bash,10/7/2022 15:01
+psorensen,Pia Sorensen,sorensen@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/dev/null,psorensen_lab,10697,62822,/bin/bash,10/17/2022 10:06
+gekiert,Grzegorz Ekiert,ekiert@fas.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/dev/null,gekiert_lab,10698,62860,/bin/bash,10/25/2022 14:16
+jkertzer,Joshua Kertzer,jkertzer@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/n/home12/jkertzer,jkertzer_lab,10699,62894,/bin/bash,11/1/2022 10:07
+mweber,Melanie Weber,mweber@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home02/mweber,mweber_lab,10702,62899,/bin/bash,11/1/2022 17:28
+kmyers,Kyle Myers,kmyers@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home06/kmyers,kmyers_lab,10705,62945,/bin/bash,11/10/2022 13:31
+joyluohong,Hong Luo,hluo@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home01/joyluohong,joyluohong_lab,10708,62946,/bin/bash,11/10/2022 13:32
+sgopinath,Smita Gopinath,smita.mp@gmail.com,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH,/n/home09/sgopinath,sgopinath_lab,10709,62964,/bin/bash,11/15/2022 10:38
+praffler,Pia Raffler,praffler@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/n/home01/praffler,praffler_lab,10710,62981,/bin/bash,11/28/2022 10:57
+dkoretz,Daniel Koretz,daniel_koretz@gse.harvard.edu,Graduate School of Education,Graduate School of Education,FACULTY,Domain Users/_approved_accounts,/n/home12/dkoretz,dkoretz_lab,10711,62986,/bin/bash,11/28/2022 13:37
+tvanderweele,Tyler VanderWeele,tvanderw@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH,/n/home13/tvanderweele,tvanderweele_lab,10713,63047,/bin/bash,12/9/2022 10:22
+joonholee,Joonho Lee,joonholee@chemistry.harvard.edu,FAS,Chemistry and Chemical Biology,FACULTY,Domain Users/FAS,/n/home08/joonholee,joonholee_lab,10723,63077,/bin/bash,12/19/2022 15:13
+jeeyunchung,Jeeyun Chung,jeeyunchung@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/FAS,/n/home06/jeeyunchung,jeeyunchung_lab,10724,63109,/bin/bash,1/5/2023 10:09
+charrison,Chase Harrison,charrison@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/dev/null,charrison_lab,10725,63113,/bin/bash,1/9/2023 14:26
+sgoshev,Simo Goshev,sgoshev@hks.harvard.edu,HKS,HKS,STAFF,Domain Users/_approved_accounts,/n/home07/sgoshev,sgoshev_lab,11164,63185,/bin/bash,1/25/2023 16:15
+eporter,Elise Porter,elise_porter@harvard.edu,SEAS,SEAS,NON-FACULTY PI,Domain Users/Kempner Institute,/dev/null,kempner_lab,10740,63189,/bin/bash,1/26/2023 10:27
+jfrankle,Jonathan Frankle,jfrankle@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS,/n/home09/jfrankle,jfrankle_lab,10330,63214,/bin/bash,1/31/2023 12:04
+guyeon,Gu-Yeon Wei,guyeon@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS,/n/home07/guyeon,guyeon_lab,10351,63292,/bin/bash,2/7/2023 14:17
+dmorenomateos,David Moreno Mateos,dmoreno@gsd.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/FAS,/dev/null,dmorenomateos_lab,10364,63359,/bin/bash,2/22/2023 11:00
+yannai,Yannai Gonczarowski,yannaigo@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/FAS,/n/home05/yannai,yannai_lab,10365,63360,/bin/bash,2/22/2023 11:00
+hlakkaraju,Hima Lakkaraju,hlakkaraju@seas.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/FAS,/n/home06/hlakkaraju,hlakkaraju_lab,10379,63426,/bin/bash,3/7/2023 16:56
+kwyu,Kwok Yu,kwok_yu@harvard.edu,FAS,FAS Other,NON-FACULTY PI,Domain Users/FAS/FAS other/Kwyu Lab,/n/home05/kwyu,kwyu_lab,10411,63469,/bin/bash,3/21/2023 11:02
+sssmith,Sandra Smith,sandra_smith@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home05/sssmith,sssmith_lab,10412,63489,/bin/bash,3/24/2023 15:37
+ymaepi,Yuan Ma,yuanma@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH,/dev/null,ymaepi_lab,10468,63490,/bin/bash,3/24/2023 15:37
+mweisskopf,Marc Weisskopf,mweissko@hsph.harvard.edu,HCSPH,Environmental Health,FACULTY,Domain Users/HSPH,/n/home03/mweisskopf,mweisskopf_lab,10471,63574,/bin/bash,4/13/2023 14:00
+cmikulaschek,Christoph Mikulaschek,mikulaschek@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/n/home02/cmikulaschek,cmikulaschek_lab,10535,63613,/bin/bash,4/26/2023 14:15
+arielpro,Ariel Procaccia,arielpro@seas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS,/n/home06/arielpro,arielpro_lab,10536,63649,/bin/bash,5/8/2023 11:11
+gjchan,Grace Chan,grace.chan@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/HSPH,/n/home12/gjchan,gjchan_lab,10672,63669,/bin/bash,5/11/2023 15:17
+sham,Sham Kakade,sham@seas.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/FAS,/n/home12/sham,sham_lab,10673,63746,/bin/bash,5/31/2023 16:10
+rhamad,Rita Hamad,rhamad@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH,/n/home09/rhamad,rhamad_lab,10739,63757,/bin/bash,6/5/2023 11:13
+ebatty,Eleanor Batty,eleanorbatty10@gmail.com,FAS,Computer Science,STAFF,Domain Users/_approved_accounts,/n/home02/ebatty,kempner_dev,10761,63782,/bin/bash,6/14/2023 15:12
+giuliasemeghini,Giulia Semeghini,semeghini@g.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home00/giuliasemeghini,giuliasemeghini_lab,10741,63821,/bin/bash,6/16/2023 16:51
+jbai,Jie Bai,Jie_Bai@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home04/jbai,jbai_lab,10770,63915,/bin/bash,7/6/2023 11:26
+xiaoying,Xiaoying Zhou,xiaoyingzhou@hsph.harvard.edu,HCSPH,Environmental Health,NON-FACULTY PI,Domain Users/HSPH,/n/home07/xiaoying,xiaoying_lab,10777,63987,/bin/bash,7/20/2023 14:02
+aowens,Avalon Owens,aowens@fas.harvard.edu,FAS,Rowland Institute,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home10/aowens,aowens_lab,10787,64008,/bin/bash,7/26/2023 11:59
+pwood,Philip Wood,pmwood@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/FAS,/n/home09/pwood,pwood_lab,10788,64012,/bin/bash,7/27/2023 11:18
+aseigal,Anna Seigal,aseigal@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home01/aseigal,aseigal_lab,10797,64050,/bin/bash,8/3/2023 14:25
+larmona,Luis Armona,larmona@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home09/larmona,larmona_lab,10342,64082,/bin/bash,8/15/2023 15:21
+mzitnik,Marinka Zitnik,marinka@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home03/mzitnik,mzitnik_lab,10824,64243,/bin/bash,9/14/2023 11:01
+hankyang,Heng Yang,hankyang@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home12/hankyang,hankyang_lab,10826,64245,/bin/bash,9/14/2023 11:17
+zjw,Zachary Ward,zward@hsph.harvard.edu,HCSPH,Health Policy and Management,FACULTY,Domain Users/HSPH,/n/home04/zjw,zjw_lab,10827,64249,/bin/bash,9/15/2023 11:23
+htiemeier,Henning Tiemeier,tiemeier@hsph.harvard.edu,HCSPH,Social and Behavioral Sciences,FACULTY,Domain Users/HSPH,/n/home11/htiemeier,htiemeier_lab,10829,64309,/bin/bash,9/21/2023 17:31
+dam,David Alvarez Melis,dam@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home10/dam,dam_lab,10830,64332,/bin/bash,9/27/2023 10:15
+emckenna,Elizabeth McKenna,emckenna@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home03/emckenna,emckenna_lab,10831,64342,/bin/bash,9/29/2023 10:51
+dziblatt,Daniel Ziblatt,dziblatt@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/n/home12/dziblatt,dziblatt_lab,10832,64343,/bin/bash,9/29/2023 11:18
+iebecker,Ignacio Becker Troncoso,iebecker@fas.harvard.edu,SEAS,SEAS,FACULTY,Domain Users/SEAS,/n/home10/iebecker,iebecker_lab,10833,64451,/bin/bash,10/16/2023 13:38
+kiyoul,Kiyoul Yang,kiyoul@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/SEAS,/n/home09/kiyoul,kiyoul_lab,10836,64489,/bin/bash,10/20/2023 14:10
+emalach,Eran Malach,emalach@fas.harvard.edu,SEAS,School of Engineering and Applied Sciences,POSTDOC/RESEARCHER,Domain Users/Kempner Institute,/n/home07/emalach,emalach_lab,10973,64527,/bin/bash,10/31/2023 14:47
+mjoshi,Manasvita Joshi,manasvitajoshi@g.harvard.edu,FAS,Research Computing,STAFF,Domain Users/_approved_accounts,/n/home_rc/mjoshi,rc_admin,40273,64529,/bin/bash,10/31/2023 17:19
+bvallee,Boris Vallee,bvallee@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/HBS,/n/home11/bvallee,bvallee_lab,10837,64558,/bin/bash,11/8/2023 10:28
+maustern,Morgane Austern,maustern@fas.harvard.edu,FAS,Statistics,FACULTY,Domain Users/FAS,/n/home09/maustern,maustern_lab,10838,64564,/bin/bash,11/9/2023 10:28
+spruitt,Spencer Pruitt,Spencer_Pruitt@hms.harvard.edu,HMS,Harvard Medical School,STAFF,Domain Users/_approved_accounts,/n/home06/spruitt,mcfee_lab,40227,64606,/bin/bash,11/16/2023 14:27
+ctm,Curtis McMullen,ctm@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/FAS,/n/home05/ctm,ctm_lab,10323,64626,/bin/bash,11/27/2023 12:27
+sitanc,Sitan Chen,sitan@seas.harvard.edu,FAS,Computer Science,FACULTY,Domain Users/FAS,/n/home05/sitanc,sitanc_lab,10324,64627,/bin/bash,11/27/2023 12:27
+cataylor,Charles Taylor,ctaylor@hks.harvard.edu,HKS,Harvard Kennedy School of Government,FACULTY,Domain Users/HKS,/n/home01/cataylor,cataylor_lab,10386,64642,/bin/bash,11/30/2023 15:37
+krajan,Kanaka Rajan,kanaka_rajan@hms.harvard.edu,HMS,Harvard Medical School,FACULTY,Domain Users/HMS,/n/home07/krajan,krajan_lab,10387,64680,/bin/bash,12/8/2023 10:05
+mcammett,Melani Cammett,mcammett@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/FAS,/n/home08/mcammett,mcammett_lab,10543,64726,/bin/bash,12/21/2023 11:28
+pwilliams,Paige Williams,paige@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/HSPH,/n/home06/pwilliams,pwilliams_lab,10841,64727,/bin/bash,12/21/2023 11:28
+dafr,Dan Freed,dafr@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/FAS,/dev/null,dafr_lab,10842,64744,/bin/bash,1/4/2024 10:43
+kcorbetthelaire,Kizzmekia Corbett-Helaire,kizzmekia_corbett@hsph.harvard.edu,HCSPH,Immunology and Infectious Diseases,FACULTY,Domain Users/HSPH,/dev/null,kcorbetthelaire_lab,10844,64757,/bin/bash,1/8/2024 15:44
+dmartin,David Martin,david_martin@fas.harvard.edu,FAS,Economics,FACULTY,Domain Users/FAS,/n/home08/dmartin,dmartin_lab,10845,64763,/bin/bash,1/9/2024 11:07
+nliu,Naijia Liu,naijialiu@fas.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/_approved_accounts,/n/home12/nliu,nliu_lab,10846,64824,/bin/bash,1/22/2024 13:44
+sneel,Seth Neel,sneel@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/_approved_accounts,/n/home05/sneel,sneel_lab,10849,64825,/bin/bash,1/22/2024 13:44
+ielbaggari,Ismail El Baggari,ielbaggari@fas.harvard.edu,FAS,Rowland Institute,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home05/ielbaggari,ielbaggari_lab,10851,64826,/bin/bash,1/22/2024 16:18
+pslade,Patrick Slade,slade@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/_approved_accounts,/n/home13/pslade,pslade_lab,10843,64884,/bin/bash,2/5/2024 10:22
+sss133,Shriya Srinivasan,shriya_srinivasan@fas.harvard.edu,SEAS,Harvard Center for Biological Imaging,FACULTY,Domain Users/_approved_accounts,/dev/null,sss133_lab,10852,64937,/bin/bash,2/13/2024 10:07
+alpoge,Levent Alpoge,alpoge@math.harvard.edu,FAS,Mathematics,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home08/alpoge,alpoge_lab,10855,64956,/bin/bash,2/15/2024 16:19
+jubellacker,Jessalyn Ubellacker,jubellacker@hsph.harvard.edu,HCSPH,Genetics and Complex Diseases \28HCSPH\29,FACULTY,Domain Users/_approved_accounts,/n/home13/jubellacker,jubellacker_lab,10858,64972,/bin/bash,2/20/2024 13:55
+nkory,Nora Kory,nkory@hsph.harvard.edu,HCSPH,Genetics and Complex Diseases \28HCSPH\29,FACULTY,Domain Users/_approved_accounts,/n/home11/nkory,nkory_lab,10857,64973,/bin/bash,2/20/2024 13:55
+aholland,Alisha Holland,aholland@fas.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/_approved_accounts,/dev/null,aholland_lab,10860,65072,/bin/bash,3/8/2024 11:27
+hanarubykim,Hana Kim,hana_kim@college.harvard.edu,FAS,Sociology,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home07/hanarubykim,hanarubykim_lab,10862,65088,/bin/bash,3/11/2024 13:16
+ppeterson,Paul Peterson,ppeterso@gov.harvard.edu,FAS,FAS Department of Government,FACULTY,Domain Users/_approved_accounts,/n/home02/ppeterson,ppeterson_lab,10864,65106,/bin/bash,3/13/2024 10:57
+rongma,Rong Ma,rongma@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/_approved_accounts,/n/home08/rongma,rongma_lab,10380,65286,/bin/bash,4/29/2024 10:15
+sfeldmann,Sascha Feldmann,sfeldmann@fas.harvard.edu,FAS,Rowland Institute,NON-FACULTY PI,Domain Users/_approved_accounts,/dev/null,sfeldmann_lab,10381,65287,/bin/bash,4/29/2024 10:35
+llessig,Lawrence Lessig,lessig@law.harvard.edu,HLS,Harvard Law School,FACULTY,Domain Users/_approved_accounts,/n/home07/llessig,llessig_lab,10522,65298,/bin/bash,5/1/2024 10:07
+epaulson,Elisabeth Paulson,epaulson@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/_approved_accounts,/n/home01/epaulson,epaulson_lab,10523,65325,/bin/bash,5/10/2024 11:42
+jimaieaton,Jeff Imai-Eaton,jeaton@hsph.harvard.edu,HCSPH,Epidemiology,FACULTY,Domain Users/_approved_accounts,/n/home12/jimaieaton,jimaieaton_lab,10867,65365,/bin/bash,5/20/2024 11:18
+ndelkies,Noam Elkies,elkies@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/_approved_accounts,/n/home05/ndelkies,ndelkies_lab,10873,65579,/bin/bash,6/26/2024 9:53
+kdbrantley,Kiante Brantley,kdbrantley@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/_approved_accounts,/n/home07/kdbrantley,kdbrantley_lab,10876,65659,/bin/bash,7/11/2024 13:50
+gpizzorno,Gabe Pizzorno,pizzorno@fas.harvard.edu,FAS,FAS Other,FACULTY,Domain Users/_approved_accounts,/n/home02/gpizzorno,gpizzorno_lab,10877,65688,/bin/bash,7/16/2024 14:57
+mili,Michael Lingzhi Li,mili@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/_approved_accounts,/n/home05/mili,mili_lab,10880,65693,/bin/bash,7/17/2024 10:04
+dcanning,David Canning,dcanning@hsph.harvard.edu,HCSPH,Global Health and Population,FACULTY,Domain Users/_approved_accounts,/dev/null,dcanning_lab,10883,65701,/bin/bash,7/17/2024 15:27
+michaelsegel,Michael Segel,michael_segel@harvard.edu,FAS,Stem Cell and Regenerative Biology,FACULTY,Domain Users/_approved_accounts,/n/home01/michaelsegel,michaelsegel_lab,10884,65722,/bin/bash,7/23/2024 16:31
+tamano,Tomomichi Amano,tamano@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/_approved_accounts,/dev/null,tamano_lab,10885,65723,/bin/bash,7/23/2024 16:31
+kazukinagashima,Kazuki Nagashima,knagashima@fas.harvard.edu,FAS,Molecular and Cellular Biology,FACULTY,Domain Users/_approved_accounts,/dev/null,kazukinagashima_lab,10886,65829,/bin/bash,8/16/2024 14:00
+albergo,Michael Albergo,malbergo@fas.harvard.edu,SEAS,School of Engineering and Applied Sciences,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home08/albergo,albergo_lab,10887,65851,/bin/bash,8/22/2024 15:36
+jcavender,Jeannine Cavender Bares,jcavender@fas.harvard.edu,FAS,Organismic and Evolutionary Biology,FACULTY,Domain Users/_approved_accounts,/n/home12/jcavender,jcavender_lab,10888,65888,/bin/bash,8/30/2024 12:56
+pgompers,Paul Gompers,pgompers@hbs.edu,HBS,Harvard Business School,FACULTY,Domain Users/_approved_accounts,/n/home05/pgompers,pgompers_lab,10970,65921,/bin/bash,9/5/2024 10:17
+lexie,Le Xie,xie@seas.harvard.edu,SEAS,School of Engineering and Applied Sciences,FACULTY,Domain Users/_approved_accounts,/n/home12/lexie,lexie_lab,10971,66006,/bin/bash,9/13/2024 16:38
+mlamont,Michele Lamont,mlamont@wjh.harvard.edu,FAS,sociology,FACULTY,Domain Users/_approved_accounts,/n/home03/mlamont,mlamont_lab,10974,66034,/bin/bash,9/19/2024 10:14
+sromerobrufau,Santiago Romero Brufau,santiagoromerobrufau@hsph.harvard.edu,HCSPH,Biostatistics,FACULTY,Domain Users/_approved_accounts,/n/home05/sromerobrufau,sromerobrufau_lab,10975,66085,/bin/bash,9/25/2024 15:25
+shro,Sung Han Ro,sunghanro@fas.harvard.edu,FAS,Physics,NON-FACULTY PI,Domain Users/_approved_accounts,/n/home03/shro,shro_lab,10976,66099,/bin/bash,9/27/2024 9:59
+harris,Joseph Harris,harris@math.harvard.edu,FAS,Mathematics,FACULTY,Domain Users/_approved_accounts,/n/home06/harris,harris_lab,10977,66101,/bin/bash,9/27/2024 13:22

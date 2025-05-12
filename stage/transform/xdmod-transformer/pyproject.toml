@@ -4,4 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "click>=8.2.0",
+    "pandas>=2.1",
+    "pathlib>=1.0.1",
+    "pyarrow>=20.0.0",
+]
