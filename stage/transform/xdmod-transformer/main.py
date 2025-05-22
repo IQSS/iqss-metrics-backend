@@ -22,12 +22,7 @@ IQSS_MAP_FILE = "./_data/iq_2025.csv"
     type=click.Path(file_okay=True, dir_okay=False, path_type=Path),
     default="./__output__/out.tsv",
 )
-@click.option(
-    "--by_pi_csv",
-    default=None,
-    type=click.Path(file_okay=True, dir_okay=False, path_type=Path),
-)
-def cli(by_user_csv: Path, output_csv: Path, by_pi_csv: Path) -> None:
+def cli(by_user_csv: Path, output_csv: Path) -> None:
     # Generates CPU averages
     wide = pd.read_csv(by_user_csv, dtype_backend="pyarrow")
     year = int(re.match(r"(\d{4})-", Path(by_user_csv).name)[1])  # type: ignore
