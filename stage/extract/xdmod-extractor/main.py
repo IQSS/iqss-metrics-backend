@@ -55,9 +55,13 @@ _METRICS: dict[str, ExecutionsT] = {
     type=click.Path(file_okay=False, dir_okay=True, path_type=Path),
     default="./__output__",
 )
-def cli(output_dir: Path) -> None:
+@click.argument(
+    "year",
+    type=int,
+    default= _dt.date.today().year,
+)
+def cli(output_dir: Path, year: int) -> None:
     """Generate last-year usage CSVs and save them in OUTPUT_DIR."""
-    year = _dt.date.today().year - 1
     start, end = f"{year}-01-01", f"{year}-12-31"
 
     output_dir.mkdir(parents=True, exist_ok=True)
