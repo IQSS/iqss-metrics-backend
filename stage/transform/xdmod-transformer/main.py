@@ -12,8 +12,8 @@ IQSS_MAP_FILE = "./_data/iq_2025.csv"
 
 def load_maps():
     u2d = pd.read_csv(
-        FASRC_MAP_FILE, usecols=["PrimaryGroup", "department"], dtype_backend="pyarrow"
-    ).rename(columns={"PrimaryGroup": "PI", "department": "Dept_orig"})
+        FASRC_MAP_FILE, usecols=["PrimaryGroup", "department", "sAMAccountName"], dtype_backend="pyarrow"
+    ).rename(columns={"PrimaryGroup": "PI", "department": "Dept_orig", "sAMAccountName": "User"})
 
     i2d = pd.read_csv(
         IQSS_MAP_FILE, usecols=["Dept", "PI"], dtype_backend="pyarrow"
@@ -54,9 +54,7 @@ def cli():
 
 @cli.command()
 @click.argument("by_pi_csv", type=click.Path(exists=True, path_type=Path))
-@click.argument(
-    "output_csv", type=click.Path(path_type=Path), default="./__output__/cpu.tsv"
-)
+@click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/cpu.tsv")
 def cpu(by_pi_csv: Path, output_csv: Path):
     df = prepare_data(by_pi_csv, "cpu_hours")
     aggregate_and_save(df, "cpu_hours", output_csv)
@@ -64,9 +62,7 @@ def cpu(by_pi_csv: Path, output_csv: Path):
 
 @cli.command()
 @click.argument("by_pi_csv", type=click.Path(exists=True, path_type=Path))
-@click.argument(
-    "output_csv", type=click.Path(path_type=Path), default="./__output__/gpu.tsv"
-)
+@click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/gpu.tsv")
 def gpu(by_pi_csv: Path, output_csv: Path):
     df = prepare_data(by_pi_csv, "gpu_hours")
     aggregate_and_save(df, "gpu_hours", output_csv)
@@ -74,9 +70,7 @@ def gpu(by_pi_csv: Path, output_csv: Path):
 
 @cli.command()
 @click.argument("by_pi_csv", type=click.Path(exists=True, path_type=Path))
-@click.argument(
-    "output_csv", type=click.Path(path_type=Path), default="./__output__/jobs.tsv"
-)
+@click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/jobs.tsv")
 def jobs(by_pi_csv: Path, output_csv: Path):
     df = prepare_data(by_pi_csv, "jobs_executed")
     aggregate_and_save(df, "jobs_executed", output_csv)
@@ -84,17 +78,34 @@ def jobs(by_pi_csv: Path, output_csv: Path):
 
 @cli.command()
 @click.argument("by_pi_csv", type=click.Path(exists=True, path_type=Path))
-@click.argument(
-    "output_csv", type=click.Path(path_type=Path), default="./__output__/dept.tsv"
-)
+@click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/dept.tsv")
 def dept(by_pi_csv: Path, output_csv: Path):
     df = prepare_data(by_pi_csv, "jobs_executed")
     year = df["Year"].iloc[0]
+    dept_counts = df["Dept"].value_counts().reset_index().rename(columns={"count": "PIs", "index": "Dept"})
+    dept_counts["Year"] = year
+    dept_counts.to_csv(output_csv, sep="\t", index=False)
+
+
+@cli.command()
+@click.argument("user_csv", type=click.Path(exists=True, path_type=Path))
+@click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/users_by_dept.tsv")
+def users(user_csv: Path, output_csv: Path):
+    wide = pd.read_csv(user_csv, dtype_backend="pyarrow")
+    year_match = re.match(r"(\d{4})-", user_csv.name)
+    year = int(year_match[1]) if year_match else None
+
+    users_long = wide.melt(var_name="User", value_name="cpu_hours")
+    users_long["Year"] = year
+
+    u2d, _ = load_maps()
+
+    merged = users_long.merge(u2d, how="inner", on="User")
+
     dept_counts = (
-        df["Dept"]
-        .value_counts()
-        .reset_index()
-        .rename(columns={"count": "PIs", "index": "Dept"})
+        merged.groupby("Dept_orig", as_index=False)
+        .agg(Count=("User", "nunique"))
+        .rename(columns={"Dept_orig": "Department"})
     )
     dept_counts["Year"] = year
     dept_counts.to_csv(output_csv, sep="\t", index=False)
