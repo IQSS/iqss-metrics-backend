@@ -86,7 +86,7 @@ def dept(by_pi_csv: Path, output_csv: Path):
     dept_counts["Year"] = year
     dept_counts.to_csv(output_csv, sep="\t", index=False)
 
-
+# active users x pi 
 @cli.command()
 @click.argument("user_csv", type=click.Path(exists=True, path_type=Path))
 @click.argument("output_csv", type=click.Path(path_type=Path), default="./__output__/users_by_dept.tsv")
@@ -98,9 +98,10 @@ def users(user_csv: Path, output_csv: Path):
     users_long = wide.melt(var_name="User", value_name="cpu_hours")
     users_long["Year"] = year
 
-    u2d, _ = load_maps()
+    u2d, i2d = load_maps()
 
-    merged = users_long.merge(u2d, how="inner", on="User")
+    merged = users_long.merge(u2d, how="inner", on="User").merge(i2d, how="right", on="PI")
+    merged["Dept"] = merged["Dept_override"].fillna(merged["Dept_orig"])
 
     dept_counts = (
         merged.groupby("Dept_orig", as_index=False)
