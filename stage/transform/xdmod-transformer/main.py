@@ -106,7 +106,7 @@ def users(user_csv: Path, output_csv: Path):
     dept_counts = (
         merged.groupby("Dept_orig", as_index=False)
         .agg(Num=("User", "nunique"))
-        .rename(columns={"Dept_orig": "Department"})
+        .rename(columns={"Dept_orig": "Dept"})
     )
     dept_counts["Year"] = year
     dept_counts.to_csv(output_csv, sep="\t", index=False)
