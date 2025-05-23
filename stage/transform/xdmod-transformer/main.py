@@ -82,7 +82,7 @@ def jobs(by_pi_csv: Path, output_csv: Path):
 def dept(by_pi_csv: Path, output_csv: Path):
     df = prepare_data(by_pi_csv, "jobs_executed")
     year = df["Year"].iloc[0]
-    dept_counts = df["Dept"].value_counts().reset_index().rename(columns={"count": "PIs", "index": "Dept"})
+    dept_counts = df["Dept"].value_counts().reset_index().rename(columns={"count": "Num", "index": "Dept"})
     dept_counts["Year"] = year
     dept_counts.to_csv(output_csv, sep="\t", index=False)
 
@@ -105,7 +105,7 @@ def users(user_csv: Path, output_csv: Path):
 
     dept_counts = (
         merged.groupby("Dept_orig", as_index=False)
-        .agg(Count=("User", "nunique"))
+        .agg(Num=("User", "nunique"))
         .rename(columns={"Dept_orig": "Department"})
     )
     dept_counts["Year"] = year
