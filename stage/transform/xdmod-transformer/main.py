@@ -32,7 +32,7 @@ def prepare_data(by_pi_csv: Path, value_name: str):
 
     u2d, i2d = load_maps()
 
-    merged = long.merge(u2d, how="inner", on="PI").merge(i2d, how="left", on="PI")
+    merged = long.merge(u2d, how="inner", on="PI").merge(i2d, how="right", on="PI")
     merged["Dept"] = merged["Dept_override"].fillna(merged["Dept_orig"])
 
     return merged
