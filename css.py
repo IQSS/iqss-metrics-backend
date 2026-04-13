@@ -247,10 +247,10 @@ def aggregate_lab(path):
     df["year_month_name"] = df["timestamp"].apply(
         lambda d: f"{d.month_name()} {d.year}")
 
-    # create period value
-    end = list(df["year_month_name"].value_counts()[-1:].index)[0]
-    begin = list(df["year_month_name"].value_counts()[0:1].index)[0]
-    period = f"{begin} - {end}"
+    # create period value from the actual chronological bounds
+    begin_ts = df["timestamp"].min()
+    end_ts = df["timestamp"].max()
+    period = f"{begin_ts.strftime('%B %Y')} - {end_ts.strftime('%B %Y')}"
 
     requests_per_month_year = df_value_counts(df, "year_month")
     requests_per_month_year = requests_per_month_year.sort_values(

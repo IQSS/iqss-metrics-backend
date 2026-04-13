@@ -51,3 +51,21 @@ jobs:
           SHEET_URL_CGA_WORKSHOP_EVALUATIONS: ${{ secrets.SHEET_URL_CGA_WORKSHOP_EVALUATIONS }}
           RT_USER: ${{ secrets.RT_USER }}
           RT_PASSWORD: ${{ secrets.RT_PASSWORD }}
+
+      - name: Update backend keepalive
+        run: |
+          git pull --ff-only origin master
+
+          keepalive_file=".github/backend-schedule-keepalive.txt"
+          current_month="$(date -u +%Y-%m)"
+          previous_month="$(cat "${keepalive_file}" 2>/dev/null || true)"
+
+          if [ "${previous_month}" = "${current_month}" ]; then
+            echo "Keepalive already current for ${current_month}"
+            exit 0
+          fi
+
+          printf '%s\n' "${current_month}" > "${keepalive_file}"
+          git add "${keepalive_file}"
+          git commit -m "Workflow keepalive ${current_month}"
+          git push origin master
