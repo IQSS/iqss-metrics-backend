@@ -6,10 +6,38 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
+    inputs:
+      audit_sheet_urls:
+        description: "Run one-off sheet URL audit instead of the normal deploy"
+        required: false
+        default: "false"
 env:
   PIPENV_VENV_IN_PROJECT: enabled
 jobs:
+  audit_sheet_urls:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_sheet_urls == 'true' }}
+    runs-on: ubuntu-latest
+    env:
+      OP_SESSION_Z2FCUIRGJBCAJMGLJUNPXUVBZU: ${{ secrets.OP_SESSION_Z2FCUIRGJBCAJMGLJUNPXUVBZU }}
+      SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
+      SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
+      SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
+      SHEET_URL_MAIN_AND_RESEARCH_COMPUTING: ${{ secrets.SHEET_URL_MAIN_AND_RESEARCH_COMPUTING }}
+      SHEET_URL_DATAVERSE: ${{ secrets.SHEET_URL_DATAVERSE }}
+      SHEET_URL_CGA_LICENSE_REQUEST: ${{ secrets.SHEET_URL_CGA_LICENSE_REQUEST }}
+      SHEET_URL_CGA_TRAINING_REGISTRATION: ${{ secrets.SHEET_URL_CGA_TRAINING_REGISTRATION }}
+      SHEET_URL_CGA_EVENT_REGISTRATION: ${{ secrets.SHEET_URL_CGA_EVENT_REGISTRATION }}
+      SHEET_URL_CGA_GIS_APPLICATION: ${{ secrets.SHEET_URL_CGA_GIS_APPLICATION }}
+      SHEET_URL_CGA_CONTACT: ${{ secrets.SHEET_URL_CGA_CONTACT }}
+      SHEET_URL_CGA_WORKSHOP_EVALUATIONS: ${{ secrets.SHEET_URL_CGA_WORKSHOP_EVALUATIONS }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit sheet URL secrets and store in 1Password
+        run: bash .github/scripts/audit-sheet-url-secrets.sh
+
   test:
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
