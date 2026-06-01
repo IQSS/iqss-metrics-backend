@@ -202,32 +202,35 @@ def cga_training_evaluations(path):
     )
 
 
+def require_columns(df, source, required_columns):
+    missing = sorted(set(required_columns) - set(df.columns))
+    if missing:
+        raise ValueError(
+            f"{source} is missing required columns: {', '.join(missing)}. "
+            f"Actual columns: {', '.join(df.columns)}"
+        )
+
+
 def cga_event_registration_aggr(path):
     """
-    Aggregate number of registration per workshop. Selects last 12 months and only workshops with more than
-    5 registrations
+    Aggregate current-year registrations for the CGA Conference.
     @param path: path where to write the TSV
     @return: nothing
     """
-    # Training (C) --------------------------------
     df = pd.read_csv(path + "cgaEventRegistration.tsv", delimiter="\t")
-    df = filter_last_12_months(df, "Timestamp")
-    df["name"] = df["The event name"]
-    df = df.sort_values("datetime")
+    require_columns(df, "cgaEventRegistration.tsv", ["Timestamp", "The event name"])
 
-    # create a list with unique courses in time order
-    df2 = df[["name"]].drop_duplicates()
-    df2.reset_index(drop=True)  # save the order
+    df["datetime"] = pd.to_datetime(df["Timestamp"], errors="coerce")
+    if len(df) > 0 and df["datetime"].isna().all():
+        raise ValueError(
+            "cgaEventRegistration.tsv has no parseable values in Timestamp"
+        )
 
-    # count the number or registrations and save ones  with more than 5
-    df3 = df[["name", "datetime"]].groupby(["name"]).count()
-    df3 = df3[df3["datetime"] > 5]
-
-    # join with the table with the correct order and rename columns
-    df3 = df2.merge(df3, how="inner", on="name").drop_duplicates()[["name", "datetime"]]
-    df_aggr = df3.rename(columns={"name": "course", "datetime": "registration_count"})
-    # save
-    registrations_ytd = int(df_aggr.tail(1)['registration_count'].iloc[0])
+    df_ytd = df[df["datetime"] >= get_beginning_of_this_year()]
+    is_conference = df_ytd["The event name"].fillna("").str.contains(
+        "CGA Conference", case=False, regex=False
+    )
+    registrations_ytd = int(is_conference.sum())
 
     write_metric(
         path=path,
