@@ -14,28 +14,29 @@ on:
 env:
   PIPENV_VENV_IN_PROJECT: enabled
 jobs:
-  audit_sheet_urls:
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_sheet_urls == 'true' }}
+  test:
     runs-on: ubuntu-latest
-    env:
-      SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
-      SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
-      SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
-      SHEET_URL_MAIN_AND_RESEARCH_COMPUTING: ${{ secrets.SHEET_URL_MAIN_AND_RESEARCH_COMPUTING }}
-      SHEET_URL_DATAVERSE: ${{ secrets.SHEET_URL_DATAVERSE }}
-      SHEET_URL_CGA_LICENSE_REQUEST: ${{ secrets.SHEET_URL_CGA_LICENSE_REQUEST }}
-      SHEET_URL_CGA_TRAINING_REGISTRATION: ${{ secrets.SHEET_URL_CGA_TRAINING_REGISTRATION }}
-      SHEET_URL_CGA_EVENT_REGISTRATION: ${{ secrets.SHEET_URL_CGA_EVENT_REGISTRATION }}
-      SHEET_URL_CGA_GIS_APPLICATION: ${{ secrets.SHEET_URL_CGA_GIS_APPLICATION }}
-      SHEET_URL_CGA_CONTACT: ${{ secrets.SHEET_URL_CGA_CONTACT }}
-      SHEET_URL_CGA_WORKSHOP_EVALUATIONS: ${{ secrets.SHEET_URL_CGA_WORKSHOP_EVALUATIONS }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Audit sheet URL secrets and store in 1Password
+      - name: Audit sheet URL secrets
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_sheet_urls == 'true' }}
         run: bash .github/scripts/audit-sheet-url-secrets.sh
+        env:
+          SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
+          SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
+          SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
+          SHEET_URL_MAIN_AND_RESEARCH_COMPUTING: ${{ secrets.SHEET_URL_MAIN_AND_RESEARCH_COMPUTING }}
+          SHEET_URL_DATAVERSE: ${{ secrets.SHEET_URL_DATAVERSE }}
+          SHEET_URL_CGA_LICENSE_REQUEST: ${{ secrets.SHEET_URL_CGA_LICENSE_REQUEST }}
+          SHEET_URL_CGA_TRAINING_REGISTRATION: ${{ secrets.SHEET_URL_CGA_TRAINING_REGISTRATION }}
+          SHEET_URL_CGA_EVENT_REGISTRATION: ${{ secrets.SHEET_URL_CGA_EVENT_REGISTRATION }}
+          SHEET_URL_CGA_GIS_APPLICATION: ${{ secrets.SHEET_URL_CGA_GIS_APPLICATION }}
+          SHEET_URL_CGA_CONTACT: ${{ secrets.SHEET_URL_CGA_CONTACT }}
+          SHEET_URL_CGA_WORKSHOP_EVALUATIONS: ${{ secrets.SHEET_URL_CGA_WORKSHOP_EVALUATIONS }}
 
       - name: Upload encrypted audit bundle
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_sheet_urls == 'true' }}
         uses: actions/upload-artifact@v4
         with:
           name: sheet-url-audit-encrypted
@@ -44,26 +45,24 @@ jobs:
             audit/aes.key.enc
           retention-days: 1
 
-  test:
-    if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
       - name: Setup Python
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install pipenv
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         run: |
           python -m pip install --upgrade pipenv wheel
 
       - name: Install dependencies
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         run: |
           pipenv install
 
       - name: Add ssh deploy key
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         run: |
           mkdir ~/.ssh
           git config --global user.email "noreply@hmdc.harvard.edu"
@@ -73,6 +72,7 @@ jobs:
           ssh-keyscan -t rsa github.com
 
       - run: make clean build run deploy
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         env:
           SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
           SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
@@ -89,6 +89,7 @@ jobs:
           RT_PASSWORD: ${{ secrets.RT_PASSWORD }}
 
       - name: Update backend keepalive
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}
         run: |
           git pull --ff-only origin master
 
