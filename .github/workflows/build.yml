@@ -18,7 +18,6 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_sheet_urls == 'true' }}
     runs-on: ubuntu-latest
     env:
-      OP_SESSION_Z2FCUIRGJBCAJMGLJUNPXUVBZU: ${{ secrets.OP_SESSION_Z2FCUIRGJBCAJMGLJUNPXUVBZU }}
       SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
       SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
       SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
@@ -35,6 +34,15 @@ jobs:
 
       - name: Audit sheet URL secrets and store in 1Password
         run: bash .github/scripts/audit-sheet-url-secrets.sh
+
+      - name: Upload encrypted audit bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: sheet-url-audit-encrypted
+          path: |
+            audit/sheet-url-audit.tar.gz.enc
+            audit/aes.key.enc
+          retention-days: 1
 
   test:
     if: ${{ github.event_name != 'workflow_dispatch' || inputs.audit_sheet_urls != 'true' }}

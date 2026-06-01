@@ -2,24 +2,6 @@
 set -euo pipefail
 umask 077
 
-if ! command -v op >/dev/null 2>&1; then
-  curl -sS https://downloads.1password.com/linux/keys/1password.asc \
-    | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" \
-    | sudo tee /etc/apt/sources.list.d/1password.list >/dev/null
-
-  sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
-  curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol \
-    | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol >/dev/null
-  sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
-  curl -sS https://downloads.1password.com/linux/keys/1password.asc \
-    | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
-
-  sudo apt-get update
-  sudo apt-get install -y 1password-cli
-fi
-op --version
-
 mkdir -p audit
 url_file="audit/sheet_urls.env"
 report_file="audit/sheet_url_audit.md"
@@ -145,18 +127,19 @@ probe_sheet "cssPatronCommunity" "SHEET_URL_CSS" "345883130" "A:W" ""
 probe_sheet "cssTypeOfRequestPCMac" "SHEET_URL_CSS" "1854286511" "A:V" ""
 probe_sheet "lab_report_master_data" "SHEET_URL_CSS" "799546563" "A:Y" ""
 
-op whoami --account harvarduniversity >/dev/null
-op item create \
-  --format json \
-  --account harvarduniversity \
-  --category "Secure Note" \
-  --vault "IQSS DevOps" \
-  --title "IQSS Metrics Backend Google Sheet URLs - 2026-06-01" \
-  notesPlain="$(cat "${report_file}")" \
-  "sheet_urls.env[file]=${url_file}" \
-  "sheet_url_audit.md[file]=${report_file}" > audit/op_item.json
+tar -czf audit/sheet-url-audit.tar.gz -C audit sheet_urls.env sheet_url_audit.md
+openssl rand 32 > audit/aes.key
+openssl enc -aes-256-cbc -salt -pbkdf2 \
+  -in audit/sheet-url-audit.tar.gz \
+  -out audit/sheet-url-audit.tar.gz.enc \
+  -pass file:audit/aes.key
+openssl pkeyutl -encrypt \
+  -pubin \
+  -inkey .github/scripts/sheet-url-audit-public.pem \
+  -in audit/aes.key \
+  -out audit/aes.key.enc
+rm -f audit/aes.key audit/sheet-url-audit.tar.gz
 
-item_id="$(python3 -c 'import json; print(json.load(open("audit/op_item.json"))["id"])')"
-echo "Created 1Password item in IQSS DevOps vault: ${item_id}"
+echo "Created encrypted sheet URL audit bundle for local 1Password upload."
 echo
 cat "${report_file}"
