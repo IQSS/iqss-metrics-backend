@@ -63,10 +63,6 @@ def harvest_cga(path):
     logging.info("Harvesting CGA Spreadsheets")
     for s in sheets:
         collection = s[0]
-        if collection == "cgaTrainingRegistration":
-            # The unavailable export returns HTML; preserve the last valid raw TSV too.
-            logging.warning("Skipping unavailable CGA training feed; retaining published training data")
-            continue
         gid = s[1]
         sheet_url = s[2]
         range_name = s[3]

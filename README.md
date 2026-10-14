@@ -114,6 +114,12 @@ searches, missing Harvard observations, invalid counts, and incompatible TSV
 headers fail the run. The TSV is replaced atomically only after the complete row
 has been collected; errors preserve the previous file.
 
+The shared Google Sheets downloader also skips HTML responses, including error
+and sign-in pages, and logs a warning without overwriting an existing TSV. This
+protects published data when a sheet is moved/copied or access changes. Correct
+the corresponding `SHEET_URL_*` when that happens. Other HTTP errors still fail
+the run; an HTML response never becomes a data file.
+
 Run the tests with `pipenv run python -m unittest discover -v`. To run only this
 collector locally after setting the environment variables and preparing `out`:
 
@@ -126,10 +132,10 @@ pipenv run python -c 'from dataverse_pm import harvest_dataverse_pm; harvest_dat
 The scheduled run on October 14, 2026 failed because the training export returned
 a Google "Page Not Found" HTML page instead of TSV, causing the lookup of
 `Date of the training workshop` to fail. The `cga_training_aggr()` call is
-temporarily commented out and harvesting that feed is skipped so its HTML error
-page cannot replace the last valid raw TSV. Its implementation and the last
-published training files are preserved. Restore harvesting and aggregation after
-repairing the source URL/access and verifying the column mapping.
+temporarily commented out. The downloader still attempts that feed, but skips
+HTML responses so they cannot replace the last valid raw TSV. Its implementation
+and last published aggregate are preserved. Restore aggregation after repairing
+the source URL/access and verifying the column mapping.
 
 ## Data Science Services (DSS)
 
