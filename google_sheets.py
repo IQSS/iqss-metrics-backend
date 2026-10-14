@@ -60,11 +60,18 @@ def harvest_sheet_tsv_http(path, name, url, range_name, columns, gid=0):
     path_and_metric_file = Path(path, name).with_suffix(".tsv")
     u = f"{url.rstrip('/')}/export"
 
-    raw_sheet = http.get(u, params={
+    response = http.get(u, params={
         "gid": gid,
         "format": "tsv",
         "range": range_name,
-    }).text.splitlines()
+    }, timeout=30)
+    content_type = response.headers.get("Content-Type", "").split(";")[0].strip().lower()
+    beginning = response.text.lstrip("\ufeff \t\r\n").lower()
+    if content_type in {"text/html", "application/xhtml+xml"} or beginning.startswith(("<!doctype html", "<html")):
+        logging.warning("Skipping Google sheet %s: received HTML instead of TSV; existing file is unchanged", name)
+        return
+    response.raise_for_status()
+    raw_sheet = response.text.splitlines()
 
     tsv = csv.reader(raw_sheet, delimiter='\t')
     values = list(tsv)

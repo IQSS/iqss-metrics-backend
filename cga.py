@@ -83,7 +83,8 @@ def aggregate_cga(path):
     cga_contact_time(path)
     cga_contact_status(path)
     cga_contact_school(path)
-    cga_training_aggr(path)
+    # Temporarily disabled: the training export returns a Google "Page Not Found" page.
+    # cga_training_aggr(path)
     cga_training_evaluations(path)
     gis_institute(path)
     cga_lic_req_top10(path)
