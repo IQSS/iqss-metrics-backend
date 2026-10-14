@@ -63,6 +63,10 @@ def harvest_cga(path):
     logging.info("Harvesting CGA Spreadsheets")
     for s in sheets:
         collection = s[0]
+        if collection == "cgaTrainingRegistration":
+            # The unavailable export returns HTML; preserve the last valid raw TSV too.
+            logging.warning("Skipping unavailable CGA training feed; retaining published training data")
+            continue
         gid = s[1]
         sheet_url = s[2]
         range_name = s[3]
@@ -83,7 +87,8 @@ def aggregate_cga(path):
     cga_contact_time(path)
     cga_contact_status(path)
     cga_contact_school(path)
-    cga_training_aggr(path)
+    # Temporarily disabled: the training export returns a Google "Page Not Found" page.
+    # cga_training_aggr(path)
     cga_training_evaluations(path)
     gis_institute(path)
     cga_lic_req_top10(path)

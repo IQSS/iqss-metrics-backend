@@ -4,6 +4,7 @@ from cga import *
 from css import *
 from rc import *
 from dataverse import *
+from dataverse_pm import harvest_dataverse_pm
 from psr import *
 from metrics import *
 
@@ -25,6 +26,7 @@ def main():
     harvest_cga(output_dir)
     harvest_harvard_dataverse(output_dir)
     harvest_dataverse(output_dir)
+    harvest_dataverse_pm(output_dir)
     harvest_css(output_dir)
     #harvest_rc(output_dir)
     #harvest_psr(output_dir)

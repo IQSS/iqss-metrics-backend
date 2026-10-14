@@ -65,6 +65,72 @@ RT-API to harvest the number of requests for dataverse.
 
 Contact: Sonia for the Support part and Danny for the rest.
 
+## Dataverse PM daily metrics
+
+`dataverse_pm.py` implements [Dataverse PM #596](https://github.com/IQSS/dataverse-pm/issues/596)
+using the project issue/PR query spreadsheet and the
+[Dataverse recipes](https://github.com/gdcc/dataverse-recipes/tree/main/python/metrics).
+The existing daily workflow calls `harvest_dataverse_pm(output_dir)` and publishes
+`assets/data/dataverse-pm-metrics.tsv` in `IQSS/iqss-metrics-dashboard`.
+
+There is one row per UTC collection `date`. Same-day reruns replace that row;
+earlier rows are retained. History starts with the first successful run, with no
+backfill of missed days or historical spreadsheet values.
+
+| Columns | Meaning |
+| --- | --- |
+| `date` | UTC collection date. Activity columns below cover the **previous** UTC calendar day, midnight inclusive to the next midnight exclusive. |
+| `hub_record_date` | Actual timestamp of the selected Harvard Hub observation (UTC). It can precede the collection date. |
+| `github_open_issues` | Current open issues in `IQSS/dataverse`, including backlog. |
+| `github_open_prs` | Current open, non-draft PRs in `IQSS/dataverse`. |
+| `github_new_issues`, `github_new_prs` | Issues/PRs created during the activity day. New PRs include drafts. |
+| `github_closed_issues`, `github_merged_prs` | Issues closed and PRs merged during the activity day. |
+| `github_closed_bugs` | Issues closed during the activity day carrying the exact `Type: Bug` label. A blocker label alone does not qualify. |
+| `dataverse_releases`, `dataverse_frontend_releases` | Non-draft, non-prerelease releases published during the activity day in `IQSS/dataverse` and `IQSS/dataverse-frontend`, respectively. |
+| `installations_total` | Number of entries in the [installation registry](https://iqss.github.io/dataverse-installations/data/data.json) at collection time. |
+| `installations_responding` | Distinct Hub installations with an observation during the current UTC month, through the collection date. This is a month-to-date snapshot. |
+| `harvard_collections`, `harvard_datasets`, `harvard_files`, `harvard_downloads` | Latest Harvard Hub totals: collections, **local** datasets, files, and cumulative downloads. Harvested datasets are excluded. |
+| `rt_new`, `rt_closed` | Unique tickets created/resolved during the activity day in the whole `dataverse_support` queue. Closed tickets must currently have `resolved` status. |
+
+GitHub searches use `repo:IQSS/dataverse`, the appropriate `is:issue`/`is:pr`
+qualifier, and `created:`, `closed:`, or `merged:` with the activity date. Open
+totals use `is:open`, with `draft:false` only for open PRs. These are actual open
+snapshots, replacing the spreadsheet's creation/update-date approximations.
+Search counts and labels reflect GitHub's state when collected; this is not an
+event-history reconstruction of reopened tickets or later label changes.
+
+The collector resolves Harvard's current Hub ID using hostname
+`dataverse.harvard.edu`, queries current and previous month observations, and
+chooses the newest Harvard record. It preserves that record's timestamp rather
+than presenting older Hub data as a fresh measurement. Sum daily activity counts
+for period reports; use the applicable snapshot for open/installation totals and
+Harvard cumulative totals, **not their sum**. Missing collection days remain gaps.
+Storage totals, percentage changes, and trend calculations are deferred.
+
+The collector uses the existing `RT_USER` and `RT_PASSWORD` credentials.
+`GITHUB_TOKEN` is supplied by GitHub Actions; authenticated local runs can also
+set it to avoid the lower anonymous API limits. HTTP errors, incomplete GitHub
+searches, missing Harvard observations, invalid counts, and incompatible TSV
+headers fail the run. The TSV is replaced atomically only after the complete row
+has been collected; errors preserve the previous file.
+
+Run the tests with `pipenv run python -m unittest discover -v`. To run only this
+collector locally after setting the environment variables and preparing `out`:
+
+```sh
+pipenv run python -c 'from dataverse_pm import harvest_dataverse_pm; harvest_dataverse_pm("./out")'
+```
+
+### Temporary CGA training omission
+
+The scheduled run on October 14, 2026 failed because the training export returned
+a Google "Page Not Found" HTML page instead of TSV, causing the lookup of
+`Date of the training workshop` to fail. The `cga_training_aggr()` call is
+temporarily commented out and harvesting that feed is skipped so its HTML error
+page cannot replace the last valid raw TSV. Its implementation and the last
+published training files are preserved. Restore harvesting and aggregation after
+repairing the source URL/access and verifying the column mapping.
+
 ## Data Science Services (DSS)
 
 Data is mainly stored in RT, but since DSS want to preparation before it is published, with receive the prepared CSVs. Contact: Steve Worthington
@@ -195,4 +261,3 @@ Follow your original workflow.
 
 ## Ref
 [GitHub actions tutorial](https://lab.github.com/githubtraining/github-actions:-hello-world)
-

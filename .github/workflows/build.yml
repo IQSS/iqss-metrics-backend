@@ -8,6 +8,8 @@ on:
   workflow_dispatch:
 env:
   PIPENV_VENV_IN_PROJECT: enabled
+permissions:
+  contents: write
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -27,6 +29,9 @@ jobs:
         run: |
           pipenv install
 
+      - name: Run tests
+        run: pipenv run python -m unittest discover -v
+
       - name: Add ssh deploy key
         run: |
           mkdir ~/.ssh
@@ -38,6 +43,7 @@ jobs:
 
       - run: make clean build run deploy
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           SHEET_URL_BUSINESS_OPERATIONS: ${{ secrets.SHEET_URL_BUSINESS_OPERATIONS }}
           SHEET_URL_CSS: ${{ secrets.SHEET_URL_CSS }}
           SHEET_URL_PSR: ${{ secrets.SHEET_URL_PSR }}
@@ -53,6 +59,7 @@ jobs:
           RT_PASSWORD: ${{ secrets.RT_PASSWORD }}
 
       - name: Update backend keepalive
+        if: github.ref == 'refs/heads/master'
         run: |
           git pull --ff-only origin master
 
